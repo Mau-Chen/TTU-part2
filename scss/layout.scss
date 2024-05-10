@@ -1,0 +1,90 @@
+@import "root";
+
+// ===導覽列===
+
+// .....漢堡動圖
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+    transform: rotate(180deg);
+}
+
+.line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #fff;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+}
+
+.ham7 .top {
+    stroke-dasharray: 40 82;
+}
+
+.ham7 .middle {
+    stroke-dasharray: 40 111;
+}
+
+.ham7 .bottom {
+    stroke-dasharray: 40 161;
+}
+
+.ham7.active .top {
+    stroke-dasharray: 17 82;
+    stroke-dashoffset: -62px;
+}
+
+.ham7.active .middle {
+    stroke-dashoffset: 23px;
+}
+
+.ham7.active .bottom {
+    stroke-dashoffset: -83px;
+}
+
+// .....首頁連結
+.navbar-brand {
+    font-weight: 700;
+    color: $primary-dark;
+}
+
+.nav-link {
+    color: $primary-dark;
+    font-weight: 700;
+}
+
+
+// .....二層選單
+.dropdown-toggle::after {
+    transition: transform .2s ease-in-out;
+}
+
+.dropdown-toggle.show::after {
+    transform: rotate(-180deg);
+}
+
+.dropdown-menu-end {
+    right: 0;
+    left: auto;
+}
+
+.pc_dropdownmenu{
+    min-width: auto;
+}
+
+// .....datatable排序箭頭
+span.dt-column-order::before,span.dt-column-order::after{
+    line-height: 12px !important;
+}

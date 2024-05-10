@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大同大學-校內育成媒合平台</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/nav-memo2-main.css">
+</head>
+
+<body>
+    <main class="main">
+        <!-- 側邊攔 -->
+        <nav class="nav-box">
+            <!-- RWD-MENU標籤 -->
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- 側邊攔上方 -->
+            <div class="top">
+                <a href="#" class="navbar-logo">
+                    <img src="./img/ttoLogo_2.png" class="navbar-brand">
+                </a>
+                <ul class="navigation navbar-top">
+                    <li class="item">
+                        <a class="link active" href="./nav-memo2.html"><i class="fas fa-home"></i><span
+                                class="tooltiptext tooltip-right">儀錶板</span></a>
+                    </li>
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-users"></i><span
+                                class="tooltiptext tooltip-right">職缺媒合</span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="./nav-memo2-joblist.html">職缺總攬&ensp;<i
+                                        class="fa-solid fa-users-line"></i></a>
+                            </li>
+                            <li><a class="dropdown-item" href="./nav-memo2-myjob.html">刊登中&emsp;&ensp;<i
+                                        class="fa-solid fa-users-viewfinder"></i></a></li>
+                            <li><a class="dropdown-item" href="#">職缺登陸&ensp;<i class="fa-solid fa-user-plus"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i
+                                class="fa-solid fa-users-rectangle"></i><span
+                                class="tooltiptext tooltip-right">職員管理</span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">職員設定&emsp;&ensp;<i class="fa-solid fa-users-gear"></i></a></li>
+                            <li><a class="dropdown-item" href="#">識別證申請&ensp;<i class="fa-regular fa-address-card"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i
+                                class="fa-solid fa-file-contract"></i><span
+                                class="tooltiptext tooltip-right">合約申請</span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">車位申請&ensp;<i
+                                        class="fa-solid fa-square-parking"></i></a></li>
+                            <li><a class="dropdown-item" href="#">空間申請&ensp;<i class="fa-solid fa-building"></i></a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">續約申請&ensp;<i
+                                        class="fa-solid fa-file-signature"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#"><i class="fa-solid fa-spinner"></i><span
+                                class="tooltiptext tooltip-right">進度查詢</span></a>
+
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#"><i class="fa-regular fa-paper-plane"></i><span
+                                class="tooltiptext tooltip-right">意見反應</span></a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="./nav-memo2-roles.html"><i class="fa-solid fa-people-robbery"></i><span
+                                class="tooltiptext tooltip-right">權限設定</span></a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#"><i class="fa-solid fa-file-shield"></i><span
+                                class="tooltiptext tooltip-right">LOG紀錄</span></a>
+                    </li>
+
+                    <!-- <li class="item">
+                        <a class="link" href="#"><i class="fas fa-archive"></i></a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#"><i class="fas fa-calendar"></i></a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#"><i class="fas fa-chart-pie"></i></a>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- 側邊攔下方 -->
+            <div class="bottom">
+                <ul class="navigation">
+                    <!-- 已登入 -->
+                    <!-- <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i
+                                class="fa-regular fa-circle-user"></i></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">設定&ensp;<i class="fa-solid fa-gear"></i></a></li>
+                            <li><a class="dropdown-item" href="#">登出&ensp;<i class="fa-solid fa-door-open"></i></a></li>
+                        </ul>
+                    </li> -->
+                    <!-- 未登入 -->
+                    <li class="item">
+                        <a class="link" href="#"><i class="fa-regular fa-circle-user"></i><span
+                                class="tooltiptext tooltip-right">登入&ensp;/&ensp;申請</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="container">
+                <div class="alert alert-primary row justify-content-between" role="alert">
+                    <p class="col mb-0">HELLO！{username} </p>
+                    <p class="col mb-0 text-end"><i class="fa-solid fa-stopwatch"></i>&ensp;19:20</p>
+
+                </div>
+
+                <!-- 推播 -->
+                <div class="discover my-2r">
+                    <h3 class="section-header">發現新東西</h3>
+                    <!-- 影片區 -->
+                    <div class="discover-videos section-border-radius section-padding">
+                        <ul class="list-videos">
+                            <li class="video">
+                                <img src="https://picsum.photos/id/40/300/200">
+                                <!-- <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHRlY2h8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"> -->
+                                <div class="details">
+                                    <!-- <span class="play"><i class="fas fa-play"></i></span> -->
+                                    <span class="time">15:03</span>
+                                </div>
+                            </li>
+                            <li class="video">
+                                <!-- <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dGVjaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"> -->
+                                <img src="https://picsum.photos/id/76/200/300" alt="">
+                                <div class="details">
+                                    <!-- <span class="play"><i class="fas fa-play"></i></span> -->
+                                    <span class="time">05:22</span>
+                                </div>
+                            </li>
+                            <li class="video">
+                                <!-- <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHRlY2h8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"> -->
+                                <img src="https://picsum.photos/id/56/200/300" alt="">
+                                <div class="details">
+                                    <!-- <span class="play"><i class="fas fa-play"></i></span> -->
+                                    <span class="time">30:45</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 快速窗口 -->
+                <div class="quicklinks section-border-radius my-2r">
+                    <h3 class="section-header">快速窗口</h3>
+                    <div class="list-quicklinks ">
+                        <div class="quicklink a">
+                            <span class="icon">
+                                <!-- <i class="fas fa-users"></i> -->
+                                <!-- <i class="fa-solid fa-users"></i> -->
+                                <!-- <i class="fa-solid fa-person-circle-plus"></i> -->
+                                <i class="fa-solid fa-user-plus"></i>
+                            </span>
+                            <h3 class="num">徵才</h3>
+                            <p class="desc">招聘人才</p>
+                        </div>
+                        <div class="quicklink b">
+                            <span class="icon icon-rotate">
+                                <!-- <i class="fas fa-fingerprint"></i> -->
+                                <i class="fa-solid fa-spinner"></i>
+                            </span>
+                            <h3 class="num">進度</h3>
+                            <p class="desc">查閱申請狀況</p>
+                            <span class="percent up">
+                                <!-- <i class="fas fa-caret-up"></i> -->
+                                <i class="fa-solid fa-person-digging"></i>
+                                <span class="value">90%</span>
+                            </span>
+                        </div>
+                        <div class="quicklink c">
+                            <span class="icon">
+                                <!-- <i class="fas fa-chalkboard-teacher"></i> -->
+                                <i class="fa-regular fa-address-card"></i>
+                            </span>
+                            <h3 class="num">職員</h3>
+                            <p class="desc">申請識別證</p>
+                            <!-- <span class="percent down">
+                                <i class="fas fa-caret-down"></i>
+                                <span class="value">12.42%</span>
+                            </span> -->
+                        </div>
+                        <div class="quicklink d">
+                            <span class="icon">
+                                <!-- <i class="fas fa-hand-pointer"></i> -->
+                                <!-- <i class="fa-solid fa-file-pen"></i> -->
+                                <!-- <i class="fa-solid fa-file-contract"></i> -->
+                                <i class="fa-solid fa-file-signature"></i>
+                            </span>
+                            <h3 class="num">申請</h3>
+                            <p class="desc">續約、新空間、新車位</p>
+                            <span class="percent down">
+                                <!-- <i class="fas fa-caret-up"></i> -->
+                                <!-- <i class="fa-solid fa-person-circle-xmark"></i> -->
+                                <i class="fa-solid fa-person-circle-exclamation"></i>
+                                <span class="value">100%</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 特殊提示 -->
+                <div class="message section-border-radius my-2r">
+                    <p class="text">
+                        任意全體總數資源地址不多認為留下給我們瀏覽新增，穩定空中成就特色記錄草魚百度寂寞記憶專欄，色彩總統我只合理一個月主持，臺灣機構庫存上帝周邊，立刻請問教材主角老婆龍岡日本地說評論辦法能源機制拿出有關部門，威脅經歷我對幾年，就要等待，複雜身體呼吸影響，明天據。
+                    </p>
+                    <button class="btn-discover">跟我來</button>
+                    <i class="fas fa-times icon-close"></i>
+                </div>
+
+                <!-- 近期活動 & 日曆 -->
+                <div class="events-calendar">
+
+                    <!-- 近期活動 -->
+                    <div class="events">
+                        <h3 class="section-header">近日到期</h3>
+                        <div class="list-events">
+                            <div class="event">
+                                <h4 class="title green">招聘到期</h4>
+                                <div class="sub-title">
+                                    <i class="fas fa-calendar"></i>
+                                    <h3>下載次數，硬盤教育。</h3>
+                                </div>
+                                <p class="description">
+                                    皮膚外觀剛才願意，快捷通知鐵路中壢業主出處物理，化工權力免費版不住我去再說一部交流絶不美麗大量，輸出和我貿易為此，生氣套件用戶網咖不肯都說寶寶是啊，上帝一旦畢業反覆全部訪問用戶名指南父親生物出處違反可能，信譽代表團體是我怎樣損失多少商標懂得，本科注意，含。
+                                </p>
+                                <!-- <div class="person">
+                                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZmFjZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60"
+                                        alt="">
+                                    <span>Alfred Nikon</span>
+                                </div> -->
+                                <div class="time">
+                                    <i class="fas fa-calendar icon"></i>
+                                    <span class="text">Duo to:</span>
+                                    <span class="date">2025-12-08</span>
+                                </div>
+                            </div>
+
+                            <div class="event">
+                                <h4 class="title orange">合約到期</h4>
+                                <div class="sub-title">
+                                    <i class="fas fa-calendar"></i>
+                                    <h3>又有同樣，公開公。</h3>
+                                </div>
+                                <p class="description">
+                                    我覺得將會西安平方米，顯卡開發者大會未來一本不願台北還沒旁邊解壓密碼，對她魔法相對繼續鎖定，基層熱點方法，設立如下知名立場財富車輛篇文章幹部交換引導基隆戀愛，會議聰明大盤號碼維持方案幾次，有機會工藝，上班西方手中希望一下公佈電信國家，富岡虛擬，要求原創寫。
+                                </p>
+                                <!-- <div class="person">
+                                    <img src="https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZhY2V8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                                        alt="">
+                                    <span>Sebastian Biji</span>
+                                </div> -->
+                                <div class="time">
+                                    <i class="fas fa-calendar icon"></i>
+                                    <span class="text">Duo to:</span>
+                                    <span class="date">2024-02-08</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 手刻日曆 -->
+                    <div class="calendar">
+                        <h3 class="section-header">日曆</h3>
+                        <div class="calendar-details section-padding section-border-radius">
+                            <h3 class="date">三月 2015</h3>
+                            <span class="navigation">
+                                <i class="fas fa-chevron-left"></i>
+                                <i class="fas fa-chevron-right"></i>
+                            </span>
+                            <div class="clear-float"></div>
+                            <table class="calendar-date">
+                                <thead>
+                                    <tr>
+                                        <th>一</th>
+                                        <th>二</th>
+                                        <th>三</th>
+                                        <th>四</th>
+                                        <th>五</th>
+                                        <th>六</th>
+                                        <th>日</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="lm">29</td>
+                                        <td class="lm">30</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>14</td>
+                                        <td>15</td>
+                                        <td>16</td>
+                                        <td class="act"><span>17</span></td>
+                                        <td>18</td>
+                                        <td>19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td>21</td>
+                                        <td>22</td>
+                                        <td>23</td>
+                                        <td>24</td>
+                                        <td>25</td>
+                                        <td>26</td>
+                                    </tr>
+                                    <tr>
+                                        <td>27</td>
+                                        <td>28</td>
+                                        <td>29</td>
+                                        <td>30</td>
+                                        <td>31</td>
+                                        <td class="lm">1</td>
+                                        <td class="lm">2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 應用程式 + 擴充功能推播 -->
+                <div class="apps-features my-2r">
+
+                    <!-- 應用程式 -->
+                    <!-- <div class="apps">
+                        <h3 class="section-header">Used Apps</h3>
+                        <div class="list-apps section-padding section-border-radius">
+                            <div class="app">
+                                <div class="desc">
+                                    <span class="icon"><i class="fab fa-facebook"></i></span>
+                                    <h3 class="name">Facebook</h3>
+                                </div>
+                                <div class="type">
+                                    <span class="icon"><i class="fab fa-android"></i></span>
+                                    <h3 class="name">Android</h3>
+                                </div>
+                                <h4 class="time">32.35 min</h4>
+                                <div class="btn-cont">
+                                    <a href="#" class="btn-view">View <i class="fas fa-caret-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="app">
+                                <div class="desc">
+                                    <span class="icon"><i class="fab fa-twitter"></i></span>
+                                    <h3 class="name">Twitter</h3>
+                                </div>
+                                <div class="type">
+                                    <span class="icon"><i class="fab fa-android"></i></span>
+                                    <h3 class="name">Android</h3>
+                                </div>
+                                <h4 class="time">18.23 min</h4>
+                                <div class="btn-cont">
+                                    <a href="#" class="btn-view">View <i class="fas fa-caret-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="app">
+                                <div class="desc">
+                                    <span class="icon"><i class="fab fa-whatsapp"></i></span>
+                                    <h3 class="name">Whatsapp</h3>
+                                </div>
+                                <div class="type">
+                                    <span class="icon"><i class="fab fa-android"></i></span>
+                                    <h3 class="name">Android</h3>
+                                </div>
+                                <h4 class="time">11.317 min</h4>
+                                <div class="btn-cont">
+                                    <a href="#" class="btn-view">View <i class="fas fa-caret-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- 擴充功能推播 -->
+                    <!-- <div class="features">
+                        <h3 class="section-header">New Offer</h3>
+                        <div class="feature section-padding section-border-radius">
+                            <div class="price-container">
+                                <h2>$9.99</h2>
+                                <span>p/m</span>
+                            </div>
+                            <h4 class="desc">Premium Plan</h4>
+                            <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit sunt
+                                aliquam similique quis ratione facilis.</div>
+                            <img class="img"
+                                src="https://www.pngitem.com/pimgs/m/98-980820_all-natural-100-vg-logo-hoja-hd-png.png"
+                                alt="">
+                        </div>
+                    </div> -->
+
+                </div>
+
+                <!-- 頁尾 -->
+                <div class="footer section-padding section-border-radius">
+                    <ul class="links">
+                        <li><a href="#">大同大學</a></li>
+                        <li><a href="./nav-memo2-joblist.html">育成媒合</a></li>
+                        <li><a href="./nav-memo2.html">帳戶總攬</a></li>
+                    </ul>
+                    <p class="copyright">
+                        <!-- All rights &copy; are reserved for <span>xyz</span>. -->
+                        大同大學&emsp;版權所有&copy;2022 All Rights Reserved.<br>建議使用：IE9.0以上版本或Google
+                        Chrome瀏覽器<span>(最佳螢幕解析1280*1024)</span>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

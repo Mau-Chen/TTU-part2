@@ -1,0 +1,2491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大同大學-校內育成媒合平台</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./css/nav-memo2-joblist.css"> -->
+    <link rel="stylesheet" href="./css/nav-memo2-main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.1/css/responsive.bootstrap5.min.css">
+</head>
+
+<body>
+    <main class="main">
+        <!-- 側邊攔 -->
+        <nav class="nav-box">
+            <!-- RWD-MENU標籤 -->
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- 側邊攔上方 -->
+            <div class="top">
+                <a href="#" class="navbar-logo">
+                    <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEX///8jHyAAAADp6enx8fHd3d0JAADt7e0aFRYWERIUDQ98ent4d3dgX1+GhIQgHB2urq4PCAr5+fmYl5dUUlInIyShoKDk4+Q5NjdKSEm9vb0+OzzT09MdGBqMi4szMDFta2zFxMW5ubnNzc091wKRAAACWElEQVR4nO3d7W6iQBSA4WEUqqilaLEfitr2/u9xcc2STYEmzQxnxsP7/IfkzYgRdI7GAAAAAAAAAAAAAAAAAAAAAAAAYBzzmU/z0DnfpLvnxHqVVZv9S+is1tOrLRdF4lexKO3be+i0vz4q67vun9oejqHzjLmM1ndrPAXum5/LEfuu7HPYwGoxcmCS5G8hC8/jBzaJAVfxMvZL9CbctfhuRQKbxDRQYTHmu+j/6kCX4l5qCZtF/AhSWEktYZIsgrzZHOWWsFnEhwCFp1ywMHsKUHioBQuXF/nA7VLuMmzuNM7yhTPJy7C5l9qKF76IFiaZ/E1/OtnC3PHxxcA7dDSFdXZKXa6Y7XHVf0cdS2FdzZxPfCz7EiMpLDL3wIEPS5EUljsvp14voy20PpbQmK+eU8dS6OfUfR8mIinM/Jz6gUIZFDqgUAiFDigUQqEDCoVQ6IBCIb8o3K8HrPqf1d9d4atdDsjtpu+Aeyvc/fRg1X72HHFvhZuffs2QP/YcQaEQClsUdlEohMIWhV0UCqGwRWEXhUIobFHYRaEQClsUdlEohMIWhV33Vqj/mbc52Fz39xbG7FdDlHz39GsUCqHQAYVCKHRAoRAKHVAohEIHFAqZ5r4n/XvX9O8/LEof4yti3kPqZR9wmke8D3gCe7mvL1TH/fg912BchWMJUKh/Lob+2Sb659PonzE0gTlR+md96Z/XNoGZe/rnJk5g9qX++aUTmEE7gTnC+mdBN9bK53mbCcxkN/rn6l9p/2+EG93/bwEAAAAAAAAAAAAAAAAAAAAAAKDHHz9+QHDZSUMNAAAAAElFTkSuQmCC"
+                        class="navbar-brand"> -->
+                    <img src="./img/ttoLogo_2.png" class="navbar-brand">
+                </a>
+                <ul class="navigation navbar-top">
+                    <li class="item">
+                        <a class="link active" href="./nav-memo2.html"><i class="fas fa-home"></i><span
+                                class="tooltiptext tooltip-right">儀錶板</span></a>
+                    </li>
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-users"></i><span
+                                class="tooltiptext tooltip-right">職缺媒合</span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="./nav-memo2-joblist.html">職缺總攬&ensp;<i
+                                        class="fa-solid fa-users-line"></i></a>
+                            </li>
+                            <li><a class="dropdown-item" href="./nav-memo2-myjob.html">刊登中&emsp;&ensp;<i
+                                        class="fa-solid fa-users-viewfinder"></i></a></li>
+                            <li><a class="dropdown-item" href="#">職缺登陸&ensp;<i class="fa-solid fa-user-plus"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i
+                                class="fa-solid fa-users-rectangle"></i><span
+                                class="tooltiptext tooltip-right">職員管理</span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">職員設定&emsp;&ensp;<i class="fa-solid fa-users-gear"></i></a></li>
+                            <li><a class="dropdown-item" href="#">識別證申請&ensp;<i class="fa-regular fa-address-card"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i
+                                class="fa-solid fa-file-contract"></i><span
+                                class="tooltiptext tooltip-right">合約申請</span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">車位申請&ensp;<i
+                                        class="fa-solid fa-square-parking"></i></a></li>
+                            <li><a class="dropdown-item" href="#">空間申請&ensp;<i class="fa-solid fa-building"></i></a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">續約申請&ensp;<i
+                                        class="fa-solid fa-file-signature"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#"><i class="fa-solid fa-spinner"></i><span
+                                class="tooltiptext tooltip-right">進度查詢</span></a>
+
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#"><i class="fa-regular fa-paper-plane"></i><span
+                                class="tooltiptext tooltip-right">意見反應</span></a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="./nav-memo2-roles.html"><i class="fa-solid fa-people-robbery"></i><span
+                                class="tooltiptext tooltip-right">權限設定</span></a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#"><i class="fa-solid fa-file-shield"></i><span
+                                class="tooltiptext tooltip-right">LOG紀錄</span></a>
+                    </li>
+
+                    <!-- <li class="item">
+                        <a class="link" href="#"><i class="fas fa-archive"></i></a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#"><i class="fas fa-calendar"></i></a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#"><i class="fas fa-chart-pie"></i></a>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- 側邊攔下方 -->
+            <div class="bottom">
+                <ul class="navigation">
+                    <!-- 已登入 -->
+                    <!-- <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i
+                                class="fa-regular fa-circle-user"></i></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">設定&ensp;<i class="fa-solid fa-gear"></i></a></li>
+                            <li><a class="dropdown-item" href="#">登出&ensp;<i class="fa-solid fa-door-open"></i></a></li>
+                        </ul>
+                    </li> -->
+                    <!-- 未登入 -->
+                    <li class="item">
+                        <a class="link" href="#"><i class="fa-regular fa-circle-user"></i><span
+                                class="tooltiptext tooltip-right">登入&ensp;/&ensp;申請</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="container">
+                <!-- 頁首 -->
+                <!-- <div class="head section-padding section-border-radius">
+                    <form>
+                        <i class="fas fa-search"></i>
+                        <input type="text" class="form-control input-search" placeholder="Search...">
+                    </form>
+                    <ul class="links">
+                        <li>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-bell"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="profile">
+                                <img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABJlBMVEVavLsQL0EjHyDxyaXktpLvxqNbv74iHyDrwJtcwsEsJiUiHB0dAAAiGhsiHR4gERMhFRclJicfCgzpupUAKz8AAA5RpKMeAAXtvZf5z6ogEhQUFBkcGh0zUlIAHzZOnZxYtrU/dXUnLC1UrKtJj44ACBMIJjsZAABDgH8wSkpMl5Y5Y2MtQUINEBfTqYg9b2+5moAAAAArOzt1YlNNPzfGpYk1WlqsinCBaFYAIjgAGzhLd3krPDwyT0+kinNEOjQ3LiuPc15dTkTVspNmU0ZwYlW+p42LgW9BUE3jza2pp5JZdG6zj3QLMzgPAAmZrZ20w7BOSEGVkoDcwKBzcWTCuaEVJiqDgnN1r6ksT1l2aWJASlEqPEhSV1mejHwoRlFhYV8oNEEXAD1gAAAMG0lEQVR4nO2d6XrayBKGQYYmbUmNkAwIJIMwiwU23tckXmI7ySyZnMlkMmdInPjM/d/E6dbCZkkIbKmbefT9CEkMjt5UdVV1dUlOpRIlSpQoUaJEiRIlSpQoUaJEiRIlSpQoUaJEiRIlSpQoUaJEiRIlShSfAHBeA16WUu61g2YJWq91YL+kxv4E682pty+PQMmAkFw22BBMC1FuQMJb3iUv9U2CBk2hS74GIGway8SI/RLuCuXXjRK+9JM8krsGgKYstDDNRgG/gGa1ugWB0ZWRbEKYap3kyoKBP7cklEYL269R5fiqcGCaZY7jJLEHcwgJJdiVCkhugg0Ryak6kjgOyb1dXpYQysNUqVdiHhFgx4RbgiwIBYTJOD6fJy+Y47WIf81tyaiAxNcXGI0/kJH9JYknrzlJKJcLcBSZmBQ82G1Cw7py6+rHZFHwEocJOV4c/s2YyCfkFjTMA9oYAYK5vHDQFbkAocI0+8T/w8GFkJdoYwQI8q6BFiQkn0Z52hhBEgMvPwQhUZk2RYAMaeblc4WZ78B5g0U1IU7wRv45bCjg7AmhQZtoSnCr3G30SvmZBgpBKNd7jYuyyVjSACVBrMryTEAut5qb+R5ZroqyQRtpWnBjOr8tToglWvUqU4Jm9TkJ8y3WCGGdnx1G5yDkN5psrUNolsMBhiXkeLnOEiIwhZCAoQk5vBNhCBE0ZqeJeQk5uccQIdySnp+QpWADGyES4dyEqFxnBRGaQmjAOQhxsGFkJYLGHIDzEDKDCFrlcOXM3ITSRnP2Px+HYDMXHnEOQqnLTBcVGrN3vvMT8q8hK4DA2A7uXCxGyOW3GImloJQLnQ3nW4fyhUEbzhLcngNwLkJOaDHhp3jzGxEhv8EEIDbiSVReyoYJsRF74Yu2eQjZaZzC4C73woSczEg3Ksp1yEa6CF6Guj6DUAsoFhjZIoKgmk27Oiz29TGoCcKc3u8fruqPP+ZI2mXCiKDgT6gdrVSyl1cYcvhXq8Pf6Vr76DSj7kybeZkI9asVrErl9vJ637XkqmM9rXj9ZkdVMhllp+23NFkgBABAX0J9Nbtii0DecMV2v69xmtbvt/UjG49I+VD0J6R9tt8s9Uwz5xcrircrI1UqKy+OL9+cHR6eXZ7uZFw8IvWs7f0NxK7ZqjcNenygtSnIctUXcK+yMqkKVlbBykxKvdF8EPOyvNmlR4j3vgX/TNF+Mw1o6UXGSzm/pYgEumsRpHw3FtqRJ6A3obLnsxSRTL2nCH12vzk96wnoY0P1rO/5begD+p6q7R97m9CHMKNceWbFPP3StOm9r+h7L8IAwh1PP5VOaNsQtKYIdZ0EDTvVz0OYUd9YKQPp4zUehwq0CSdPLPS2dn212m7rE5kwHGFGOdL1fnv1+pprj+UOgXbLdJxQL94cZ0li3/t06eejQYQ7+1ekFFAzx4dFfURIeSGCUnkIuOoGF5zXfQH9CTGiU+go6s6VY0Zxm7aXpuCBE0v1q2wAVxjCcVjlzs4eDLRqgCk7FvTJfwsRYsYb4qhIpM1HNhf2pJdv/luQMJPRckxsn2CqgQihdhgSMDShctkn05g92ocXpmSPsrVvQwKGt2GG9Dv4cpfqGSIobdpbJ/0mrAnDEypnVjyV16k6Kty1hzD6AQlwYcJjUuQgyaAJOGzSBNQwi3upUsyRrjDlWAPqVsYvhgach/Ba58QD+sGUlG05PbSTzkOIU2Ke/qyC1fFGq1EQqncsEIIe8dJobEgIeepe6rT0i5EQksKNdqSBW0KeVG3RxFJclkoy7cn9Zs882UBcey8Cwp0iv73VKlEmxJU3rMucdhZBxj/tixCycJ8XwIRo9fltqN5pHO0wY8va5hdDu2lowp02YuQMONUUEKf7dLgXJ1TPNAYKGkcneIv4+BjmiYQ7RVSg3w52RIYxEPfMXYwjvUq76B7Krmu0kFvEcITkHIPnaZO5AvbRRf/u+XptdgM8T79LYwmYm3ZDsX8Tpp8YglBR7qwOv7hp0IZzVHfOn3TtcmUm40xCVTldtfoX4gXtfrcrcu+9rVxbnxlSZxHuHK627Z4+EktseCkcn9XX3j6RUDkbzZ4gNmb1oVkeAXLo6omE1pbJFS8y4Kegt5kfPwVuz0qLswi10fEhEoUN2nwpMsduOs9/sFR8N8OIMwjHjoJ5+aJHm84WgGN3OGvvn0SofBhOLPAHBu2O/kjDIzacMX56GuHZ8PxXYuVmBKKxk2BU/PkphOrRMNDk6R8djgRMuermxI+/BBtxxjp0nTRfZese0tKG6aZ96dcnECofnBm+vNlgIYyOBCB0x07434LdNJBQPXSWodyDDK1CS8B04+nH/wQaMdiG7jANA+f30xoRSrsL23DopEwSNgTZeSZU//cgIwYRqp/sSJqXBWYaGEOBUqvVshGrjQUJlWO7oJHwt6I9CuUhAKBzdxAqflloYmhoQpn6eIKPhnlf7C5kQ+W0zWA1M67RqOnHPxaYa8tkdKeAZ+VuoGmN3f+E2p/nJ1TfDktS6uN6Pmp2BdeI+idfI/oRKqfuvokvbzMYZ4hwqNlwh777vpso3xnhfs710R6bTkoEDNG14r5fS8rPhu6cNyo32QXEwaZVFp0Nf9tnlM9nVt+5p6QqWo85ZViwe9Cyn6eEirfh7yhR3/adLcV6gc0gMybg3oGBNE9EL0L1TycTCim2DWgLNmSet3OGV1fqMaHy4k8rjCJeoj/zHEZ4O/za7tugokfmf0SofF7/aL27sH3AXr3tKfLc47JTof70eZpxmlD95TfJrdUYLUe9RB6CacUbvf3Hz5UAQvXLbtG2Nws3AM0huCHJziPqPv7134ovofrrX3Z7h5fyZaYe0DZLcH29VHcaN2g/m/Uj3NlHbq1t5g3aVz2fIADuY/jaeyvZ7JBynFA5dZqH0i5zjacQgutVu4bTDivZkSYI7+ybKkSBjUcLzCnQ2u5ad5jmuBUfwgxprSG+u71t0L7ahUSelWttiovHK96EVmuNZIkldFFHwJQRQtqbiiehcqbhr5ZZ6t4vIFGSJI3D+cKLkNMkKb8clZq/sAdC+2Y9Dy9VVbjMHjqSm/EfRxpluR10qFFN8+8nnK5p/v2E6tITAgCNv38P2Ft8+dtgYpR7MQEISo1B7Wvg7ulrbWCWwBJtDIfCxmttdWqd9Nq3QMJva2n8rq3WcpkS+2bTHHTOO2miTjaAMOO857wzMJtLAkl889V9zb5yotq7gFh6ee6+ba1Tu3+1BP6KrTeBRy79e0AsxU46JguSZUvitWc+TOIRvbz1I1SOX06/mUA2GTUkBL1B5xEeMeJErJkgnDThEHLQSjEHic3XSNe8rpesxB8VT0L1/bn3B9Ln6V22DAlg/eSxd4756ViwGRGqe498dMKQdWYYAew9+JnPteII8cUIsBb4mbXaAxsTC9h+D37ONmbFoaM6hIryPsCCQ0YG7Aibg2BTuIjfb+2NsEWoqMffw3xsrTagfF4KUrtB62/iYl/+7122Uqm8UFQ1s/f9ZbBbjzG+ovlkdlhPh+SzGde+v//x4/3Xb2szlu2EOvf0fgoEbMxcStOQnfPzTmcOPEsvX9GxIkgNZkeY59H5gIanAuNhDg99ojr3NH4Qa4yAGPEhdj44iBMQI8b9eEHQCpUFn1G1mKeG4UPMgOn0fbyERrw+SlSL9QQHtOJKFCN1Yr0rGG7Fb8N0J04bwvj5cN6P8SgcNOOOpESdGMe/gUnBSbFiA0zBk3mL52dRLcaZIhp8cUZTUKKxDLH+iY2Q0jJM1+K6SyHuqnuoTlzji4ASYLoziMdN6WRDGzEWQFyU0rJhXPmCSlFqqxNPTwrc0wJMr8WzEOktw5gWIo294VCxbIPhLrVlGFNGhPSWIV6IcbTcKLRoxvRP9DYEPYrLkJSm0RM2qNrwPPq2KRzQBMQ5P/KFSK3strX2EDUhtd3vUBED0iy7bUW+C6ZYdtuKPNRQzfdEkW8v6Ob7dPT7fFCnmu+JIm64UWuzjVQzIiWk1O0e13m0nQz4D23AqDdQBu18H3Vvn4FAk05HWrcxEGjS0dZtDAQa7KZGhIQUG4kjRdoWNhhYhulOhJUp5Q6GoygrUzYCzVqEEwtMBJr02rcICWnD2epER8hARUM0X+39f+Akcv/jtCCzAAAAAElFTkSuQmCC">
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div> -->
+
+                <!-- 麵包屑 -->
+                <div class="breadcrumb-box section-padding section-border-radius my-2r">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><i class="fa-solid fa-users"></i>&ensp;職缺媒合</li>
+                        <li class="breadcrumb-item active"><i class="fa-solid fa-users-line"></i>&ensp;職缺總攬</li>
+                    </ol>
+                </div>
+
+                <!-- 職缺列表 -->
+                <div class="tabs-box my-2r">
+                    <h3 class="section-header"><i class="fa-solid fa-quote-left"></i>職缺列表<i class="fa-solid fa-quote-right"></i></h3>
+                    <div class="tabs section-border-radius section-padding">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-all-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-all" type="button" role="tab" aria-controls="nav-all"
+                                    aria-selected="true">不限學系</button>
+                                <button class="nav-link" id="nav-engineering-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-engineering" type="button" role="tab"
+                                    aria-controls="nav-engineering" aria-selected="false">工程學系</button>
+                                <button class="nav-link" id="nav-management-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-management" type="button" role="tab"
+                                    aria-controls="nav-management" aria-selected="false">經營學系</button>
+                                <button class="nav-link" id="nav-design-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-design" type="button" role="tab" aria-controls="nav-design"
+                                    aria-selected="false">設計學系</button>
+                                <button class="nav-link" id="nav-language-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-language" type="button" role="tab" aria-controls="nav-language"
+                                    aria-selected="false">國際語文</button>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active p-2" id="nav-all" role="tabpanel"
+                                aria-labelledby="nav-all-tab">
+                                <table id="jobList" class="table table-hover table-bordered responsive"
+                                    style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-nowrap text-center">上架日期</th>
+                                            <th class="text-nowrap text-center">公司名稱</th>
+                                            <th class="text-nowrap text-center">職務名稱</th>
+                                            <th class="text-nowrap text-center">工作性質</th>
+                                            <th class="text-nowrap text-center">工作時間</th>
+                                            <th class="text-nowrap text-center">下架日期</th>
+                                            <th class="text-nowrap text-center">詳情</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2024-04-25</td>
+                                            <td>Tiger Nixon</td>
+                                            <td>System Architect</td>
+                                            <td>Edinburgh</td>
+                                            <td>11:00 ~ 12:00</td>
+                                            <td>2011-06-30</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                                    <i class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-06-30</td>
+                                            <td>Garrett Winters</td>
+                                            <td>Accountant</td>
+                                            <td>Tokyo</td>
+                                            <td>12:00 ~ 15:00</td>
+                                            <td>2011-06-25</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm">
+                                                    <i class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-01-12</td>
+                                            <td>Ashton Cox</td>
+                                            <td>Junior Technical Author</td>
+                                            <td>San Francisco</td>
+                                            <td>13:10 ~ 15:00</td>
+                                            <td>2011-06-25</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm">
+                                                    <i class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-03-29</td>
+                                            <td>Cedric Kelly</td>
+                                            <td>Senior Javascript Developer</td>
+                                            <td>Edinburgh</td>
+                                            <td>14:50 ~ 17:00</td>
+                                            <td>2011-06-30</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm">
+                                                    <i class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-11-28</td>
+                                            <td>Airi Satou</td>
+                                            <td>Accountant</td>
+                                            <td>Tokyo</td>
+                                            <td>14:48 ~ 17:00</td>
+                                            <td>2011-06-25</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm">
+                                                    <i class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-12-02</td>
+                                            <td>Brielle Williamson</td>
+                                            <td>Integration Specialist</td>
+                                            <td>New York</td>
+                                            <td>14:32 ~ 17:00</td>
+                                            <td>2011-08-30</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm">
+                                                    <i class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-08-06</td>
+                                            <td>Herrod Chandler</td>
+                                            <td>Sales Assistant</td>
+                                            <td>San Francisco</td>
+                                            <td>14:38 ~ 17:00</td>
+                                            <td>2011-04-18</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-10-14</td>
+                                            <td>Rhona Davidson</td>
+                                            <td>Integration Specialist</td>
+                                            <td>Tokyo</td>
+                                            <td>14:28 ~ 17:59</td>
+                                            <td>2012-08-06</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-09-15</td>
+                                            <td>Colleen Hurst</td>
+                                            <td>Javascript Developer</td>
+                                            <td>San Francisco</td>
+                                            <td>14:18 ~ 17:49</td>
+                                            <td>2010-10-14</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-12-13</td>
+                                            <td>Sonya Frost</td>
+                                            <td>Software Engineer</td>
+                                            <td>Edinburgh</td>
+                                            <td>14:01 ~ 17:49</td>
+                                            <td>2009-09-15</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-12-19</td>
+                                            <td>Jena Gaines</td>
+                                            <td>Office Manager</td>
+                                            <td>London</td>
+                                            <td>18:01 ~ 21:49</td>
+                                            <td>2008-12-13</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-12-13</td>
+                                            <td>Quinn Flynn</td>
+                                            <td>Support Lead</td>
+                                            <td>Edinburgh</td>
+                                            <td>11:01 ~ 21:49</td>
+                                            <td>2013-03-03</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-10-16</td>
+                                            <td>Charde Marshall</td>
+                                            <td>Regional Director</td>
+                                            <td>San Francisco</td>
+                                            <td>11:41 ~ 21:49</td>
+                                            <td>2013-03-03</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-12-18</td>
+                                            <td>Haley Kennedy</td>
+                                            <td>Senior Marketing Designer</td>
+                                            <td>London</td>
+                                            <td>15:41 ~ 21:49</td>
+                                            <td>2014-12-18</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-03-17</td>
+                                            <td>Tatyana Fitzpatrick</td>
+                                            <td>Regional Director</td>
+                                            <td>London</td>
+                                            <td>15:41 ~ 21:49</td>
+                                            <td>2010-03-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-11-27</td>
+                                            <td>Michael Silva</td>
+                                            <td>Marketing Designer</td>
+                                            <td>London</td>
+                                            <td>15:26 ~ 21:49</td>
+                                            <td>2013-03-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-06-09</td>
+                                            <td>Paul Byrd</td>
+                                            <td>Chief Financial Officer (CFO)</td>
+                                            <td>New York</td>
+                                            <td>15:56 ~ 21:49</td>
+                                            <td>2012-03-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-04-10</td>
+                                            <td>Gloria Little</td>
+                                            <td>Systems Administrator</td>
+                                            <td>New York</td>
+                                            <td>15:25 ~ 21:49</td>
+                                            <td>2015-03-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-10-13</td>
+                                            <td>Bradley Greer</td>
+                                            <td>Software Engineer</td>
+                                            <td>London</td>
+                                            <td>15:05 ~ 21:09</td>
+                                            <td>2015-01-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-09-26</td>
+                                            <td>Dai Rios</td>
+                                            <td>Personnel Lead</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:15 ~ 21:19</td>
+                                            <td>2013-02-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-09-03</td>
+                                            <td>Jenette Caldwell</td>
+                                            <td>Development Lead</td>
+                                            <td>New York</td>
+                                            <td>15:16 ~ 21:19</td>
+                                            <td>2013-03-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-06-25</td>
+                                            <td>Yuri Berry</td>
+                                            <td>Chief Marketing Officer (CMO)</td>
+                                            <td>New York</td>
+                                            <td>15:26 ~ 21:39</td>
+                                            <td>2013-03-28</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-12-12</td>
+                                            <td>Caesar Vance</td>
+                                            <td>Pre-Sales Support</td>
+                                            <td>New York</td>
+                                            <td>15:27 ~ 21:31</td>
+                                            <td>2013-03-29</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-09-20</td>
+                                            <td>Doris Wilder</td>
+                                            <td>Sales Assistant</td>
+                                            <td>Sydney</td>
+                                            <td>15:25 ~ 21:32</td>
+                                            <td>2013-03-30</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-10-09</td>
+                                            <td>Angelica Ramos</td>
+                                            <td>Chief Executive Officer (CEO)</td>
+                                            <td>London</td>
+                                            <td>15:25 ~ 21:33</td>
+                                            <td>2013-01-01</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-12-22</td>
+                                            <td>Gavin Joyce</td>
+                                            <td>Developer</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:12 ~ 21:45</td>
+                                            <td>2013-01-02</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-11-14</td>
+                                            <td>Jennifer Chang</td>
+                                            <td>Regional Director</td>
+                                            <td>Singapore</td>
+                                            <td>15:13 ~ 21:45</td>
+                                            <td>2013-01-03</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-06-07</td>
+                                            <td>Brenden Wagner</td>
+                                            <td>Software Engineer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:13 ~ 21:45</td>
+                                            <td>2013-01-03</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-03-11</td>
+                                            <td>Fiona Green</td>
+                                            <td>Chief Operating Officer (COO)</td>
+                                            <td>San Francisco</td>
+                                            <td>15:14 ~ 21:45</td>
+                                            <td>2013-01-04</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-08-14</td>
+                                            <td>Shou Itou</td>
+                                            <td>Regional Marketing</td>
+                                            <td>Tokyo</td>
+                                            <td>15:14 ~ 21:45</td>
+                                            <td>2013-01-05</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-06-02</td>
+                                            <td>Michelle House</td>
+                                            <td>Integration Specialist</td>
+                                            <td>Sydney</td>
+                                            <td>15:15 ~ 21:45</td>
+                                            <td>2013-01-06</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-10-22</td>
+                                            <td>Suki Burks</td>
+                                            <td>Developer</td>
+                                            <td>London</td>
+                                            <td>15:16 ~ 21:45</td>
+                                            <td>2013-01-07</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-05-07</td>
+                                            <td>Prescott Bartlett</td>
+                                            <td>Technical Author</td>
+                                            <td>London</td>
+                                            <td>15:17 ~ 21:45</td>
+                                            <td>2013-01-08</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-10-26</td>
+                                            <td>Gavin Cortez</td>
+                                            <td>Team Leader</td>
+                                            <td>San Francisco</td>
+                                            <td>15:18 ~ 21:45</td>
+                                            <td>2013-01-07</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-03-09</td>
+                                            <td>Martena Mccray</td>
+                                            <td>Post-Sales support</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:19 ~ 21:45</td>
+                                            <td>2013-01-08</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-12-09</td>
+                                            <td>Unity Butler</td>
+                                            <td>Marketing Designer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:25 ~ 21:35</td>
+                                            <td>2013-01-09</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-12-16</td>
+                                            <td>Howard Hatfield</td>
+                                            <td>Office Manager</td>
+                                            <td>San Francisco</td>
+                                            <td>15:26 ~ 21:35</td>
+                                            <td>2013-01-10</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-02-12</td>
+                                            <td>Hope Fuentes</td>
+                                            <td>Secretary</td>
+                                            <td>San Francisco</td>
+                                            <td>15:05 ~ 21:09</td>
+                                            <td>2013-01-11</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-02-14</td>
+                                            <td>Vivian Harrell</td>
+                                            <td>Financial Controller</td>
+                                            <td>San Francisco</td>
+                                            <td>15:06 ~ 21:09</td>
+                                            <td>2013-01-11</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-12-11</td>
+                                            <td>Timothy Mooney</td>
+                                            <td>Office Manager</td>
+                                            <td>London</td>
+                                            <td>15:15 ~ 21:45</td>
+                                            <td>2013-01-12</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-09-26</td>
+                                            <td>Jackson Bradshaw</td>
+                                            <td>Director</td>
+                                            <td>New York</td>
+                                            <td>15:16 ~ 21:45</td>
+                                            <td>2013-01-13</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-02-03</td>
+                                            <td>Olivia Liang</td>
+                                            <td>Support Engineer</td>
+                                            <td>Singapore</td>
+                                            <td>15:36 ~ 21:49</td>
+                                            <td>2013-01-14</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-05-03</td>
+                                            <td>Bruno Nash</td>
+                                            <td>Software Engineer</td>
+                                            <td>London</td>
+                                            <td>15:37 ~ 21:49</td>
+                                            <td>2013-01-14</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-08-19</td>
+                                            <td>Sakura Yamamoto</td>
+                                            <td>Support Engineer</td>
+                                            <td>Tokyo</td>
+                                            <td>15:15 ~ 21:45</td>
+                                            <td>2013-01-15</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2013-08-11</td>
+                                            <td>Thor Walton</td>
+                                            <td>Developer</td>
+                                            <td>New York</td>
+                                            <td>15:16 ~ 21:45</td>
+                                            <td>2013-01-15</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-07-07</td>
+                                            <td>Finn Camacho</td>
+                                            <td>Support Engineer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:15 ~ 21:45</td>
+                                            <td>2013-01-16</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-04-09</td>
+                                            <td>Serge Baldwin</td>
+                                            <td>Data Coordinator</td>
+                                            <td>Singapore</td>
+                                            <td>15:06 ~ 21:49</td>
+                                            <td>2013-01-17</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-01-04</td>
+                                            <td>Zenaida Frank</td>
+                                            <td>Software Engineer</td>
+                                            <td>New York</td>
+                                            <td>15:17 ~ 21:45</td>
+                                            <td>2013-01-18</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-06-01</td>
+                                            <td>Zorita Serrano</td>
+                                            <td>Software Engineer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:18 ~ 21:45</td>
+                                            <td>2013-01-16</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2013-02-01</td>
+                                            <td>Jennifer Acosta</td>
+                                            <td>Junior Javascript Developer</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:20 ~ 21:45</td>
+                                            <td>2013-01-17</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-12-06</td>
+                                            <td>Cara Stevens</td>
+                                            <td>Sales Assistant</td>
+                                            <td>New York</td>
+                                            <td>15:19 ~ 21:45</td>
+                                            <td>2013-01-19</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-03-21</td>
+                                            <td>Hermione Butler</td>
+                                            <td>Regional Director</td>
+                                            <td>London</td>
+                                            <td>15:12 ~ 21:45</td>
+                                            <td>2013-01-20</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-02-27</td>
+                                            <td>Lael Greer</td>
+                                            <td>Systems Administrator</td>
+                                            <td>London</td>
+                                            <td>15:27 ~ 21:31</td>
+                                            <td>2013-01-21</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-07-14</td>
+                                            <td>Jonas Alexander</td>
+                                            <td>Developer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:16 ~ 21:19</td>
+                                            <td>2013-01-22</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-11-13</td>
+                                            <td>Shad Decker</td>
+                                            <td>Regional Director</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:26 ~ 21:35</td>
+                                            <td>2013-01-23</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-06-27</td>
+                                            <td>Michael Bruce</td>
+                                            <td>Javascript Developer</td>
+                                            <td>Singapore</td>
+                                            <td>15:19 ~ 21:45</td>
+                                            <td>2013-01-24</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-01-25</td>
+                                            <td>Donna Snider</td>
+                                            <td>Customer Support</td>
+                                            <td>New York</td>
+                                            <td>15:17 ~ 21:45</td>
+                                            <td>2013-01-25</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th class="text-nowrap text-center">上架日期</th>
+                                            <th class="text-nowrap text-center">公司名稱</th>
+                                            <th class="text-nowrap text-center">職務名稱</th>
+                                            <th class="text-nowrap text-center">工作性質</th>
+                                            <th class="text-nowrap text-center">工作時間</th>
+                                            <th class="text-nowrap text-center">下架日期</th>
+                                            <th class="text-nowrap text-center">詳情</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade p-2" id="nav-engineering" role="tabpanel"
+                                aria-labelledby="nav-engineering-tab">
+                                <table id="jobList2" class="table table-hover table-bordered responsive"
+                                    style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-nowrap text-center">上架日期</th>
+                                            <th class="text-nowrap text-center">公司名稱</th>
+                                            <th class="text-nowrap text-center">職務名稱</th>
+                                            <th class="text-nowrap text-center">工作性質</th>
+                                            <th class="text-nowrap text-center">工作時間</th>
+                                            <th class="text-nowrap text-center">下架日期</th>
+                                            <th class="text-nowrap text-center">詳情</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2012-12-18</td>
+                                            <td>Haley Kennedy</td>
+                                            <td>Senior Marketing Designer</td>
+                                            <td>London</td>
+                                            <td>15:41 ~ 21:49</td>
+                                            <td>2014-12-18</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-03-17</td>
+                                            <td>Tatyana Fitzpatrick</td>
+                                            <td>Regional Director</td>
+                                            <td>London</td>
+                                            <td>15:41 ~ 21:49</td>
+                                            <td>2010-03-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-11-27</td>
+                                            <td>Michael Silva</td>
+                                            <td>Marketing Designer</td>
+                                            <td>London</td>
+                                            <td>15:26 ~ 21:49</td>
+                                            <td>2013-03-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-06-09</td>
+                                            <td>Paul Byrd</td>
+                                            <td>Chief Financial Officer (CFO)</td>
+                                            <td>New York</td>
+                                            <td>15:56 ~ 21:49</td>
+                                            <td>2012-03-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-04-10</td>
+                                            <td>Gloria Little</td>
+                                            <td>Systems Administrator</td>
+                                            <td>New York</td>
+                                            <td>15:25 ~ 21:49</td>
+                                            <td>2015-03-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-10-13</td>
+                                            <td>Bradley Greer</td>
+                                            <td>Software Engineer</td>
+                                            <td>London</td>
+                                            <td>15:05 ~ 21:09</td>
+                                            <td>2015-01-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-09-26</td>
+                                            <td>Dai Rios</td>
+                                            <td>Personnel Lead</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:15 ~ 21:19</td>
+                                            <td>2013-02-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-09-03</td>
+                                            <td>Jenette Caldwell</td>
+                                            <td>Development Lead</td>
+                                            <td>New York</td>
+                                            <td>15:16 ~ 21:19</td>
+                                            <td>2013-03-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-06-25</td>
+                                            <td>Yuri Berry</td>
+                                            <td>Chief Marketing Officer (CMO)</td>
+                                            <td>New York</td>
+                                            <td>15:26 ~ 21:39</td>
+                                            <td>2013-03-28</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-12-12</td>
+                                            <td>Caesar Vance</td>
+                                            <td>Pre-Sales Support</td>
+                                            <td>New York</td>
+                                            <td>15:27 ~ 21:31</td>
+                                            <td>2013-03-29</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-09-20</td>
+                                            <td>Doris Wilder</td>
+                                            <td>Sales Assistant</td>
+                                            <td>Sydney</td>
+                                            <td>15:25 ~ 21:32</td>
+                                            <td>2013-03-30</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-10-09</td>
+                                            <td>Angelica Ramos</td>
+                                            <td>Chief Executive Officer (CEO)</td>
+                                            <td>London</td>
+                                            <td>15:25 ~ 21:33</td>
+                                            <td>2013-01-01</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-12-22</td>
+                                            <td>Gavin Joyce</td>
+                                            <td>Developer</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:12 ~ 21:45</td>
+                                            <td>2013-01-02</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-11-14</td>
+                                            <td>Jennifer Chang</td>
+                                            <td>Regional Director</td>
+                                            <td>Singapore</td>
+                                            <td>15:13 ~ 21:45</td>
+                                            <td>2013-01-03</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-06-07</td>
+                                            <td>Brenden Wagner</td>
+                                            <td>Software Engineer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:13 ~ 21:45</td>
+                                            <td>2013-01-03</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-03-11</td>
+                                            <td>Fiona Green</td>
+                                            <td>Chief Operating Officer (COO)</td>
+                                            <td>San Francisco</td>
+                                            <td>15:14 ~ 21:45</td>
+                                            <td>2013-01-04</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-08-14</td>
+                                            <td>Shou Itou</td>
+                                            <td>Regional Marketing</td>
+                                            <td>Tokyo</td>
+                                            <td>15:14 ~ 21:45</td>
+                                            <td>2013-01-05</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-06-02</td>
+                                            <td>Michelle House</td>
+                                            <td>Integration Specialist</td>
+                                            <td>Sydney</td>
+                                            <td>15:15 ~ 21:45</td>
+                                            <td>2013-01-06</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-10-22</td>
+                                            <td>Suki Burks</td>
+                                            <td>Developer</td>
+                                            <td>London</td>
+                                            <td>15:16 ~ 21:45</td>
+                                            <td>2013-01-07</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-05-07</td>
+                                            <td>Prescott Bartlett</td>
+                                            <td>Technical Author</td>
+                                            <td>London</td>
+                                            <td>15:17 ~ 21:45</td>
+                                            <td>2013-01-08</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-10-26</td>
+                                            <td>Gavin Cortez</td>
+                                            <td>Team Leader</td>
+                                            <td>San Francisco</td>
+                                            <td>15:18 ~ 21:45</td>
+                                            <td>2013-01-07</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-03-09</td>
+                                            <td>Martena Mccray</td>
+                                            <td>Post-Sales support</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:19 ~ 21:45</td>
+                                            <td>2013-01-08</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-12-09</td>
+                                            <td>Unity Butler</td>
+                                            <td>Marketing Designer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:25 ~ 21:35</td>
+                                            <td>2013-01-09</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-12-16</td>
+                                            <td>Howard Hatfield</td>
+                                            <td>Office Manager</td>
+                                            <td>San Francisco</td>
+                                            <td>15:26 ~ 21:35</td>
+                                            <td>2013-01-10</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-02-12</td>
+                                            <td>Hope Fuentes</td>
+                                            <td>Secretary</td>
+                                            <td>San Francisco</td>
+                                            <td>15:05 ~ 21:09</td>
+                                            <td>2013-01-11</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-02-14</td>
+                                            <td>Vivian Harrell</td>
+                                            <td>Financial Controller</td>
+                                            <td>San Francisco</td>
+                                            <td>15:06 ~ 21:09</td>
+                                            <td>2013-01-11</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-12-11</td>
+                                            <td>Timothy Mooney</td>
+                                            <td>Office Manager</td>
+                                            <td>London</td>
+                                            <td>15:15 ~ 21:45</td>
+                                            <td>2013-01-12</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-09-26</td>
+                                            <td>Jackson Bradshaw</td>
+                                            <td>Director</td>
+                                            <td>New York</td>
+                                            <td>15:16 ~ 21:45</td>
+                                            <td>2013-01-13</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-02-03</td>
+                                            <td>Olivia Liang</td>
+                                            <td>Support Engineer</td>
+                                            <td>Singapore</td>
+                                            <td>15:36 ~ 21:49</td>
+                                            <td>2013-01-14</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-05-03</td>
+                                            <td>Bruno Nash</td>
+                                            <td>Software Engineer</td>
+                                            <td>London</td>
+                                            <td>15:37 ~ 21:49</td>
+                                            <td>2013-01-14</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-08-19</td>
+                                            <td>Sakura Yamamoto</td>
+                                            <td>Support Engineer</td>
+                                            <td>Tokyo</td>
+                                            <td>15:15 ~ 21:45</td>
+                                            <td>2013-01-15</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2013-08-11</td>
+                                            <td>Thor Walton</td>
+                                            <td>Developer</td>
+                                            <td>New York</td>
+                                            <td>15:16 ~ 21:45</td>
+                                            <td>2013-01-15</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-07-07</td>
+                                            <td>Finn Camacho</td>
+                                            <td>Support Engineer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:15 ~ 21:45</td>
+                                            <td>2013-01-16</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-04-09</td>
+                                            <td>Serge Baldwin</td>
+                                            <td>Data Coordinator</td>
+                                            <td>Singapore</td>
+                                            <td>15:06 ~ 21:49</td>
+                                            <td>2013-01-17</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-01-04</td>
+                                            <td>Zenaida Frank</td>
+                                            <td>Software Engineer</td>
+                                            <td>New York</td>
+                                            <td>15:17 ~ 21:45</td>
+                                            <td>2013-01-18</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-06-01</td>
+                                            <td>Zorita Serrano</td>
+                                            <td>Software Engineer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:18 ~ 21:45</td>
+                                            <td>2013-01-16</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2013-02-01</td>
+                                            <td>Jennifer Acosta</td>
+                                            <td>Junior Javascript Developer</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:20 ~ 21:45</td>
+                                            <td>2013-01-17</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-12-06</td>
+                                            <td>Cara Stevens</td>
+                                            <td>Sales Assistant</td>
+                                            <td>New York</td>
+                                            <td>15:19 ~ 21:45</td>
+                                            <td>2013-01-19</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-03-21</td>
+                                            <td>Hermione Butler</td>
+                                            <td>Regional Director</td>
+                                            <td>London</td>
+                                            <td>15:12 ~ 21:45</td>
+                                            <td>2013-01-20</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-02-27</td>
+                                            <td>Lael Greer</td>
+                                            <td>Systems Administrator</td>
+                                            <td>London</td>
+                                            <td>15:27 ~ 21:31</td>
+                                            <td>2013-01-21</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-07-14</td>
+                                            <td>Jonas Alexander</td>
+                                            <td>Developer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:16 ~ 21:19</td>
+                                            <td>2013-01-22</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-11-13</td>
+                                            <td>Shad Decker</td>
+                                            <td>Regional Director</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:26 ~ 21:35</td>
+                                            <td>2013-01-23</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-06-27</td>
+                                            <td>Michael Bruce</td>
+                                            <td>Javascript Developer</td>
+                                            <td>Singapore</td>
+                                            <td>15:19 ~ 21:45</td>
+                                            <td>2013-01-24</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-01-25</td>
+                                            <td>Donna Snider</td>
+                                            <td>Customer Support</td>
+                                            <td>New York</td>
+                                            <td>15:17 ~ 21:45</td>
+                                            <td>2013-01-25</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th class="text-nowrap text-center">上架日期</th>
+                                            <th class="text-nowrap text-center">公司名稱</th>
+                                            <th class="text-nowrap text-center">職務名稱</th>
+                                            <th class="text-nowrap text-center">工作性質</th>
+                                            <th class="text-nowrap text-center">工作時間</th>
+                                            <th class="text-nowrap text-center">下架日期</th>
+                                            <th class="text-nowrap text-center">詳情</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade p-2" id="nav-management" role="tabpanel"
+                                aria-labelledby="nav-management-tab">
+                                <table id="jobList3" class="table table-hover table-bordered responsive"
+                                    style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-nowrap text-center">上架日期</th>
+                                            <th class="text-nowrap text-center">公司名稱</th>
+                                            <th class="text-nowrap text-center">職務名稱</th>
+                                            <th class="text-nowrap text-center">工作性質</th>
+                                            <th class="text-nowrap text-center">工作時間</th>
+                                            <th class="text-nowrap text-center">下架日期</th>
+                                            <th class="text-nowrap text-center">詳情</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2008-10-26</td>
+                                            <td>Gavin Cortez</td>
+                                            <td>Team Leader</td>
+                                            <td>San Francisco</td>
+                                            <td>15:18 ~ 21:45</td>
+                                            <td>2013-01-07</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-03-09</td>
+                                            <td>Martena Mccray</td>
+                                            <td>Post-Sales support</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:19 ~ 21:45</td>
+                                            <td>2013-01-08</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-12-09</td>
+                                            <td>Unity Butler</td>
+                                            <td>Marketing Designer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:25 ~ 21:35</td>
+                                            <td>2013-01-09</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-12-16</td>
+                                            <td>Howard Hatfield</td>
+                                            <td>Office Manager</td>
+                                            <td>San Francisco</td>
+                                            <td>15:26 ~ 21:35</td>
+                                            <td>2013-01-10</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-02-12</td>
+                                            <td>Hope Fuentes</td>
+                                            <td>Secretary</td>
+                                            <td>San Francisco</td>
+                                            <td>15:05 ~ 21:09</td>
+                                            <td>2013-01-11</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-02-14</td>
+                                            <td>Vivian Harrell</td>
+                                            <td>Financial Controller</td>
+                                            <td>San Francisco</td>
+                                            <td>15:06 ~ 21:09</td>
+                                            <td>2013-01-11</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-12-11</td>
+                                            <td>Timothy Mooney</td>
+                                            <td>Office Manager</td>
+                                            <td>London</td>
+                                            <td>15:15 ~ 21:45</td>
+                                            <td>2013-01-12</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-09-26</td>
+                                            <td>Jackson Bradshaw</td>
+                                            <td>Director</td>
+                                            <td>New York</td>
+                                            <td>15:16 ~ 21:45</td>
+                                            <td>2013-01-13</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-02-03</td>
+                                            <td>Olivia Liang</td>
+                                            <td>Support Engineer</td>
+                                            <td>Singapore</td>
+                                            <td>15:36 ~ 21:49</td>
+                                            <td>2013-01-14</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-05-03</td>
+                                            <td>Bruno Nash</td>
+                                            <td>Software Engineer</td>
+                                            <td>London</td>
+                                            <td>15:37 ~ 21:49</td>
+                                            <td>2013-01-14</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-08-19</td>
+                                            <td>Sakura Yamamoto</td>
+                                            <td>Support Engineer</td>
+                                            <td>Tokyo</td>
+                                            <td>15:15 ~ 21:45</td>
+                                            <td>2013-01-15</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2013-08-11</td>
+                                            <td>Thor Walton</td>
+                                            <td>Developer</td>
+                                            <td>New York</td>
+                                            <td>15:16 ~ 21:45</td>
+                                            <td>2013-01-15</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-07-07</td>
+                                            <td>Finn Camacho</td>
+                                            <td>Support Engineer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:15 ~ 21:45</td>
+                                            <td>2013-01-16</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-04-09</td>
+                                            <td>Serge Baldwin</td>
+                                            <td>Data Coordinator</td>
+                                            <td>Singapore</td>
+                                            <td>15:06 ~ 21:49</td>
+                                            <td>2013-01-17</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-01-04</td>
+                                            <td>Zenaida Frank</td>
+                                            <td>Software Engineer</td>
+                                            <td>New York</td>
+                                            <td>15:17 ~ 21:45</td>
+                                            <td>2013-01-18</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-06-01</td>
+                                            <td>Zorita Serrano</td>
+                                            <td>Software Engineer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:18 ~ 21:45</td>
+                                            <td>2013-01-16</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2013-02-01</td>
+                                            <td>Jennifer Acosta</td>
+                                            <td>Junior Javascript Developer</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:20 ~ 21:45</td>
+                                            <td>2013-01-17</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-12-06</td>
+                                            <td>Cara Stevens</td>
+                                            <td>Sales Assistant</td>
+                                            <td>New York</td>
+                                            <td>15:19 ~ 21:45</td>
+                                            <td>2013-01-19</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-03-21</td>
+                                            <td>Hermione Butler</td>
+                                            <td>Regional Director</td>
+                                            <td>London</td>
+                                            <td>15:12 ~ 21:45</td>
+                                            <td>2013-01-20</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-02-27</td>
+                                            <td>Lael Greer</td>
+                                            <td>Systems Administrator</td>
+                                            <td>London</td>
+                                            <td>15:27 ~ 21:31</td>
+                                            <td>2013-01-21</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-07-14</td>
+                                            <td>Jonas Alexander</td>
+                                            <td>Developer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:16 ~ 21:19</td>
+                                            <td>2013-01-22</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-11-13</td>
+                                            <td>Shad Decker</td>
+                                            <td>Regional Director</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:26 ~ 21:35</td>
+                                            <td>2013-01-23</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-06-27</td>
+                                            <td>Michael Bruce</td>
+                                            <td>Javascript Developer</td>
+                                            <td>Singapore</td>
+                                            <td>15:19 ~ 21:45</td>
+                                            <td>2013-01-24</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-01-25</td>
+                                            <td>Donna Snider</td>
+                                            <td>Customer Support</td>
+                                            <td>New York</td>
+                                            <td>15:17 ~ 21:45</td>
+                                            <td>2013-01-25</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th class="text-nowrap text-center">上架日期</th>
+                                            <th class="text-nowrap text-center">公司名稱</th>
+                                            <th class="text-nowrap text-center">職務名稱</th>
+                                            <th class="text-nowrap text-center">工作性質</th>
+                                            <th class="text-nowrap text-center">工作時間</th>
+                                            <th class="text-nowrap text-center">下架日期</th>
+                                            <th class="text-nowrap text-center">詳情</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade p-2" id="nav-design" role="tabpanel"
+                                aria-labelledby="nav-design-tab">
+                                <table id="jobList4" class="table table-hover table-bordered responsive"
+                                    style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-nowrap text-center">上架日期</th>
+                                            <th class="text-nowrap text-center">公司名稱</th>
+                                            <th class="text-nowrap text-center">職務名稱</th>
+                                            <th class="text-nowrap text-center">工作性質</th>
+                                            <th class="text-nowrap text-center">工作時間</th>
+                                            <th class="text-nowrap text-center">下架日期</th>
+                                            <th class="text-nowrap text-center">詳情</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2008-12-19</td>
+                                            <td>Jena Gaines</td>
+                                            <td>Office Manager</td>
+                                            <td>London</td>
+                                            <td>18:01 ~ 21:49</td>
+                                            <td>2008-12-13</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-12-13</td>
+                                            <td>Quinn Flynn</td>
+                                            <td>Support Lead</td>
+                                            <td>Edinburgh</td>
+                                            <td>11:01 ~ 21:49</td>
+                                            <td>2013-03-03</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-10-16</td>
+                                            <td>Charde Marshall</td>
+                                            <td>Regional Director</td>
+                                            <td>San Francisco</td>
+                                            <td>11:41 ~ 21:49</td>
+                                            <td>2013-03-03</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-12-18</td>
+                                            <td>Haley Kennedy</td>
+                                            <td>Senior Marketing Designer</td>
+                                            <td>London</td>
+                                            <td>15:41 ~ 21:49</td>
+                                            <td>2014-12-18</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-03-17</td>
+                                            <td>Tatyana Fitzpatrick</td>
+                                            <td>Regional Director</td>
+                                            <td>London</td>
+                                            <td>15:41 ~ 21:49</td>
+                                            <td>2010-03-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-11-27</td>
+                                            <td>Michael Silva</td>
+                                            <td>Marketing Designer</td>
+                                            <td>London</td>
+                                            <td>15:26 ~ 21:49</td>
+                                            <td>2013-03-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-06-09</td>
+                                            <td>Paul Byrd</td>
+                                            <td>Chief Financial Officer (CFO)</td>
+                                            <td>New York</td>
+                                            <td>15:56 ~ 21:49</td>
+                                            <td>2012-03-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-04-10</td>
+                                            <td>Gloria Little</td>
+                                            <td>Systems Administrator</td>
+                                            <td>New York</td>
+                                            <td>15:25 ~ 21:49</td>
+                                            <td>2015-03-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-10-13</td>
+                                            <td>Bradley Greer</td>
+                                            <td>Software Engineer</td>
+                                            <td>London</td>
+                                            <td>15:05 ~ 21:09</td>
+                                            <td>2015-01-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-09-26</td>
+                                            <td>Dai Rios</td>
+                                            <td>Personnel Lead</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:15 ~ 21:19</td>
+                                            <td>2013-02-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-09-03</td>
+                                            <td>Jenette Caldwell</td>
+                                            <td>Development Lead</td>
+                                            <td>New York</td>
+                                            <td>15:16 ~ 21:19</td>
+                                            <td>2013-03-27</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-06-25</td>
+                                            <td>Yuri Berry</td>
+                                            <td>Chief Marketing Officer (CMO)</td>
+                                            <td>New York</td>
+                                            <td>15:26 ~ 21:39</td>
+                                            <td>2013-03-28</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-12-12</td>
+                                            <td>Caesar Vance</td>
+                                            <td>Pre-Sales Support</td>
+                                            <td>New York</td>
+                                            <td>15:27 ~ 21:31</td>
+                                            <td>2013-03-29</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-09-20</td>
+                                            <td>Doris Wilder</td>
+                                            <td>Sales Assistant</td>
+                                            <td>Sydney</td>
+                                            <td>15:25 ~ 21:32</td>
+                                            <td>2013-03-30</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-10-09</td>
+                                            <td>Angelica Ramos</td>
+                                            <td>Chief Executive Officer (CEO)</td>
+                                            <td>London</td>
+                                            <td>15:25 ~ 21:33</td>
+                                            <td>2013-01-01</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-12-22</td>
+                                            <td>Gavin Joyce</td>
+                                            <td>Developer</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:12 ~ 21:45</td>
+                                            <td>2013-01-02</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-11-14</td>
+                                            <td>Jennifer Chang</td>
+                                            <td>Regional Director</td>
+                                            <td>Singapore</td>
+                                            <td>15:13 ~ 21:45</td>
+                                            <td>2013-01-03</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-06-07</td>
+                                            <td>Brenden Wagner</td>
+                                            <td>Software Engineer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:13 ~ 21:45</td>
+                                            <td>2013-01-03</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-03-11</td>
+                                            <td>Fiona Green</td>
+                                            <td>Chief Operating Officer (COO)</td>
+                                            <td>San Francisco</td>
+                                            <td>15:14 ~ 21:45</td>
+                                            <td>2013-01-04</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-08-14</td>
+                                            <td>Shou Itou</td>
+                                            <td>Regional Marketing</td>
+                                            <td>Tokyo</td>
+                                            <td>15:14 ~ 21:45</td>
+                                            <td>2013-01-05</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-06-02</td>
+                                            <td>Michelle House</td>
+                                            <td>Integration Specialist</td>
+                                            <td>Sydney</td>
+                                            <td>15:15 ~ 21:45</td>
+                                            <td>2013-01-06</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-10-22</td>
+                                            <td>Suki Burks</td>
+                                            <td>Developer</td>
+                                            <td>London</td>
+                                            <td>15:16 ~ 21:45</td>
+                                            <td>2013-01-07</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-05-07</td>
+                                            <td>Prescott Bartlett</td>
+                                            <td>Technical Author</td>
+                                            <td>London</td>
+                                            <td>15:17 ~ 21:45</td>
+                                            <td>2013-01-08</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-10-26</td>
+                                            <td>Gavin Cortez</td>
+                                            <td>Team Leader</td>
+                                            <td>San Francisco</td>
+                                            <td>15:18 ~ 21:45</td>
+                                            <td>2013-01-07</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-03-09</td>
+                                            <td>Martena Mccray</td>
+                                            <td>Post-Sales support</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:19 ~ 21:45</td>
+                                            <td>2013-01-08</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-12-09</td>
+                                            <td>Unity Butler</td>
+                                            <td>Marketing Designer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:25 ~ 21:35</td>
+                                            <td>2013-01-09</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-12-16</td>
+                                            <td>Howard Hatfield</td>
+                                            <td>Office Manager</td>
+                                            <td>San Francisco</td>
+                                            <td>15:26 ~ 21:35</td>
+                                            <td>2013-01-10</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-02-12</td>
+                                            <td>Hope Fuentes</td>
+                                            <td>Secretary</td>
+                                            <td>San Francisco</td>
+                                            <td>15:05 ~ 21:09</td>
+                                            <td>2013-01-11</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-02-14</td>
+                                            <td>Vivian Harrell</td>
+                                            <td>Financial Controller</td>
+                                            <td>San Francisco</td>
+                                            <td>15:06 ~ 21:09</td>
+                                            <td>2013-01-11</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-12-11</td>
+                                            <td>Timothy Mooney</td>
+                                            <td>Office Manager</td>
+                                            <td>London</td>
+                                            <td>15:15 ~ 21:45</td>
+                                            <td>2013-01-12</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-09-26</td>
+                                            <td>Jackson Bradshaw</td>
+                                            <td>Director</td>
+                                            <td>New York</td>
+                                            <td>15:16 ~ 21:45</td>
+                                            <td>2013-01-13</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-02-03</td>
+                                            <td>Olivia Liang</td>
+                                            <td>Support Engineer</td>
+                                            <td>Singapore</td>
+                                            <td>15:36 ~ 21:49</td>
+                                            <td>2013-01-14</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-05-03</td>
+                                            <td>Bruno Nash</td>
+                                            <td>Software Engineer</td>
+                                            <td>London</td>
+                                            <td>15:37 ~ 21:49</td>
+                                            <td>2013-01-14</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-08-19</td>
+                                            <td>Sakura Yamamoto</td>
+                                            <td>Support Engineer</td>
+                                            <td>Tokyo</td>
+                                            <td>15:15 ~ 21:45</td>
+                                            <td>2013-01-15</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2013-08-11</td>
+                                            <td>Thor Walton</td>
+                                            <td>Developer</td>
+                                            <td>New York</td>
+                                            <td>15:16 ~ 21:45</td>
+                                            <td>2013-01-15</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-07-07</td>
+                                            <td>Finn Camacho</td>
+                                            <td>Support Engineer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:15 ~ 21:45</td>
+                                            <td>2013-01-16</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-04-09</td>
+                                            <td>Serge Baldwin</td>
+                                            <td>Data Coordinator</td>
+                                            <td>Singapore</td>
+                                            <td>15:06 ~ 21:49</td>
+                                            <td>2013-01-17</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-01-04</td>
+                                            <td>Zenaida Frank</td>
+                                            <td>Software Engineer</td>
+                                            <td>New York</td>
+                                            <td>15:17 ~ 21:45</td>
+                                            <td>2013-01-18</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012-06-01</td>
+                                            <td>Zorita Serrano</td>
+                                            <td>Software Engineer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:18 ~ 21:45</td>
+                                            <td>2013-01-16</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2013-02-01</td>
+                                            <td>Jennifer Acosta</td>
+                                            <td>Junior Javascript Developer</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:20 ~ 21:45</td>
+                                            <td>2013-01-17</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-12-06</td>
+                                            <td>Cara Stevens</td>
+                                            <td>Sales Assistant</td>
+                                            <td>New York</td>
+                                            <td>15:19 ~ 21:45</td>
+                                            <td>2013-01-19</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-03-21</td>
+                                            <td>Hermione Butler</td>
+                                            <td>Regional Director</td>
+                                            <td>London</td>
+                                            <td>15:12 ~ 21:45</td>
+                                            <td>2013-01-20</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009-02-27</td>
+                                            <td>Lael Greer</td>
+                                            <td>Systems Administrator</td>
+                                            <td>London</td>
+                                            <td>15:27 ~ 21:31</td>
+                                            <td>2013-01-21</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-07-14</td>
+                                            <td>Jonas Alexander</td>
+                                            <td>Developer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:16 ~ 21:19</td>
+                                            <td>2013-01-22</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-11-13</td>
+                                            <td>Shad Decker</td>
+                                            <td>Regional Director</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:26 ~ 21:35</td>
+                                            <td>2013-01-23</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-06-27</td>
+                                            <td>Michael Bruce</td>
+                                            <td>Javascript Developer</td>
+                                            <td>Singapore</td>
+                                            <td>15:19 ~ 21:45</td>
+                                            <td>2013-01-24</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-01-25</td>
+                                            <td>Donna Snider</td>
+                                            <td>Customer Support</td>
+                                            <td>New York</td>
+                                            <td>15:17 ~ 21:45</td>
+                                            <td>2013-01-25</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th class="text-nowrap text-center">上架日期</th>
+                                            <th class="text-nowrap text-center">公司名稱</th>
+                                            <th class="text-nowrap text-center">職務名稱</th>
+                                            <th class="text-nowrap text-center">工作性質</th>
+                                            <th class="text-nowrap text-center">工作時間</th>
+                                            <th class="text-nowrap text-center">下架日期</th>
+                                            <th class="text-nowrap text-center">詳情</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade p-2" id="nav-language" role="tabpanel"
+                                aria-labelledby="nav-language-tab">
+                                <table id="jobList5" class="table table-hover table-bordered responsive"
+                                    style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-nowrap text-center">上架日期</th>
+                                            <th class="text-nowrap text-center">公司名稱</th>
+                                            <th class="text-nowrap text-center">職務名稱</th>
+                                            <th class="text-nowrap text-center">工作性質</th>
+                                            <th class="text-nowrap text-center">工作時間</th>
+                                            <th class="text-nowrap text-center">下架日期</th>
+                                            <th class="text-nowrap text-center">詳情</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2009-02-27</td>
+                                            <td>Lael Greer</td>
+                                            <td>Systems Administrator</td>
+                                            <td>London</td>
+                                            <td>15:27 ~ 21:31</td>
+                                            <td>2013-01-21</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2010-07-14</td>
+                                            <td>Jonas Alexander</td>
+                                            <td>Developer</td>
+                                            <td>San Francisco</td>
+                                            <td>15:16 ~ 21:19</td>
+                                            <td>2013-01-22</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008-11-13</td>
+                                            <td>Shad Decker</td>
+                                            <td>Regional Director</td>
+                                            <td>Edinburgh</td>
+                                            <td>15:26 ~ 21:35</td>
+                                            <td>2013-01-23</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-06-27</td>
+                                            <td>Michael Bruce</td>
+                                            <td>Javascript Developer</td>
+                                            <td>Singapore</td>
+                                            <td>15:19 ~ 21:45</td>
+                                            <td>2013-01-24</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011-01-25</td>
+                                            <td>Donna Snider</td>
+                                            <td>Customer Support</td>
+                                            <td>New York</td>
+                                            <td>15:17 ~ 21:45</td>
+                                            <td>2013-01-25</td>
+                                            <td class="text-center"><button type="button"
+                                                    class="btn btn-outline-primary rounded-circle btn-sm"><i
+                                                        class="fa-solid fa-info px-1"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th class="text-nowrap text-center">上架日期</th>
+                                            <th class="text-nowrap text-center">公司名稱</th>
+                                            <th class="text-nowrap text-center">職務名稱</th>
+                                            <th class="text-nowrap text-center">工作性質</th>
+                                            <th class="text-nowrap text-center">工作時間</th>
+                                            <th class="text-nowrap text-center">下架日期</th>
+                                            <th class="text-nowrap text-center">詳情</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 分析區 -->
+                <!-- <div class="analytics section-border-radius">
+                    <h3 class="section-header">分析統計</h3>
+                    <div class="list-analytics">
+                        <div class="analytic a">
+                            <span class="icon">
+                                <i class="fas fa-users"></i>
+                            </span>
+                            <h3 class="num">35.2 K</h3>
+                            <p class="desc">Total followers</p>
+                        </div>
+                        <div class="analytic b">
+                            <span class="icon">
+                                <i class="fas fa-fingerprint"></i>
+                            </span>
+                            <h3 class="num">8.1 K</h3>
+                            <p class="desc">Impressions</p>
+                            <span class="percent up">
+                                <i class="fas fa-caret-up"></i>
+                                <span class="value">115.31%</span>
+                            </span>
+                        </div>
+                        <div class="analytic c">
+                            <span class="icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </span>
+                            <h3 class="num">9.1 K</h3>
+                            <p class="desc">Reach</p>
+                            <span class="percent down">
+                                <i class="fas fa-caret-down"></i>
+                                <span class="value">12.42%</span>
+                            </span>
+                        </div>
+                        <div class="analytic d">
+                            <span class="icon">
+                                <i class="fas fa-hand-pointer"></i>
+                            </span>
+                            <h3 class="num">26.8 K</h3>
+                            <p class="desc">Engagement Rate</p>
+                            <span class="percent up">
+                                <i class="fas fa-caret-up"></i>
+                                <span class="value">86.79%</span>
+                            </span>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- 特殊提示 -->
+                <!-- <div class="message section-border-radius">
+                    <p class="text">
+                        任意全體總數資源地址不多認為留下給我們瀏覽新增，穩定空中成就特色記錄草魚百度寂寞記憶專欄，色彩總統我只合理一個月主持，臺灣機構庫存上帝周邊，立刻請問教材主角老婆龍岡日本地說評論辦法能源機制拿出有關部門，威脅經歷我對幾年，就要等待，複雜身體呼吸影響，明天據。
+                    </p>
+                    <button class="btn-discover">跟我來</button>
+                    <i class="fas fa-times icon-close"></i>
+                </div> -->
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="staticBackdropLabel">職缺內容</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <!-- 公司名稱和公司簡介 -->
+                                    <div class="row mb-1">
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                            公司名稱
+                                        </div>
+                                        <div class="col lightBoxItems p-3" id="companyName">
+                                            Tiger Nixon
+                                        </div>
+                                    </div>
+                                    <div class="row mb-1">
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                            公司簡介
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            顏色一時二級阿宅人民共和國，臉色全球兒子現代系統滿足楠雅回去離線過了消息，想法如此實驗有機會我在今日說出消除主動可是作用法規，具體意味着註冊時間，你怎麼版面對比白色時期配合只能效率名稱出了，痛苦電話一本概念測試健康一場，教育活動事業經過促進，能不能，強烈。
+                                        </div>
+                                    </div>
+
+                                    <!-- 職務相關資訊 -->
+                                    <div class="row mb-1 multiple">
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                            職務名稱
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            System Architect
+                                        </div>
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                            工作性質
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            Edinburgh
+                                        </div>
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                            科系限制
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            不限學系
+                                        </div>
+                                    </div>
+
+                                    <!-- 工作時間、休假制度、工作待遇 -->
+                                    <div class="row mb-1 multiple">
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                            工作時間
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            11:00 ~ 12:00
+                                        </div>
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                            休假制度
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            見紅休
+                                        </div>
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                            工作待遇
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            110/hr
+                                        </div>
+                                    </div>
+
+                                    <!-- 工作內容、附加條件、應徵方式 -->
+                                    <div class="row mb-1">
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                            工作內容
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            最近進口數學上有全身來說學習百姓長沙，笑道涉及一個青春人氣，理論一場怎麼樣熟悉價格委託利用消除專家聽到條款平衡老公，傳統面前，選擇第二章是個措施幫你下了你們的一塊領先線上描述，農村本帖場所代理接口回去一時加快豪華，要有你可以國內不了，而在一股和平島成果一。
+                                        </div>
+                                    </div>
+                                    <div class="row mb-1">
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                            附加條件
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            根據下去立場等人隨意政策方式，本報由於，人氣品質，引發一部。
+                                        </div>
+                                    </div>
+                                    <div class="row mb-1">
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                            應徵方式
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            透明參考，放下機票。
+                                        </div>
+                                    </div>
+
+                                    <!-- 工作地點和截止日期 -->
+                                    <div class="row mb-1 multiple">
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                            工作地點
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            異常看見遭遇已經主管當中挑戰清除，你自。
+                                        </div>
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                            截止日期
+                                        </div>
+                                        <div class="col-12 col-lg-auto lightBoxItems p-3">
+                                            2011-06-30
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary"
+                                    data-bs-dismiss="modal">關閉視窗</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 頁尾 -->
+                <div class="footer section-padding section-border-radius my-2r">
+                    <ul class="links">
+                        <li><a href="#">大同大學</a></li>
+                        <li><a href="./nav-memo2-joblist.html">育成媒合</a></li>
+                        <li><a href="./nav-memo2.html">帳戶總攬</a></li>
+                    </ul>
+                    <p class="copyright">
+                        大同大學 版權所有&copy;2022 All Rights Reserved.<br>建議使用：IE9.0以上版本或Google
+                        Chrome瀏覽器<span>(最佳螢幕解析1280*1024)</span>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.1/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.1/js/responsive.bootstrap5.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

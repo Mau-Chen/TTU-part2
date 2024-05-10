@@ -1,0 +1,27 @@
+.tabs-box .tabs {
+  background-color: #fff;
+}
+
+textarea.resize-none {
+  resize: none;
+}
+textarea.h-100 {
+  height: 100px;
+}
+textarea.h-150 {
+  height: 150px;
+}
+textarea.h-200 {
+  height: 200px;
+}
+
+.salaryRadio {
+  border: 1px dashed;
+  border-radius: 8px;
+}
+.salaryRadio .salaryLabel {
+  display: none;
+}
+.salaryRadio .salaryLabel.choose {
+  display: flex;
+}/*# sourceMappingURL=nav-memo2-joblist.css.map */

@@ -155,12 +155,15 @@ nav .nav-tabs .nav-link.active {
 .main .nav-box .navbar-user img {
   border-radius: 50px;
 }
+.main .nav-box .bottom {
+  padding-bottom: 50px;
+}
 .main .burger-menu {
   position: absolute;
   color: #fff;
   font-size: 18px;
   left: 100%;
-  background-color: #2d3037;
+  background-color: #f3969a;
   height: 35px;
   width: 40px;
   text-align: center;

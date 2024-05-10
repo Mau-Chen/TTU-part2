@@ -200,6 +200,9 @@ nav{
             border-radius: 50px;
 
         }
+        .bottom{
+            padding-bottom: 50px;
+        }
     }
 
     .burger-menu {
@@ -207,7 +210,8 @@ nav{
         color: #fff;
         font-size: 18px;
         left: 100%;
-        background-color: #2d3037;
+        // background-color: #2d3037;
+        background-color: #f3969a;
         height: 35px;
         width: 40px;
         text-align: center;

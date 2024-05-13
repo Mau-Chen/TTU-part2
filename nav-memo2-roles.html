@@ -24,8 +24,6 @@
             <!-- 側邊攔上方 -->
             <div class="top">
                 <a href="#" class="navbar-logo">
-                    <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEX///8jHyAAAADp6enx8fHd3d0JAADt7e0aFRYWERIUDQ98ent4d3dgX1+GhIQgHB2urq4PCAr5+fmYl5dUUlInIyShoKDk4+Q5NjdKSEm9vb0+OzzT09MdGBqMi4szMDFta2zFxMW5ubnNzc091wKRAAACWElEQVR4nO3d7W6iQBSA4WEUqqilaLEfitr2/u9xcc2STYEmzQxnxsP7/IfkzYgRdI7GAAAAAAAAAAAAAAAAAAAAAAAAYBzzmU/z0DnfpLvnxHqVVZv9S+is1tOrLRdF4lexKO3be+i0vz4q67vun9oejqHzjLmM1ndrPAXum5/LEfuu7HPYwGoxcmCS5G8hC8/jBzaJAVfxMvZL9CbctfhuRQKbxDRQYTHmu+j/6kCX4l5qCZtF/AhSWEktYZIsgrzZHOWWsFnEhwCFp1ywMHsKUHioBQuXF/nA7VLuMmzuNM7yhTPJy7C5l9qKF76IFiaZ/E1/OtnC3PHxxcA7dDSFdXZKXa6Y7XHVf0cdS2FdzZxPfCz7EiMpLDL3wIEPS5EUljsvp14voy20PpbQmK+eU8dS6OfUfR8mIinM/Jz6gUIZFDqgUAiFDigUQqEDCoVQ6IBCIb8o3K8HrPqf1d9d4atdDsjtpu+Aeyvc/fRg1X72HHFvhZuffs2QP/YcQaEQClsUdlEohMIWhV0UCqGwRWEXhUIobFHYRaEQClsUdlEohMIWhV33Vqj/mbc52Fz39xbG7FdDlHz39GsUCqHQAYVCKHRAoRAKHVAohEIHFAqZ5r4n/XvX9O8/LEof4yti3kPqZR9wmke8D3gCe7mvL1TH/fg912BchWMJUKh/Lob+2Sb659PonzE0gTlR+md96Z/XNoGZe/rnJk5g9qX++aUTmEE7gTnC+mdBN9bK53mbCcxkN/rn6l9p/2+EG93/bwEAAAAAAAAAAAAAAAAAAAAAAKDHHz9+QHDZSUMNAAAAAElFTkSuQmCC"
-                        class="navbar-brand"> -->
                     <img src="./img/ttoLogo_2.png" class="navbar-brand">
                 </a>
                 <ul class="navigation navbar-top">
@@ -53,10 +51,10 @@
                                 class="fa-solid fa-users-rectangle"></i><span
                                 class="tooltiptext tooltip-right">職員管理</span></a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">職員設定&ensp;<i class="fa-solid fa-users-gear"></i></a>
-                            </li>
                             <li><a class="dropdown-item" href="#">識別證申請&ensp;<i
                                         class="fa-regular fa-address-card"></i></a></li>
+                            <li><a class="dropdown-item" href="#">職員設定&emsp;&ensp;<i
+                                        class="fa-solid fa-users-gear"></i></a></li>
                         </ul>
                     </li>
                     <li class="item dropend">
@@ -73,6 +71,23 @@
                                         class="fa-solid fa-file-signature"></i></a></li>
                         </ul>
                     </li>
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-stamp"></i><span
+                                class="tooltiptext tooltip-right">資料審核</span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">廠商審核&emsp;&ensp;<i class="fa-solid fa-user-tie"></i></a></li>
+                            <li><a class="dropdown-item" href="#">車位審核&emsp;&ensp;<i
+                                        class="fa-solid fa-square-parking"></i></a></li>
+                            <li><a class="dropdown-item" href="#">空間審核&emsp;&ensp;<i class="fa-solid fa-building"></i></a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">續約審核&emsp;&ensp;<i class="fa-solid fa-file-signature"></i></a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">識別證審核&ensp;<i class="fa-regular fa-address-card"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+
                     <li class="item">
                         <a class="link" href="#"><i class="fa-solid fa-spinner"></i><span
                                 class="tooltiptext tooltip-right">進度查詢</span></a>
@@ -106,7 +121,7 @@
             <div class="bottom">
                 <ul class="navigation">
                     <!-- 已登入 -->
-                    <!-- <li class="item dropend">
+                    <li class="item dropend">
                         <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                             data-bs-toggle="dropdown" aria-expanded="false"><i
                                 class="fa-regular fa-circle-user"></i></a>
@@ -114,12 +129,12 @@
                             <li><a class="dropdown-item" href="#">設定&ensp;<i class="fa-solid fa-gear"></i></a></li>
                             <li><a class="dropdown-item" href="#">登出&ensp;<i class="fa-solid fa-door-open"></i></a></li>
                         </ul>
-                    </li> -->
+                    </li>
                     <!-- 未登入 -->
-                    <li class="item">
+                    <!-- <li class="item">
                         <a class="link" href="#"><i class="fa-regular fa-circle-user"></i><span
                                 class="tooltiptext tooltip-right">登入&ensp;/&ensp;申請</span></a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </nav>

@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大同大學-校內育成媒合平台</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/nav-memo2-main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.1/css/responsive.bootstrap5.min.css">
+</head>
+
+<body>
+    <main class="main">
+        <!-- 側邊攔 -->
+        <nav class="nav-box">
+            <!-- RWD-MENU標籤 -->
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- 側邊攔上方 -->
+            <div class="top">
+                <a href="#" class="navbar-logo">
+                    <img src="./img/ttoLogo_2.png" class="navbar-brand">
+                </a>
+                <ul class="navigation navbar-top">
+                    <li class="item">
+                        <a class="link active" href="./nav-memo2.html"><i class="fas fa-home"></i><span class="tooltiptext tooltip-right">儀錶板</span></a>
+                    </li>
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-users"></i><span
+                                class="tooltiptext tooltip-right">職缺媒合</span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="./nav-memo2-joblist.html">職缺總攬&ensp;<i class="fa-solid fa-users-line"></i></a></li>
+                            <li><a class="dropdown-item" href="./nav-memo2-myjob.html">刊登中&emsp;&ensp;<i class="fa-solid fa-users-viewfinder"></i></a></li>
+                            <li><a class="dropdown-item" href="./nav-memo2-jobCreate.html">職缺登陸&ensp;<i class="fa-solid fa-user-plus"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i
+                                class="fa-solid fa-users-rectangle"></i><span
+                                class="tooltiptext tooltip-right">職員管理</span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">識別證申請&ensp;<i
+                                        class="fa-regular fa-address-card"></i></a></li>
+                            <li><a class="dropdown-item" href="#">職員設定&emsp;&ensp;<i
+                                        class="fa-solid fa-users-gear"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-file-contract"></i><span class="tooltiptext tooltip-right">合約申請</span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">車位申請&ensp;<i class="fa-solid fa-square-parking"></i></a></li>
+                            <li><a class="dropdown-item" href="#">空間申請&ensp;<i class="fa-solid fa-building"></i></a></li>
+                            <li><a class="dropdown-item" href="#">續約申請&ensp;<i class="fa-solid fa-file-signature"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#"><i class="fa-solid fa-spinner"></i><span
+                                class="tooltiptext tooltip-right">進度查詢</span></a>
+                    </li>
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-stamp"></i><span
+                                class="tooltiptext tooltip-right">資料審核</span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="./vendorApplication.html">廠商審核&emsp;&ensp;<i
+                                        class="fa-solid fa-user-tie"></i></a></li>
+                            <li><a class="dropdown-item" href="#">車位審核&emsp;&ensp;<i
+                                        class="fa-solid fa-square-parking"></i></a></li>
+                            <li><a class="dropdown-item" href="#">空間審核&emsp;&ensp;<i
+                                        class="fa-solid fa-building"></i></a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">續約審核&emsp;&ensp;<i
+                                        class="fa-solid fa-file-signature"></i></a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">識別證審核&ensp;<i
+                                        class="fa-regular fa-address-card"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="item">
+                        <a class="link" href="./nav-memo2-roles.html"><i class="fa-solid fa-people-robbery"></i><span
+                                class="tooltiptext tooltip-right">權限設定</span></a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#"><i class="fa-solid fa-file-shield"></i><span
+                                class="tooltiptext tooltip-right">LOG紀錄</span></a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#"><i class="fa-regular fa-paper-plane"></i><span
+                                class="tooltiptext tooltip-right">意見反應</span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 側邊攔下方 -->
+            <div class="bottom">
+                <ul class="navigation">
+                    <!-- 已登入 -->
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i
+                                class="fa-regular fa-circle-user"></i></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">設定&ensp;<i class="fa-solid fa-gear"></i></a></li>
+                            <li><a class="dropdown-item" href="#">登出&ensp;<i class="fa-solid fa-door-open"></i></a></li>
+                        </ul>
+                    </li>
+                    <!-- 未登入 -->
+                    <!-- <li class="item">
+                        <a class="link" href="./nav-memo2-login.html"><i class="fa-regular fa-circle-user"></i><span
+                                class="tooltiptext tooltip-right">登入&ensp;/&ensp;申請</span></a>
+                    </li> -->
+                </ul>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="container">
+                <!-- 麵包屑 -->
+                <div class="breadcrumb-box section-padding section-border-radius my-2r">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><i class="fa-solid fa-stamp"></i>&ensp;資料審核</li>
+                        <li class="breadcrumb-item active"><i class="fa-solid fa-user-tie"></i>&ensp;廠商審核</li>
+                    </ol>
+                </div>
+
+                <!-- 職缺列表 -->
+                <div class="tabs-box my-2r">
+                    <h3 class="section-header"><i class="fa-solid fa-quote-left"></i>申請列表<i
+                        class="fa-solid fa-quote-right"></i></h3>
+                    <div class="tabs section-border-radius section-padding">
+                        <table id="venderApplicationList"
+                            class="table table-hover table-bordered responsive align-middle" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th class="text-nowrap text-center">申請日期</th>
+                                    <th class="text-nowrap text-center">公司名稱</th>
+                                    <th class="text-nowrap text-center">統一編號</th>
+                                    <th class="text-nowrap text-center">E-mail</th>
+                                    <th class="text-nowrap text-center">審核結果</th>
+                                    <th class="text-nowrap text-center">檢閱</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">2024-04-25</td>
+                                    <td>Tiger Nixon</td>
+                                    <td class="text-center">23456780</td>
+                                    <td>abc@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-06-30</td>
+                                    <td>Garrett Winters</td>
+                                    <td class="text-center">83456780</td>
+                                    <td>bcd@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-01-12</td>
+                                    <td>Ashton Cox</td>
+                                    <td class="text-center">53456780</td>
+                                    <td>cde@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2012-03-29</td>
+                                    <td>Cedric Kelly</td>
+                                    <td class="text-center">63456780</td>
+                                    <td>def@gmail.com</td>
+                                    <td class="text-center">不通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2008-11-28</td>
+                                    <td>Airi Satou</td>
+                                    <td class="text-center">83456780</td>
+                                    <td>efg@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2012-12-02</td>
+                                    <td>Brielle Williamson</td>
+                                    <td class="text-center">63456780</td>
+                                    <td>fgh@gmail.com</td>
+                                    <td class="text-center">待補件</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2012-08-06</td>
+                                    <td>Herrod Chandler</td>
+                                    <td class="text-center">63453780</td>
+                                    <td>ghi@gmail.com</td>
+                                    <td class="text-center">待補件</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-10-14</td>
+                                    <td>Rhona Davidson</td>
+                                    <td class="text-center">63456780</td>
+                                    <td>hij@gmail.com</td>
+                                    <td class="text-center">待補件</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-09-15</td>
+                                    <td>Colleen Hurst</td>
+                                    <td class="text-center">63443780</td>
+                                    <td>ijk@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2008-12-13</td>
+                                    <td>Sonya Frost</td>
+                                    <td class="text-center">22443780</td>
+                                    <td>jkl@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2008-12-19</td>
+                                    <td>Jena Gaines</td>
+                                    <td class="text-center">52443780</td>
+                                    <td>klm@gmail.com</td>
+                                    <td class="text-center">待補件</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2013-03-03</td>
+                                    <td>Quinn Flynn</td>
+                                    <td class="text-center">11443780</td>
+                                    <td>lmn@gmail.com</td>
+                                    <td class="text-center">待補件</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2008-10-16</td>
+                                    <td>Charde Marshall</td>
+                                    <td class="text-center">11445380</td>
+                                    <td>mno@gmail.com</td>
+                                    <td class="text-center">待補件</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2012-12-18</td>
+                                    <td>Haley Kennedy</td>
+                                    <td class="text-center">11427380</td>
+                                    <td>nop@gmail.com</td>
+                                    <td class="text-center">待補件</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-03-17</td>
+                                    <td>Tatyana Fitzpatrick</td>
+                                    <td class="text-center">11445380</td>
+                                    <td>opq@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2012-11-27</td>
+                                    <td>Michael Silva</td>
+                                    <td class="text-center">05427380</td>
+                                    <td>pqr@gmail.com</td>
+                                    <td class="text-center">待審中</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-06-09</td>
+                                    <td>Paul Byrd</td>
+                                    <td class="text-center">05427380</td>
+                                    <td>qrs@gmail.com</td>
+                                    <td class="text-center">待審中</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2018-06-09</td>
+                                    <td>Gloria Little</td>
+                                    <td class="text-center">12345678</td>
+                                    <td>rst@gmail.com</td>
+                                    <td class="text-center">待審中</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2012-10-13</td>
+                                    <td>Bradley Greer</td>
+                                    <td class="text-center">22443780</td>
+                                    <td>stu@gmail.com</td>
+                                    <td class="text-center">待審中</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2012-09-26</td>
+                                    <td>Dai Rios</td>
+                                    <td class="text-center">05437380</td>
+                                    <td>tuv@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-09-03</td>
+                                    <td>Jenette Caldwell</td>
+                                    <td class="text-center">24437380</td>
+                                    <td>uvw@gmail.com</td>
+                                    <td class="text-center">待審中</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-06-25</td>
+                                    <td>Yuri Berry</td>
+                                    <td class="text-center">94437380</td>
+                                    <td>vwx@gmail.com</td>
+                                    <td class="text-center">待審中</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-12-12</td>
+                                    <td>Caesar Vance</td>
+                                    <td class="text-center">24437380</td>
+                                    <td>wxy@gmail.com</td>
+                                    <td class="text-center">待審中</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-09-20</td>
+                                    <td>Doris Wilder</td>
+                                    <td class="text-center">63453780</td>
+                                    <td>xyx@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-10-09</td>
+                                    <td>Angelica Ramos</td>
+                                    <td class="text-center">24457380</td>
+                                    <td>axyx@gmail.com</td>
+                                    <td class="text-center">待審中</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-12-22</td>
+                                    <td>Gavin Joyce</td>
+                                    <td class="text-center">24457380</td>
+                                    <td>bxyx@gmail.com</td>
+                                    <td class="text-center">不通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-11-14</td>
+                                    <td>Jennifer Chang</td>
+                                    <td class="text-center">11445380</td>
+                                    <td>cxyx@gmail.com</td>
+                                    <td class="text-center">待審中</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-06-07</td>
+                                    <td>Brenden Wagner</td>
+                                    <td class="text-center">22443780</td>
+                                    <td>dxyx@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-03-11</td>
+                                    <td>Fiona Green</td>
+                                    <td class="text-center">24457380</td>
+                                    <td>exyx@gmail.com</td>
+                                    <td class="text-center">待審中</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-08-14</td>
+                                    <td>Shou Itou</td>
+                                    <td class="text-center">24454380</td>
+                                    <td>fxyx@gmail.com</td>
+                                    <td class="text-center">待審中</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-06-02</td>
+                                    <td>Michelle House</td>
+                                    <td class="text-center">63456780</td>
+                                    <td>gxyx@gmail.com</td>
+                                    <td class="text-center">待審中</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-10-22</td>
+                                    <td>Suki Burks</td>
+                                    <td class="text-center">24457380</td>
+                                    <td>hxyx@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-05-07</td>
+                                    <td>Prescott Bartlett</td>
+                                    <td class="text-center">24454380</td>
+                                    <td>ixyx@gmail.com</td>
+                                    <td class="text-center">待審中</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2008-10-26</td>
+                                    <td>Gavin Cortez</td>
+                                    <td class="text-center">21454380</td>
+                                    <td>jxyx@gmail.com</td>
+                                    <td class="text-center">待審中</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-03-09</td>
+                                    <td>Martena Mccray</td>
+                                    <td class="text-center">21444380</td>
+                                    <td>kxyx@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-12-09</td>
+                                    <td>Unity Butler</td>
+                                    <td class="text-center">05427380</td>
+                                    <td>lxyx@gmail.com</td>
+                                    <td class="text-center">不通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2008-12-16</td>
+                                    <td>Howard Hatfield</td>
+                                    <td class="text-center">52443780</td>
+                                    <td>mxyx@gmail.com</td>
+                                    <td class="text-center">不通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-02-12</td>
+                                    <td>Hope Fuentes</td>
+                                    <td class="text-center">21424380</td>
+                                    <td>nxyx@gmail.com</td>
+                                    <td class="text-center">待補件</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-02-14</td>
+                                    <td>Vivian Harrell</td>
+                                    <td class="text-center">21434380</td>
+                                    <td>oxyx@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2008-12-11</td>
+                                    <td>Timothy Mooney</td>
+                                    <td class="text-center">52443780</td>
+                                    <td>pxyx@gmail.com</td>
+                                    <td class="text-center">待補件</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2008-09-26</td>
+                                    <td>Jackson Bradshaw</td>
+                                    <td class="text-center">22434380</td>
+                                    <td>qxyx@gmail.com</td>
+                                    <td class="text-center">待補件</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-02-03</td>
+                                    <td>Olivia Liang</td>
+                                    <td class="text-center">22475380</td>
+                                    <td>rxyx@gmail.com</td>
+                                    <td class="text-center">待補件</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-05-03</td>
+                                    <td>Bruno Nash</td>
+                                    <td class="text-center">22443780</td>
+                                    <td>sxyx@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-08-19</td>
+                                    <td>Sakura Yamamoto</td>
+                                    <td class="text-center">22475380</td>
+                                    <td>txyx@gmail.com</td>
+                                    <td class="text-center">待審中</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2013-08-11</td>
+                                    <td>Thor Walton</td>
+                                    <td class="text-center">24457380</td>
+                                    <td>uxyx@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-07-07</td>
+                                    <td>Finn Camacho</td>
+                                    <td class="text-center">22475380</td>
+                                    <td>vxyx@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2012-04-09</td>
+                                    <td>Serge Baldwin</td>
+                                    <td class="text-center">22575480</td>
+                                    <td>wxyx@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-01-04</td>
+                                    <td>Zenaida Frank</td>
+                                    <td class="text-center">22443780</td>
+                                    <td>xxyx@gmail.com</td>
+                                    <td class="text-center">待審中</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2012-06-01</td>
+                                    <td>Zorita Serrano</td>
+                                    <td class="text-center">22443780</td>
+                                    <td>yxyx@gmail.com</td>
+                                    <td class="text-center">待審中</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2013-02-01</td>
+                                    <td>Jennifer Acosta</td>
+                                    <td class="text-center">22475480</td>
+                                    <td>xxyx@gmail.com</td>
+                                    <td class="text-center">待審中</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-12-06</td>
+                                    <td>Cara Stevens</td>
+                                    <td class="text-center">63453780</td>
+                                    <td>aabc@gmail.com</td>
+                                    <td class="text-center">不通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-03-21</td>
+                                    <td>Hermione Butler</td>
+                                    <td class="text-center">11445380</td>
+                                    <td>babc@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-02-27</td>
+                                    <td>Lael Greer</td>
+                                    <td class="text-center">22475180</td>
+                                    <td>cabc@gmail.com</td>
+                                    <td class="text-center">不通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-07-14</td>
+                                    <td>Jonas Alexander</td>
+                                    <td class="text-center">24457380</td>
+                                    <td>dabc@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2008-11-13</td>
+                                    <td>Shad Decker</td>
+                                    <td class="text-center">11445380</td>
+                                    <td>eabc@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-06-27</td>
+                                    <td>Michael Bruce</td>
+                                    <td class="text-center">63443780</td>
+                                    <td>fabc@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-01-25</td>
+                                    <td>Donna Snider</td>
+                                    <td class="text-center">8375480</td>
+                                    <td>gabc@gmail.com</td>
+                                    <td class="text-center">通過</td>
+                                    <td class="text-center"><button type="button"
+                                            class="btn btn-outline-primary rounded-circle btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#vendorDetail">
+                                            <i class="fa-solid fa-paperclip"></i></button></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th class="text-nowrap text-center">申請日期</th>
+                                    <th class="text-nowrap text-center">公司名稱</th>
+                                    <th class="text-nowrap text-center">統一編號</th>
+                                    <th class="text-nowrap text-center">E-mail</th>
+                                    <th class="text-nowrap text-center">審核結果</th>
+                                    <th class="text-nowrap text-center">檢閱</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                    </div>
+                </div>
+
+                <!-- 頁尾 -->
+                <div class="footer section-padding section-border-radius my-2r">
+                    <ul class="links">
+                        <li><a href="#">大同大學</a></li>
+                        <li><a href="./nav-memo2-joblist.html">育成媒合</a></li>
+                        <li><a href="./nav-memo2.html">帳戶總攬</a></li>
+                    </ul>
+                    <p class="copyright">
+                        大同大學 版權所有&copy;2022 All Rights Reserved.<br>建議使用：IE9.0以上版本或Google
+                        Chrome瀏覽器<span>(最佳螢幕解析1280*1024)</span>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade vendorDetail" id="vendorDetail" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="vendorDetailLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+            <form class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="vendorDetailLabel">廠商申請資料</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <!-- 公司名稱 -->
+                        <div class="row mb-1">
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                公司名稱
+                            </div>
+                            <div class="col lightBoxItems p-3" id="companyName">
+                                好棒棒股份有限公司
+                            </div>
+                        </div>
+                        <!-- 主要營業項目 -->
+                        <div class="row mb-1">
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                主要<br class="d-none d-lg-block">營業項目
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                顏色一時二級阿宅人民共和國，臉色全球兒子現代系統滿足楠雅回去離線過了消息，想法如此實驗有機會我在今日說出消除主動可是作用法規，具體意味着註冊時間，你怎麼版面對比白色時期配合只能效率名稱出了，痛苦電話一本概念測試健康一場，教育活動事業經過促進，能不能，強烈。
+                            </div>
+                        </div>
+
+                        <!-- 統編、成立日、資本額 -->
+                        <div class="row mb-1 multiple">
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                統一編號
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                23456780
+                            </div>
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                成立日期
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                2020/01/01
+                            </div>
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                資本額
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                1,000,000
+                            </div>
+                        </div>
+
+                        <!-- 員工數、主要股東、負責人 -->
+                        <div class="row mb-1 multiple">
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                員工人數
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                5
+                            </div>
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                主要股東
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                王大明
+                            </div>
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                負責人
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                王大明
+                            </div>
+                        </div>
+
+                        <!-- 電話、傳真、使用代號 -->
+                        <div class="row mb-1 multiple">
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                聯絡電話
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                02-86710000
+                            </div>
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                傳真號碼
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                02-86720000
+                            </div>
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                使用名
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                abc123
+                            </div>
+                        </div>
+
+                        <!-- 聯絡人、分機、職稱 -->
+                        <div class="row mb-1 multiple">
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                主聯絡人
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                王小妹
+                            </div>
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                分機號碼
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                123
+                            </div>
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                職務名
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                秘書
+                            </div>
+                        </div>
+
+
+                        <!-- 登記地址 -->
+                        <div class="row mb-1">
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                登記地址
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                台北市台北區台北中路000巷11號0樓
+                            </div>
+                        </div>
+                        <!-- 通訊地址 -->
+                        <div class="row mb-1">
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                通訊地址
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                台北市台北區台北中路000巷11號0樓
+                            </div>
+                        </div>
+
+                        <!-- 輔導項目需求 -->
+                        <div class="row mb-1">
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                輔導項目<br class="d-none d-lg-block">需求
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                最近進口數學上有全身來說學習百姓長沙，笑道涉及一個青春人氣，理論一場怎麼樣熟悉價格委託利用消除專家聽到條款平衡老公，傳統面前，選擇第二章是個措施幫你下了你們的一塊領先線上描述，農村本帖場所代理接口回去一時加快豪華，要有你可以國內不了，而在一股和平島成果一。
+                            </div>
+                        </div>
+
+                        <!-- E-mail、推薦人、申請日期 -->
+                        <div class="row mb-1 multiple">
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                電子信箱
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                abc@gmail.com
+                            </div>
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                推薦人
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                王中明
+                            </div>
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                申請日期
+                            </div>
+                            <div class="col-12 col-lg-auto lightBoxItems p-3">
+                                2011-06-30
+                            </div>
+                        </div>
+                        <!-- 掃描文件 若曾補件過，顯示補件後的檔案-->
+                        <div class="row mb-1">
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                掃描文件
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                <a href="#">公司登記證&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update">補</span></a>
+                                <a href="#">企業與大同大學教職員簽訂之合作備忘錄&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update d-none">補</span></a>
+                                <a href="#">同意審查聲明書&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update">補</span></a>
+                                <a href="#">營利事業登記證或預查名稱表影本&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update">補</span></a>
+                                <a href="#">企業營運計畫構想書&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update">補</span></a>
+                                <a href="#">創新育成中心進駐申請書&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update">補</span></a>
+                                <a href="#">進駐審查費繳費證明&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update">補</span></a>
+                            </div>
+                        </div>
+                        <!-- 補件上傳 若狀態為通過，不顯示此區塊-->
+                        <div class="row mb-1">
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                補件上傳
+                            </div>
+                            <div class="col lightBoxItems p-3">
+                                <div class="row align-items-center my-1">
+                                    <label for="companyProof"
+                                        class="col-auto col-form-label text-nowrap upload-label py-0">公司登記證<i
+                                            class="fa-solid fa-upload mx-1"></i>
+                                    </label>
+                                    <div class="col">
+                                        <input type="file" class="form-control d-none" id="companyProof" accept=".pdf"
+                                            onchange="javascript:{document.getElementById('fileInfo1').innerHTML = document.getElementById('companyProof').value;setFormHeight();}">
+                                        <div id="fileInfo1" class="fileInfo"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row align-items-center my-1">
+                                    <label for="memoUpload"
+                                        class="col-auto col-form-label text-nowrap upload-label py-0">企業與大同大學教職員簽訂之合作備忘錄<i
+                                            class="fa-solid fa-upload mx-1"></i>
+                                    </label>
+                                    <div class="col">
+                                        <input type="file" class="form-control d-none" id="memoUpload" accept=".pdf"
+                                            onchange="javascript:{document.getElementById('fileInfo6').innerHTML = document.getElementById('memoUpload').value;setFormHeight();}">
+                                        <div id="fileInfo6" class="fileInfo"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row align-items-center my-1">
+                                    <label for="consentDoc"
+                                        class="col-auto col-form-label text-nowrap upload-label py-0">同意審查聲明書<i
+                                            class="fa-solid fa-upload mx-1"></i>
+                                    </label>
+                                    <div class="col">
+                                        <input type="file" class="form-control d-none" id="consentDoc" accept=".pdf"
+                                            onchange="javascript:{document.getElementById('fileInfo3').innerHTML = document.getElementById('consentDoc').value;setFormHeight();}">
+                                        <div id="fileInfo3" class="fileInfo"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row align-items-center my-1">
+                                    <label for="businessProof"
+                                        class="col-auto col-form-label text-nowrap upload-label py-0">營利事業登記證或預查名稱表影本<i
+                                            class="fa-solid fa-upload mx-1"></i>
+                                    </label>
+                                    <div class="col">
+                                        <input type="file" class="form-control d-none" id="businessProof" accept=".pdf"
+                                            onchange="javascript:{document.getElementById('fileInfo2').innerHTML = document.getElementById('businessProof').value;setFormHeight();}">
+                                        <div id="fileInfo2" class="fileInfo"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row align-items-center my-1">
+                                    <label for="planUpload"
+                                        class="col-auto col-form-label text-nowrap upload-label py-0">企業營運計畫構想書<i
+                                            class="fa-solid fa-upload mx-1"></i>
+                                    </label>
+                                    <div class="col">
+                                        <input type="file" class="form-control d-none" id="planUpload" accept=".pdf"
+                                            onchange="javascript:{document.getElementById('fileInfo5').innerHTML = document.getElementById('planUpload').value;setFormHeight();}">
+                                        <div id="fileInfo5" class="fileInfo"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row align-items-center my-1">
+                                    <label for="entryForm"
+                                        class="col-auto col-form-label text-nowrap upload-label py-0">創新育成中心進駐申請書<i
+                                            class="fa-solid fa-upload mx-1"></i>
+                                    </label>
+                                    <div class="col">
+                                        <input type="file" class="form-control d-none" id="entryForm" accept=".pdf"
+                                            onchange="javascript:{document.getElementById('fileInfo4').innerHTML = document.getElementById('entryForm').value;setFormHeight();}">
+                                        <div id="fileInfo4" class="fileInfo"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row align-items-center my-1">
+                                    <label for="payProof"
+                                        class="col col-form-label text-nowrap upload-label py-0">進駐審查費繳費證明<i class="fa-solid fa-upload mx-1"></i>
+                                    </label>
+                                    <div class="col-12">
+                                        <input type="file" class="form-control d-none" id="payProof"
+                                            accept=".pdf"
+                                            onchange="javascript:{document.getElementById('fileInfo7').innerHTML = document.getElementById('payProof').value;setFormHeight();}">
+                                        <div id="fileInfo7" class="fileInfo"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 審核 -->
+                        <div class="row mb-1">
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                審核狀態
+                            </div>
+                            <div class="col lightBoxItems p-2">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <select class="form-select">
+                                            <option value="2" selected disabled>待審中</option>
+                                            <option value="3">待補件</option>
+                                            <option value="4">不通過</option>
+                                            <option value="0">通過</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">關閉</button>
+                    <button class="btn btn-outline-secondary">確認修改</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.1/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.1/js/responsive.bootstrap5.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

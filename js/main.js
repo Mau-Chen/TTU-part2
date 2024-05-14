@@ -140,6 +140,50 @@ $(function () {
             },
         }
     });
+    $('#venderApplicationList').DataTable({
+        responsive: true, // 預設為undefined
+        "order": [[0, "desc"]],
+        "columnDefs": [
+            {
+                targets: [0],
+                responsivePriority: 1,
+            },
+            {
+                targets: [2],
+                responsivePriority: 2,
+            },
+            {
+                targets: [3],
+                responsivePriority: 2,
+            },
+            { "orderable": false, "targets": [5] }
+        ],
+        language: {
+            lengthMenu: "顯示 _MENU_ 筆",
+            sProcessing: "處理中...",
+            loadingRecords: "載入中...",
+            sZeroRecords: "OOPS！没有匹配的结果",
+            sInfo: "共有 _MAX_ 筆",
+            sInfoEmpty: "共有 0 筆",
+            sInfoFiltered: " ",
+            sInfoPostFix: "",
+            sSearch: '<i class="fa fa-search px-1" aria-hidden="true"></i>',
+            sUrl: "",
+            sEmptyTable: "尚未有資料紀錄存在",
+            sLoadingRecords: "載入中...",
+            sInfoThousands: ",",
+            oPaginate: {
+                sFirst: '<i class="fa fa-step-backward" aria-hidden="true"></i>',
+                sPrevious: '<i class="fa fa-caret-left" aria-hidden="true"></i>',
+                sNext: '<i class="fa fa-caret-right" aria-hidden="true"></i>',
+                sLast: '<i class="fa fa-step-forward" aria-hidden="true"></i>',
+            },
+            oAria: {
+                sSortAscending: ": 以升序排列此列",
+                sSortDescending: ": 以降序排列此列",
+            },
+        }
+    });
 
 });
 

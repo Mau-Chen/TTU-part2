@@ -1,0 +1,24 @@
+.vendorDetail {
+    .upload-label {
+        color: #ff7851;
+
+        &:hover {
+            color: #e1613e;
+        }
+    }
+
+    .lightBoxItems {
+        a {
+            .update {
+                color: #e83e8c;
+            }
+
+            &:hover {
+                .update {
+                    color: #b63270;
+                }
+            }
+        }
+    }
+
+}

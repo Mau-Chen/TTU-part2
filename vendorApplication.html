@@ -27,15 +27,20 @@
                 </a>
                 <ul class="navigation navbar-top">
                     <li class="item">
-                        <a class="link active" href="./nav-memo2.html"><i class="fas fa-home"></i><span class="tooltiptext tooltip-right">儀錶板</span></a>
+                        <a class="link active" href="./nav-memo2.html"><i class="fas fa-home"></i><span
+                                class="tooltiptext tooltip-right">儀錶板</span></a>
                     </li>
                     <li class="item dropend">
-                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-users"></i><span
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-users"></i><span
                                 class="tooltiptext tooltip-right">職缺媒合</span></a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="./nav-memo2-joblist.html">職缺總攬&ensp;<i class="fa-solid fa-users-line"></i></a></li>
-                            <li><a class="dropdown-item" href="./nav-memo2-myjob.html">刊登中&emsp;&ensp;<i class="fa-solid fa-users-viewfinder"></i></a></li>
-                            <li><a class="dropdown-item" href="./nav-memo2-jobCreate.html">職缺登陸&ensp;<i class="fa-solid fa-user-plus"></i></a></li>
+                            <li><a class="dropdown-item" href="./nav-memo2-joblist.html">職缺總攬&ensp;<i
+                                        class="fa-solid fa-users-line"></i></a></li>
+                            <li><a class="dropdown-item" href="./nav-memo2-myjob.html">刊登中&emsp;&ensp;<i
+                                        class="fa-solid fa-users-viewfinder"></i></a></li>
+                            <li><a class="dropdown-item" href="./nav-memo2-jobCreate.html">職缺登陸&ensp;<i
+                                        class="fa-solid fa-user-plus"></i></a></li>
                         </ul>
                     </li>
                     <li class="item dropend">
@@ -51,11 +56,17 @@
                         </ul>
                     </li>
                     <li class="item dropend">
-                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-file-contract"></i><span class="tooltiptext tooltip-right">合約申請</span></a>
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i
+                                class="fa-solid fa-file-contract"></i><span
+                                class="tooltiptext tooltip-right">合約申請</span></a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">車位申請&ensp;<i class="fa-solid fa-square-parking"></i></a></li>
-                            <li><a class="dropdown-item" href="#">空間申請&ensp;<i class="fa-solid fa-building"></i></a></li>
-                            <li><a class="dropdown-item" href="#">續約申請&ensp;<i class="fa-solid fa-file-signature"></i></a></li>
+                            <li><a class="dropdown-item" href="#">車位申請&ensp;<i
+                                        class="fa-solid fa-square-parking"></i></a></li>
+                            <li><a class="dropdown-item" href="#">空間申請&ensp;<i class="fa-solid fa-building"></i></a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">續約申請&ensp;<i
+                                        class="fa-solid fa-file-signature"></i></a></li>
                         </ul>
                     </li>
                     <li class="item">
@@ -131,7 +142,7 @@
                 <!-- 職缺列表 -->
                 <div class="tabs-box my-2r">
                     <h3 class="section-header"><i class="fa-solid fa-quote-left"></i>申請列表<i
-                        class="fa-solid fa-quote-right"></i></h3>
+                            class="fa-solid fa-quote-right"></i></h3>
                     <div class="tabs section-border-radius section-padding">
                         <table id="venderApplicationList"
                             class="table table-hover table-bordered responsive align-middle" style="width:100%">
@@ -141,7 +152,7 @@
                                     <th class="text-nowrap text-center">公司名稱</th>
                                     <th class="text-nowrap text-center">統一編號</th>
                                     <th class="text-nowrap text-center">E-mail</th>
-                                    <th class="text-nowrap text-center">審核結果</th>
+                                    <th class="text-nowrap text-center">審核進度</th>
                                     <th class="text-nowrap text-center">檢閱</th>
                                 </tr>
                             </thead>
@@ -780,7 +791,7 @@
                                     <th class="text-nowrap text-center">公司名稱</th>
                                     <th class="text-nowrap text-center">統一編號</th>
                                     <th class="text-nowrap text-center">E-mail</th>
-                                    <th class="text-nowrap text-center">審核結果</th>
+                                    <th class="text-nowrap text-center">審核進度</th>
                                     <th class="text-nowrap text-center">檢閱</th>
                                 </tr>
                             </tfoot>
@@ -809,8 +820,8 @@
 
 
     <!-- Modal -->
-    <div class="modal fade vendorDetail" id="vendorDetail" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="vendorDetailLabel" aria-hidden="true">
+    <div class="modal fade vendorDetail" id="vendorDetail" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="vendorDetailLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
             <form class="modal-content">
                 <div class="modal-header">
@@ -980,16 +991,16 @@
                         <!-- 掃描文件 若曾補件過，顯示補件後的檔案-->
                         <div class="row mb-1">
                             <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
-                                掃描文件
+                                檢附文件<br>下載
                             </div>
                             <div class="col lightBoxItems p-3">
-                                <a href="#">公司登記證&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update">補</span></a>
-                                <a href="#">企業與大同大學教職員簽訂之合作備忘錄&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update d-none">補</span></a>
-                                <a href="#">同意審查聲明書&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update">補</span></a>
-                                <a href="#">營利事業登記證或預查名稱表影本&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update">補</span></a>
-                                <a href="#">企業營運計畫構想書&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update">補</span></a>
-                                <a href="#">創新育成中心進駐申請書&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update">補</span></a>
-                                <a href="#">進駐審查費繳費證明&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update">補</span></a>
+                                <a class="d-inline me-3 text-nowrap" href="#">公司登記證&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update">補</span></a>
+                                <a class="d-inline me-3 text-nowrap" href="#">營利事業登記證或預查名稱表影本&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update">補</span></a>
+                                <a class="d-inline me-3 text-nowrap" href="#">企業與大同大學教職員簽訂之合作備忘錄&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update d-none">補</span></a>
+                                <a class="d-inline me-3 text-nowrap" href="#">企業營運計畫構想書&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update">補</span></a>
+                                <a class="d-inline me-3 text-nowrap" href="#">創新育成中心進駐申請書&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update">補</span></a>
+                                <a class="d-inline me-3 text-nowrap" href="#">同意審查聲明書&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update">補</span></a>
+                                <a class="d-inline text-nowrap" href="#">進駐審查費繳費證明&ensp;<i class="fa-solid fa-download"></i><span class="mx-1 update">補</span></a>
                             </div>
                         </div>
                         <!-- 補件上傳 若狀態為通過，不顯示此區塊-->
@@ -1072,11 +1083,11 @@
 
                                 <div class="row align-items-center my-1">
                                     <label for="payProof"
-                                        class="col col-form-label text-nowrap upload-label py-0">進駐審查費繳費證明<i class="fa-solid fa-upload mx-1"></i>
+                                        class="col col-form-label text-nowrap upload-label py-0">進駐審查費繳費證明<i
+                                            class="fa-solid fa-upload mx-1"></i>
                                     </label>
                                     <div class="col-12">
-                                        <input type="file" class="form-control d-none" id="payProof"
-                                            accept=".pdf"
+                                        <input type="file" class="form-control d-none" id="payProof" accept=".pdf"
                                             onchange="javascript:{document.getElementById('fileInfo7').innerHTML = document.getElementById('payProof').value;setFormHeight();}">
                                         <div id="fileInfo7" class="fileInfo"></div>
                                     </div>
@@ -1084,9 +1095,9 @@
                             </div>
                         </div>
                         <!-- 審核 -->
-                        <div class="row mb-1">
+                        <!-- <div class="row mb-1">
                             <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
-                                審核狀態
+                                審核進度
                             </div>
                             <div class="col lightBoxItems p-2">
                                 <div class="row">
@@ -1100,7 +1111,33 @@
                                     </div>
                                 </div>
                             </div>
+                        </div> -->
+                        <div class="row mb-1 multiple">
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                審核進度
+                            </div>
+                            <div class="col lightBoxItems p-2">
+                                <select class="form-select">
+                                    <option value="2" selected disabled>待審中</option>
+                                    <option value="3">待補件</option>
+                                    <option value="4">不通過</option>
+                                    <option value="0">通過</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                <span class="">補</span>統一編號
+                            </div>
+                            <div class="col lightBoxItems p-2">
+                                <input type="text" class="form-control add">
+                            </div>
+                            <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                <span class="add">補</span>成立日期
+                            </div>
+                            <div class="col lightBoxItems p-2 ">
+                                <input type="date" class="form-control add">
+                            </div>
                         </div>
+
                     </div>
                 </div>
                 <div class="modal-footer">

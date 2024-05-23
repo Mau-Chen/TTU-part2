@@ -235,11 +235,14 @@ h6 {
         border-radius: 50%;
         background-color: #f3969a;
         position: absolute;
-        width: 900px;
+        width: 1900px;
         height: 1000px;
-        right: -115px;
-        top: -190px;
-        transform-origin: 100% 40%;
+        // right: -115px;
+        // top: -190px;
+        // transform-origin: 100% 40%;
+        left: -90%;
+        bottom: -20%;
+        transform-origin: 100% -100%;
         transform: scale(0);
     }
 

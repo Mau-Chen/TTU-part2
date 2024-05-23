@@ -90,6 +90,7 @@ a {
     width: 30% !important;
 }
 
+
 nav {
     .nav-tabs {
         .nav-link {
@@ -101,6 +102,20 @@ nav {
                 color: #22523f;
                 font-size: 1.05em;
             }
+        }
+    }
+}
+.form-check.form-switch{
+    padding-left: 0em;
+}
+.form-select{
+    option{
+        color: #333;
+        &:disabled{
+            color: #888;
+        }
+        &:hover{
+            background-color: #2b4e55;
         }
     }
 }

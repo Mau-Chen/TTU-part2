@@ -1,0 +1,27 @@
+#idCardApp_pdf {
+    .scroll_x {
+        overflow-x: auto;
+    }
+
+    .title_imgBox {
+        height: 2.5em;
+        // width: 2.5em;
+
+        // margin: 0;
+        // padding: 0;
+        img {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .titleText {
+        // font-size: 2em;
+    }
+
+    .h-2 {
+        height: 5rem;
+    }
+
+}

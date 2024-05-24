@@ -41,7 +41,8 @@
                             </li>
                             <li><a class="dropdown-item" href="./nav-memo2-myjob.html">刊登中&emsp;&ensp;<i
                                         class="fa-solid fa-users-viewfinder"></i></a></li>
-                            <li><a class="dropdown-item" href="./nav-memo2-jobCreate.html">職缺登陸&ensp;<i class="fa-solid fa-user-plus"></i></a>
+                            <li><a class="dropdown-item" href="./nav-memo2-jobCreate.html">職缺登陸&ensp;<i
+                                        class="fa-solid fa-user-plus"></i></a>
                             </li>
                         </ul>
                     </li>
@@ -51,7 +52,7 @@
                                 class="fa-solid fa-users-rectangle"></i><span
                                 class="tooltiptext tooltip-right">職員管理</span></a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">識別證申請&ensp;<i
+                            <li><a class="dropdown-item" href="idcard_application.html">識別證申請&ensp;<i
                                         class="fa-regular fa-address-card"></i></a></li>
                             <li><a class="dropdown-item" href="#">職員設定&emsp;&ensp;<i
                                         class="fa-solid fa-users-gear"></i></a></li>
@@ -76,13 +77,18 @@
                             data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-stamp"></i><span
                                 class="tooltiptext tooltip-right">資料審核</span></a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="./vendorApplication.html">廠商審核&emsp;&ensp;<i class="fa-solid fa-user-tie"></i></a></li>
-                            <li><a class="dropdown-item" href="#">車位審核&emsp;&ensp;<i class="fa-solid fa-square-parking"></i></a></li>
-                            <li><a class="dropdown-item" href="#">空間審核&emsp;&ensp;<i class="fa-solid fa-building"></i></a>
+                            <li><a class="dropdown-item" href="./vendorApplication.html">廠商審核&emsp;&ensp;<i
+                                        class="fa-solid fa-user-tie"></i></a></li>
+                            <li><a class="dropdown-item" href="#">車位審核&emsp;&ensp;<i
+                                        class="fa-solid fa-square-parking"></i></a></li>
+                            <li><a class="dropdown-item" href="#">空間審核&emsp;&ensp;<i
+                                        class="fa-solid fa-building"></i></a>
                             </li>
-                            <li><a class="dropdown-item" href="#">續約審核&emsp;&ensp;<i class="fa-solid fa-file-signature"></i></a>
+                            <li><a class="dropdown-item" href="#">續約審核&emsp;&ensp;<i
+                                        class="fa-solid fa-file-signature"></i></a>
                             </li>
-                            <li><a class="dropdown-item" href="#">識別證審核&ensp;<i class="fa-regular fa-address-card"></i></a>
+                            <li><a class="dropdown-item" href="#">識別證審核&ensp;<i
+                                        class="fa-regular fa-address-card"></i></a>
                             </li>
                         </ul>
                     </li>
@@ -92,17 +98,30 @@
                                 class="tooltiptext tooltip-right">進度查詢</span></a>
 
                     </li>
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i
+                                class="fa-solid fa-people-robbery"></i><span
+                                class="tooltiptext tooltip-right">用戶管理</span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="./nav-memo2-roles.html">權限設定&ensp;<i
+                                        class="fa-solid fa-user-lock"></i></a></li>
+                            <li><a class="dropdown-item" href="#">資料修改&ensp;<i class="fa-solid fa-address-book"></i></a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#"><i class="fa-solid fa-file-shield"></i><span
+                                class="tooltiptext tooltip-right">LOG紀錄</span></a>
+                    </li>
                     <li class="item">
                         <a class="link" href="#"><i class="fa-regular fa-paper-plane"></i><span
                                 class="tooltiptext tooltip-right">意見反應</span></a>
                     </li>
                     <li class="item">
-                        <a class="link" href="./nav-memo2-roles.html"><i class="fa-solid fa-people-robbery"></i><span
-                                class="tooltiptext tooltip-right">權限設定</span></a>
-                    </li>
-                    <li class="item">
-                        <a class="link" href="#"><i class="fa-solid fa-file-shield"></i><span
-                                class="tooltiptext tooltip-right">LOG紀錄</span></a>
+                        <a class="link" href="stylePage.html"><i class="fa-solid fa-paint-roller"></i><span
+                                class="tooltiptext tooltip-right">樣式設計</span></a>
                     </li>
                 </ul>
             </div>
@@ -148,9 +167,9 @@
                                     <th class="text-nowrap text-center">公司名稱</th>
                                     <th class="text-nowrap text-center">使用者代號</th>
                                     <th class="text-nowrap text-center">E-mail</th>
-                                    <th class="text-nowrap text-center">當前權限</th>
-                                    <th class="text-nowrap text-center">調整權限</th>
-                                    <th class="text-nowrap text-center">停權&ensp;/&ensp;啟用</th>
+                                    <th class="text-nowrap text-center">當前角色</th>
+                                    <th class="text-nowrap text-center">調整角色</th>
+                                    <th class="text-nowrap text-center">啟用</th>
                                     <th class="text-nowrap text-center">儲存</th>
                                 </tr>
                             </thead>
@@ -161,17 +180,17 @@
                                     <td>System Architect</td>
                                     <td>Edinburgh</td>
 
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckDefault">
                                         </div>
                                     </td>
@@ -185,17 +204,17 @@
                                     <td>Garrett Winters</td>
                                     <td>Accountant</td>
                                     <td>Tokyo</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -210,17 +229,17 @@
                                     <td>Ashton Cox</td>
                                     <td>Junior Technical Author</td>
                                     <td>San Francisco</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckDefault">
 
                                         </div>
@@ -234,17 +253,17 @@
                                     <td>Cedric Kelly</td>
                                     <td>Senior Javascript Developer</td>
                                     <td>Edinburgh</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckDefault">
 
                                         </div>
@@ -259,17 +278,17 @@
                                     <td>Airi Satou</td>
                                     <td>Accountant</td>
                                     <td>Tokyo</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -284,17 +303,17 @@
                                     <td>Brielle Williamson</td>
                                     <td>Integration Specialist</td>
                                     <td>New York</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked>
 
                                         </div>
@@ -309,17 +328,17 @@
                                     <td>Herrod Chandler</td>
                                     <td>Sales Assistant</td>
                                     <td>San Francisco</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox">
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox">
                                         </div>
                                     </td>
                                     <td class="text-center">
@@ -332,17 +351,17 @@
                                     <td>Rhona Davidson</td>
                                     <td>Integration Specialist</td>
                                     <td>Tokyo</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckDefault">
 
                                         </div>
@@ -357,17 +376,17 @@
                                     <td>Colleen Hurst</td>
                                     <td>Javascript Developer</td>
                                     <td>San Francisco</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -382,17 +401,17 @@
                                     <td>Sonya Frost</td>
                                     <td>Software Engineer</td>
                                     <td>Edinburgh</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -407,17 +426,17 @@
                                     <td>Jena Gaines</td>
                                     <td>Office Manager</td>
                                     <td>London</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -432,17 +451,17 @@
                                     <td>Quinn Flynn</td>
                                     <td>Support Lead</td>
                                     <td>Edinburgh</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -457,17 +476,17 @@
                                     <td>Charde Marshall</td>
                                     <td>Regional Director</td>
                                     <td>San Francisco</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -482,17 +501,17 @@
                                     <td>Haley Kennedy</td>
                                     <td>Senior Marketing Designer</td>
                                     <td>London</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -507,17 +526,17 @@
                                     <td>Tatyana Fitzpatrick</td>
                                     <td>Regional Director</td>
                                     <td>London</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -532,17 +551,17 @@
                                     <td>Michael Silva</td>
                                     <td>Marketing Designer</td>
                                     <td>London</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -557,17 +576,17 @@
                                     <td>Paul Byrd</td>
                                     <td>Chief Financial Officer (CFO)</td>
                                     <td>New York</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
                                         </div>
                                     </td>
@@ -579,19 +598,19 @@
                                 <tr>
                                     <td class="text-center">2018-06-09</td>
                                     <td>Gloria Little</td>
-                                    <td>Systems Administrator</td>
+                                    <td>Systems 系統管理員istrator</td>
                                     <td>New York</td>
-                                    <td class="text-center nowLevel">201Room</td>
+                                    <td class="text-center nowLevel">系統開發員</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox" checked="">
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox" checked="">
 
                                         </div>
                                     </td>
@@ -605,17 +624,17 @@
                                     <td>Bradley Greer</td>
                                     <td>Software Engineer</td>
                                     <td>London</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -630,17 +649,17 @@
                                     <td>Dai Rios</td>
                                     <td>Personnel Lead</td>
                                     <td>Edinburgh</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -655,17 +674,17 @@
                                     <td>Jenette Caldwell</td>
                                     <td>Development Lead</td>
                                     <td>New York</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -680,17 +699,17 @@
                                     <td>Yuri Berry</td>
                                     <td>Chief Marketing Officer (CMO)</td>
                                     <td>New York</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -705,17 +724,17 @@
                                     <td>Caesar Vance</td>
                                     <td>Pre-Sales Support</td>
                                     <td>New York</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -730,17 +749,17 @@
                                     <td>Doris Wilder</td>
                                     <td>Sales Assistant</td>
                                     <td>Sydney</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -755,17 +774,17 @@
                                     <td>Angelica Ramos</td>
                                     <td>Chief Executive Officer (CEO)</td>
                                     <td>London</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -780,17 +799,17 @@
                                     <td>Gavin Joyce</td>
                                     <td>Developer</td>
                                     <td>Edinburgh</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -805,17 +824,17 @@
                                     <td>Jennifer Chang</td>
                                     <td>Regional Director</td>
                                     <td>Singapore</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -830,17 +849,17 @@
                                     <td>Brenden Wagner</td>
                                     <td>Software Engineer</td>
                                     <td>San Francisco</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -855,17 +874,17 @@
                                     <td>Fiona Green</td>
                                     <td>Chief Operating Officer (COO)</td>
                                     <td>San Francisco</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -880,17 +899,17 @@
                                     <td>Shou Itou</td>
                                     <td>Regional Marketing</td>
                                     <td>Tokyo</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -905,17 +924,17 @@
                                     <td>Michelle House</td>
                                     <td>Integration Specialist</td>
                                     <td>Sydney</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -930,17 +949,17 @@
                                     <td>Suki Burks</td>
                                     <td>Developer</td>
                                     <td>London</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -955,17 +974,17 @@
                                     <td>Prescott Bartlett</td>
                                     <td>Technical Author</td>
                                     <td>London</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -980,17 +999,17 @@
                                     <td>Gavin Cortez</td>
                                     <td>Team Leader</td>
                                     <td>San Francisco</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1005,17 +1024,17 @@
                                     <td>Martena Mccray</td>
                                     <td>Post-Sales support</td>
                                     <td>Edinburgh</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1030,17 +1049,17 @@
                                     <td>Unity Butler</td>
                                     <td>Marketing Designer</td>
                                     <td>San Francisco</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1055,17 +1074,17 @@
                                     <td>Howard Hatfield</td>
                                     <td>Office Manager</td>
                                     <td>San Francisco</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1080,17 +1099,17 @@
                                     <td>Hope Fuentes</td>
                                     <td>Secretary</td>
                                     <td>San Francisco</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1105,17 +1124,17 @@
                                     <td>Vivian Harrell</td>
                                     <td>Financial Controller</td>
                                     <td>San Francisco</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1130,17 +1149,17 @@
                                     <td>Timothy Mooney</td>
                                     <td>Office Manager</td>
                                     <td>London</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1155,17 +1174,17 @@
                                     <td>Jackson Bradshaw</td>
                                     <td>Director</td>
                                     <td>New York</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1180,17 +1199,17 @@
                                     <td>Olivia Liang</td>
                                     <td>Support Engineer</td>
                                     <td>Singapore</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1205,17 +1224,17 @@
                                     <td>Bruno Nash</td>
                                     <td>Software Engineer</td>
                                     <td>London</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1230,17 +1249,17 @@
                                     <td>Sakura Yamamoto</td>
                                     <td>Support Engineer</td>
                                     <td>Tokyo</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1255,17 +1274,17 @@
                                     <td>Thor Walton</td>
                                     <td>Developer</td>
                                     <td>New York</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1280,17 +1299,17 @@
                                     <td>Finn Camacho</td>
                                     <td>Support Engineer</td>
                                     <td>San Francisco</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1305,17 +1324,17 @@
                                     <td>Serge Baldwin</td>
                                     <td>Data Coordinator</td>
                                     <td>Singapore</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1330,17 +1349,17 @@
                                     <td>Zenaida Frank</td>
                                     <td>Software Engineer</td>
                                     <td>New York</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1355,17 +1374,17 @@
                                     <td>Zorita Serrano</td>
                                     <td>Software Engineer</td>
                                     <td>San Francisco</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1380,17 +1399,17 @@
                                     <td>Jennifer Acosta</td>
                                     <td>Junior Javascript Developer</td>
                                     <td>Edinburgh</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1405,17 +1424,17 @@
                                     <td>Cara Stevens</td>
                                     <td>Sales Assistant</td>
                                     <td>New York</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1430,17 +1449,17 @@
                                     <td>Hermione Butler</td>
                                     <td>Regional Director</td>
                                     <td>London</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1453,19 +1472,19 @@
                                 <tr>
                                     <td class="text-center">2009-02-27</td>
                                     <td>Lael Greer</td>
-                                    <td>Systems Administrator</td>
+                                    <td>Systems 系統管理員istrator</td>
                                     <td>London</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1480,17 +1499,17 @@
                                     <td>Jonas Alexander</td>
                                     <td>Developer</td>
                                     <td>San Francisco</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1505,17 +1524,17 @@
                                     <td>Shad Decker</td>
                                     <td>Regional Director</td>
                                     <td>Edinburgh</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1530,17 +1549,17 @@
                                     <td>Michael Bruce</td>
                                     <td>Javascript Developer</td>
                                     <td>Singapore</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1555,17 +1574,17 @@
                                     <td>Donna Snider</td>
                                     <td>Customer Support</td>
                                     <td>New York</td>
-                                    <td class="text-center nowLevel">Firm</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
                                     <td class="text-center">
                                         <select class="form-select">
-                                            <option value="">Admin</option>
-                                            <option value="">Employees</option>
-                                            <option value="">Firm</option>
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input mx-auto" type="checkbox"
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
                                                 id="flexSwitchCheckChecked" checked="">
 
                                         </div>
@@ -1582,8 +1601,9 @@
                                     <th class="text-nowrap text-center">公司名稱</th>
                                     <th class="text-nowrap text-center">使用者代號</th>
                                     <th class="text-nowrap text-center">E-mail</th>
-                                    <th class="text-nowrap text-center">權限</th>
-                                    <th class="text-nowrap text-center">禁用/啟用</th>
+                                    <th class="text-nowrap text-center">當前角色</th>
+                                    <th class="text-nowrap text-center">調整角色</th>
+                                    <th class="text-nowrap text-center">啟用</th>
                                     <th class="text-nowrap text-center">儲存</th>
                                 </tr>
                             </tfoot>

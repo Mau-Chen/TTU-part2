@@ -105,16 +105,20 @@ nav {
         }
     }
 }
-.form-check.form-switch{
+
+.form-check.form-switch {
     padding-left: 0em;
 }
-.form-select{
-    option{
+
+.form-select {
+    option {
         color: #333;
-        &:disabled{
+
+        &:disabled {
             color: #888;
         }
-        &:hover{
+
+        &:hover {
             background-color: #2b4e55;
         }
     }
@@ -1132,4 +1136,113 @@ nav {
             }
         }
     }
+}
+
+/* ::::::::::::::::::::::::::::: underConstructionPage */
+.underConstructionPage {
+    .tabs {
+        img {
+            margin: 0 auto;
+            padding: 0;
+            width: 202px;
+            animation: move .8s linear infinite;
+        }
+
+        @keyframes move {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-2deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+
+            75% {
+                transform: rotate(2deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    }
+}
+
+/* ==========右下大白熊狗TOP========== */
+
+.top_button {
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
+    // background-color: #fff;
+    width: 5vw;
+    min-width: 60px;
+    height: 5vw;
+    min-height: 60px;
+    // border-radius: 20%;
+    opacity: 0;
+    // box-shadow: 0px 0px 10px gray;
+    z-index: 30;
+    transition: 0.3s ease;
+    /* 添加透明度變化的動畫效果 */
+    cursor: pointer;
+}
+
+.top_button img {
+    display: block;
+    margin: 0 auto;
+    width: 65%;
+    transform: translateY(3%);
+}
+
+.top_button:hover {
+    opacity: 1;
+}
+
+/* 定義透明度變化的動畫效果 */
+@keyframes fadeAnimation {
+    0% {
+        transform: rotate(0deg);
+        opacity: .8;
+    }
+
+    25% {
+        transform: rotate(-2deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    75% {
+        transform: rotate(2deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: .8;
+    }
+    // 0% {
+    //     opacity: .5;
+    // }
+
+    // 50% {
+    //     opacity: 1;
+    // }
+
+    // 100% {
+    //     opacity: .5;
+    // }
+}
+
+/* 當畫面不在網頁最頂端時，套用透明度變化的動畫 */
+.top_button.scroll-animation {
+    animation: fadeAnimation 1s linear infinite;
 }

@@ -63,53 +63,36 @@
                                 class="fa-solid fa-file-contract"></i><span
                                 class="tooltiptext tooltip-right">合約申請</span></a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">車位申請&ensp;<i
+                            <li><a class="dropdown-item" href="#">停車位申請&ensp;<i
                                         class="fa-solid fa-square-parking"></i></a></li>
-                            <li><a class="dropdown-item" href="#">空間申請&ensp;<i class="fa-solid fa-building"></i></a>
+                            <li><a class="dropdown-item" href="#">培育室申請&ensp;<i class="fa-solid fa-building"></i></a>
                             </li>
-                            <li><a class="dropdown-item" href="#">續約申請&ensp;<i
+                            <li><a class="dropdown-item" href="#">續約申請&emsp;&ensp;<i
                                         class="fa-solid fa-file-signature"></i></a></li>
-                        </ul>
-                    </li>
-                    <li class="item dropend">
-                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                            data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-stamp"></i><span
-                                class="tooltiptext tooltip-right">資料審核</span></a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="./vendorApplication.html">廠商審核&emsp;&ensp;<i
-                                        class="fa-solid fa-user-tie"></i></a></li>
-                            <li><a class="dropdown-item" href="#">車位審核&emsp;&ensp;<i
-                                        class="fa-solid fa-square-parking"></i></a></li>
-                            <li><a class="dropdown-item" href="#">空間審核&emsp;&ensp;<i
-                                        class="fa-solid fa-building"></i></a>
-                            </li>
-                            <li><a class="dropdown-item" href="#">續約審核&emsp;&ensp;<i
-                                        class="fa-solid fa-file-signature"></i></a>
-                            </li>
-                            <li><a class="dropdown-item" href="#">識別證審核&ensp;<i
-                                        class="fa-regular fa-address-card"></i></a>
-                            </li>
                         </ul>
                     </li>
 
                     <li class="item">
                         <a class="link" href="#"><i class="fa-solid fa-spinner"></i><span
                                 class="tooltiptext tooltip-right">進度查詢</span></a>
-
                     </li>
+
                     <li class="item dropend">
                         <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                            data-bs-toggle="dropdown" aria-expanded="false"><i
-                                class="fa-solid fa-people-robbery"></i><span
-                                class="tooltiptext tooltip-right">用戶管理</span></a>
+                            data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-briefcase"></i><span
+                                class="tooltiptext tooltip-right">資料管理</span></a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="./nav-memo2-roles.html">權限設定&ensp;<i
-                                        class="fa-solid fa-user-lock"></i></a></li>
-                            <li><a class="dropdown-item" href="#">資料修改&ensp;<i class="fa-solid fa-address-book"></i></a>
-                            </li>
-
+                            <li><a class="dropdown-item" href="#">培育室管理&emsp;&ensp;<i
+                                        class="fa-solid fa-tree-city"></i></a></li>
+                            <li><a class="dropdown-item" href="#">停車位管理&emsp;&ensp;<i
+                                        class="fa-brands fa-product-hunt"></i></a></li>
+                            <li><a class="dropdown-item" href="./nav-memo2-roles.html">用戶權限設定&ensp;<i
+                                        class="fa-solid fa-people-robbery"></i></a></li>
+                            <li><a class="dropdown-item" href="#">用戶資料修改&ensp;<i
+                                        class="fa-solid fa-address-book"></i></a></li>
                         </ul>
                     </li>
+                    
                     <li class="item">
                         <a class="link" href="#"><i class="fa-solid fa-file-shield"></i><span
                                 class="tooltiptext tooltip-right">LOG紀錄</span></a>
@@ -121,6 +104,11 @@
                     <li class="item">
                         <a class="link" href="stylePage.html"><i class="fa-solid fa-paint-roller"></i><span
                                 class="tooltiptext tooltip-right">樣式設計</span></a>
+                    </li>
+
+                    <li class="item">
+                        <a class="link" href="underConstruction.html"><i class="fa-solid fa-person-digging"></i><span
+                                class="tooltiptext tooltip-right">施工頁</span></a>
                     </li>
                 </ul>
             </div>
@@ -154,10 +142,9 @@
                         <li class="breadcrumb-item active"><i class="fa-regular fa-address-card"></i>&ensp;識別證申請</li>
                     </ol>
                 </div>
-                <!-- <section> -->
-                <div class="contentPrint">
+                <div class="no_print">
                     <!-- 職缺列表 -->
-                    <div class="tabs-box my-2r">
+                    <div class="tabs-box my-2r no_print">
                         <h3 class="section-header"><i class="fa-solid fa-quote-left"></i>申請人資料<i
                                 class="fa-solid fa-quote-right"></i></h3>
                         <div class="tabs section-border-radius section-padding">
@@ -264,7 +251,7 @@
                                         </div>
                                         <div class="row mb-3">
                                             <label for="idcardECPhone" class="col-lg-auto col-form-label text-nowrap"
-                                                asp-for="IdCard_ECPhone">&#10551;&ensp;聯絡電話：</label>
+                                                asp-for="IdCard_ECPhone">&ensp;&#10551;聯絡電話：</label>
                                             <div class="col">
                                                 <input type="text" class="form-control" id="idcardECPhone"
                                                     asp-for="IdCard_ECPhone">
@@ -317,6 +304,11 @@
                                             <div class="col">請妥善保管，如遺失請依規定至本校出納組繳交<span
                                                     class="fw-bold text-danger">300元</span>並申請補發。</div>
                                         </div>
+                                        <div class="row ms-3">
+                                            <div class="col-auto">5.</div>
+                                            <div class="col text-decoration-underline fw-bold">印出申請書並簽名後，交至<span
+                                                    class="fw-bold text-danger">大同大學研發處</span>，才算申請完成喔！</div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row text-center p-3 justify-content-center">
@@ -327,9 +319,9 @@
                                         <button type="button" class="btn btn-lg btn-outline-info" data-bs-toggle="modal"
                                             data-bs-target="#idCardApp_pdf">預覽</button>
                                     </div>
-                                    <div class="col-auto">
+                                    <!-- <div class="col-auto">
                                         <button type="submit" class="btn btn-lg btn-success">送出</button>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </form>
                         </div>
@@ -350,14 +342,13 @@
                                     <div class="modal-body">
                                         <div class="table-responsive px-5">
                                             <!-- <h3 class="text-center">大同大學創新育成中心培育企業識別證申請表</h3> -->
-                                            <div class="row align-items-center justify-content-center mb-2" style="min-width: 552px;">
+                                            <div class="row align-items-center justify-content-center mb-2 modal-minW">
                                                 <div class="col-auto title_imgBox"><img src="./img/ttulogo.png"></div>
                                                 <h3 class="col-auto text-center fw-bold text-nowrap mb-0">
                                                     大同大學創新育成中心培育企業識別證申請表
                                                 </h3>
                                             </div>
-                                            <table
-                                                class="table table-bordered align-middle border border-3 border-dark">
+                                            <table class="table table-bordered align-middle border border-3 border-dark modal-minW">
                                                 <tr class="py-2">
                                                     <td colspan="2" class="text-center fw-bold  text-nowrap">
                                                         公司行號名稱(立案全銜)
@@ -427,7 +418,7 @@
                                                     </td>
                                                 </tr>
                                             </table>
-                                            <div class="row my-3" style="min-width: 552px;">
+                                            <div class="row my-3 modal-minW">
                                                 <div class="col-12">申請人聲明：</div>
                                                 <div class="ms-2 col-12">
                                                     &emsp;&emsp;本份資料均填寫屬實，進駐大同大學期間，願意完全遵守大同大學有關人事及校園安全規定條則，並不得任意使用大同大學名稱，如有違背，將立即喪失進駐資格，並歸還任何大同大學所核發校園出入等相關證件。
@@ -436,13 +427,13 @@
                                                     &emsp;&emsp;申請人離職需將識別證繳回育成中心(代繳回本校人事室)。識別證為出入培育室使用，不作其他識別用途。請妥善保管，如遺失請依規定至本校出納組繳交<span
                                                         class="fw-bold text-danger">300元</span>並申請補發。</div>
                                             </div>
-                                            <div class="row my-2 mb-3 pb-5" style="min-width: 552px;">
+                                            <div class="row my-2 mb-3 pb-5 modal-minW">
                                                 <div class="col fw-bold text-dark text-nowrap">申請人簽名：</div>
                                                 <div class="col"></div>
                                                 <div class="col fw-bold text-dark text-nowrap">公司負責人簽名：</div>
                                                 <div class="col"></div>
                                             </div>
-                                            <div class="row p-2" style="min-width: 552px;">
+                                            <div class="row p-2 modal-minW">
                                                 <div class="col py-2 ps-3 border border-dark text-dark">大同大學創新育成中心審核：
                                                 </div>
                                                 <br>
@@ -459,12 +450,11 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-outline-dark"
                                         data-bs-dismiss="modal">關閉</button>
-                                    <button type="button" class="btn btn-primary print" id="printIdCard">列印</button>
+                                    <button type="button" class="btn btn-primary print" id="printIdCard">列印並送出申請</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <!-- </section> -->
                 <!-- 頁尾 -->
@@ -483,9 +473,7 @@
             </div>
         </div>
     </main>
-    <section class="print_template">
-
-    </section>
+    <section class="print_template"></section>
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -499,12 +487,9 @@
         $(document).on("click", ".print", function () {
             const section = $("section");
             const modalBody = $(".modal-body").detach();
-
-            const content = $(".contentPrint").detach();
             section.append(modalBody);
             window.print();
             section.empty();
-            section.append(content);
             $(".modal-body-wrapper").append(modalBody);
         });
 

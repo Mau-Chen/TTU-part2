@@ -184,7 +184,142 @@ $(function () {
             },
         }
     });
-
+    $('#cultivationRoom_OpenList').DataTable({
+        responsive: true, // 預設為undefined
+        "order": [[0, "desc"]],
+        "columnDefs": [
+            {
+                targets: [0],
+                responsivePriority: 1,
+            },
+            {
+                targets: [2],
+                responsivePriority: 2,
+            },
+            {
+                targets: [5],
+                responsivePriority: 3,
+            },
+            { "orderable": false, "targets": [5, 6] }
+        ],
+        language: {
+            lengthMenu: "顯示 _MENU_ 筆",
+            sProcessing: "處理中...",
+            loadingRecords: "載入中...",
+            sZeroRecords: "OOPS！没有匹配的结果",
+            sInfo: "共有 _MAX_ 筆",
+            sInfoEmpty: "共有 0 筆",
+            sInfoFiltered: " ",
+            sInfoPostFix: "",
+            sSearch: '<i class="fa fa-search px-1" aria-hidden="true"></i>',
+            sUrl: "",
+            sEmptyTable: "尚未有資料紀錄存在",
+            sLoadingRecords: "載入中...",
+            sInfoThousands: ",",
+            oPaginate: {
+                sFirst: '<i class="fa fa-step-backward" aria-hidden="true"></i>',
+                sPrevious: '<i class="fa fa-caret-left" aria-hidden="true"></i>',
+                sNext: '<i class="fa fa-caret-right" aria-hidden="true"></i>',
+                sLast: '<i class="fa fa-step-forward" aria-hidden="true"></i>',
+            },
+            oAria: {
+                sSortAscending: ": 以升序排列此列",
+                sSortDescending: ": 以降序排列此列",
+            },
+        }
+    });
+    $('#cultivationRoom_CloseList').DataTable({
+        responsive: true, // 預設為undefined
+        "order": [[0, "desc"]],
+        "columnDefs": [
+            {
+                targets: [0],
+                responsivePriority: 1,
+            },
+            {
+                targets: [2],
+                responsivePriority: 2,
+            },
+            {
+                targets: [5],
+                responsivePriority: 3,
+            },
+            { "orderable": false, "targets": [6, 7] }
+        ],
+        language: {
+            lengthMenu: "顯示 _MENU_ 筆",
+            sProcessing: "處理中...",
+            loadingRecords: "載入中...",
+            sZeroRecords: "OOPS！没有匹配的结果",
+            sInfo: "共有 _MAX_ 筆",
+            sInfoEmpty: "共有 0 筆",
+            sInfoFiltered: " ",
+            sInfoPostFix: "",
+            sSearch: '<i class="fa fa-search px-1" aria-hidden="true"></i>',
+            sUrl: "",
+            sEmptyTable: "尚未有資料紀錄存在",
+            sLoadingRecords: "載入中...",
+            sInfoThousands: ",",
+            oPaginate: {
+                sFirst: '<i class="fa fa-step-backward" aria-hidden="true"></i>',
+                sPrevious: '<i class="fa fa-caret-left" aria-hidden="true"></i>',
+                sNext: '<i class="fa fa-caret-right" aria-hidden="true"></i>',
+                sLast: '<i class="fa fa-step-forward" aria-hidden="true"></i>',
+            },
+            oAria: {
+                sSortAscending: ": 以升序排列此列",
+                sSortDescending: ": 以降序排列此列",
+            },
+        }
+    });
+    $('#roomHistoryList,#roomHistoryList2').DataTable({
+        responsive: true, // 預設為undefined
+        "order": [[0, "desc"]],
+        lengthMenu: [
+            [10, 25, 50, -1],
+            [10, 25, 50, "全部"],
+        ],
+        "columnDefs": [
+            {
+                targets: [0],
+                responsivePriority: 1,
+            },
+            {
+                targets: [1],
+                responsivePriority: 2,
+            },
+            {
+                targets: [2],
+                responsivePriority: 3,
+            },
+            { "orderable": false, "targets": [1, 2, 3, 4, 5, 6, 7, 8] }
+        ],
+        language: {
+            lengthMenu: "顯示 _MENU_ 筆",
+            sProcessing: "處理中...",
+            loadingRecords: "載入中...",
+            sZeroRecords: "OOPS！没有匹配的结果",
+            sInfo: "共有 _MAX_ 筆",
+            sInfoEmpty: "共有 0 筆",
+            sInfoFiltered: " ",
+            sInfoPostFix: "",
+            sSearch: '<i class="fa fa-search px-1" aria-hidden="true"></i>',
+            sUrl: "",
+            sEmptyTable: "尚未有資料紀錄存在",
+            sLoadingRecords: "載入中...",
+            sInfoThousands: ",",
+            oPaginate: {
+                sFirst: '<i class="fa fa-step-backward" aria-hidden="true"></i>',
+                sPrevious: '<i class="fa fa-caret-left" aria-hidden="true"></i>',
+                sNext: '<i class="fa fa-caret-right" aria-hidden="true"></i>',
+                sLast: '<i class="fa fa-step-forward" aria-hidden="true"></i>',
+            },
+            oAria: {
+                sSortAscending: ": 以升序排列此列",
+                sSortDescending: ": 以降序排列此列",
+            },
+        }
+    });
 });
 
 
@@ -296,4 +431,24 @@ function combineInputs() {
 //}
 
 
+let btn_up_el = document.getElementById("btn_up");
+btn_up_el.addEventListener("click", function () {
+    // console.log('aaa');
+    let html_el = document.getElementsByTagName("html")[0];
+    html_el.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+// 當畫面滾動時觸發的事件
+window.addEventListener("scroll", function () {
+    let btnUp = document.querySelector(".top_button");
+    if (window.scrollY > 0) {
+        // 當畫面不在網頁最頂端時，加上 scroll-animation 類別來套用透明度變化的動畫
+        btnUp.classList.add("scroll-animation");
+    } else {
+        // 畫面在網頁最頂端時，移除 scroll-animation 類別
+        btnUp.classList.remove("scroll-animation");
+    }
+});
 

@@ -148,19 +148,34 @@
                 <!-- 麵包屑 -->
                 <div class="breadcrumb-box section-padding section-border-radius my-2r no_print">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item active"><i class="fa-solid fa-person-digging"></i>&ensp;網頁建置中</li>
+                        <li class="breadcrumb-item"><i class="fa-solid fa-file-contract"></i>&ensp;申請與查閱</li>
+                        <li class="breadcrumb-item active"><i class="fa-solid fa-square-parking"></i>&ensp;停車位管理</li>
+                        <!-- <li class="breadcrumb-item active"><i class="fa-solid fa-id-card-clip"></i>&ensp;識別證申請</li> -->
                     </ol>
                 </div>
-                <!-- 建置內頁 -->
-                <div class="tabs-box my-2r underConstructionPage">
-                    <h3 class="section-header"><i class="fa-solid fa-quote-left"></i>本頁建設中<i
-                            class="fa-solid fa-quote-right"></i></h3>
-                    <div class="tabs section-border-radius section-padding p-5">
-                        <img src="./img/under_construction.png" >
+                <!-- 識別證列表 -->
+                <div class="tabs-box my-2r">
+                    <div class="row mb-4 px-3">
+                        <h3 class="section-header col-auto mb-0 lh-base"><i class="fa-solid fa-quote-left"></i>停車位列表<i
+                                class="fa-solid fa-quote-right"></i></h3>
+                        <a class="btn btn-outline-info col-auto goto_somewhere ms-3 py-2" role="button"
+                            href="./parkingspace_apply.html"><i class="fa-solid fa-car-side"></i>/<i class="fa-solid fa-motorcycle"></i><i
+                                class="fa-solid fa-arrow-right mx-1"></i><i class="fa-solid fa-plus"></i><span
+                                class="tooltiptext tooltip-right">申請停車位</span></a>
+                    </div>
+
+                    <div class="tabs section-border-radius section-padding">
+                        <table id="myParkingSpaceList" class="table table-hover table-bordered responsive align-middle"
+                            style="width:100%">
+                        </table>
                     </div>
                 </div>
 
-                <!-- </section> -->
+
+                <!-- TOP -->
+                <div class="top_button no_print">
+                    <a id="btn_up"><img src="./img/TOP_LOGO_3.png" alt=""></a>
+                </div>
                 <!-- 頁尾 -->
                 <div class="footer section-padding section-border-radius my-2r no_print">
                     <ul class="links">
@@ -187,7 +202,17 @@
     <script src="https://cdn.datatables.net/responsive/3.0.1/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/3.0.1/js/responsive.bootstrap5.min.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+        $(document).on("click", ".print", function () {
+            const section = $("section");
+            const modalBody = $(".modal-body").detach();
+            section.append(modalBody);
+            window.print();
+            section.empty();
+            $(".modal-body-wrapper").append(modalBody);
+        });
 
+    </script>
 </body>
 
 </html>

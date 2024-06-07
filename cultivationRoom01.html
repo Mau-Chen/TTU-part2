@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大同大學-校內育成媒合平台</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/nav-memo2-main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.1/css/responsive.bootstrap5.min.css">
+</head>
+
+<body>
+    <main class="main">
+        <!-- 側邊攔 -->
+        <nav class="nav-box no_print">
+            <!-- RWD-MENU標籤 -->
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- 側邊攔上方 -->
+            <div class="top">
+                <a href="#" class="navbar-logo">
+                    <img src="./img/ttoLogo_2.png" class="navbar-brand">
+                </a>
+                <ul class="navigation navbar-top">
+                    <li class="item">
+                        <a class="link active" href="./nav-memo2.html"><i class="fas fa-home"></i><span
+                                class="tooltiptext tooltip-right">儀錶板</span></a>
+                    </li>
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink1"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-users"></i><span
+                                class="tooltiptext tooltip-right">職缺媒合</span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                            <li><a class="dropdown-item" href="./nav-memo2-joblist.html">職缺總攬&ensp;<i
+                                        class="fa-solid fa-users-line"></i></a>
+                            </li>
+                            <li><a class="dropdown-item" href="./nav-memo2-myjob.html">刊登中&emsp;&ensp;<i
+                                        class="fa-solid fa-users-viewfinder"></i></a></li>
+                    </li>
+                </ul>
+                </li>
+                <li class="item dropend">
+                    <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink2"
+                        data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-users-rectangle"></i><span
+                            class="tooltiptext tooltip-right">職員管理</span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                        <li><a class="dropdown-item" href="idcard_application.html">識別證申請&ensp;<i
+                                    class="fa-regular fa-address-card"></i></a></li>
+                        <li><a class="dropdown-item" href="#">職員設定&emsp;&ensp;<i class="fa-solid fa-users-gear"></i></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="item dropend">
+                    <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink3"
+                        data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-file-contract"></i><span
+                            class="tooltiptext tooltip-right">合約申請</span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink3">
+                        <li><a class="dropdown-item" href="parkingSpace_apply.html">停車位申請&ensp;<i class="fa-solid fa-square-parking"></i></a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">續約申請&emsp;&ensp;<i
+                                    class="fa-solid fa-file-signature"></i></a></li>
+                    </ul>
+                </li>
+
+                <li class="item">
+                    <a class="link" href="#"><i class="fa-solid fa-spinner"></i><span
+                            class="tooltiptext tooltip-right">進度查詢</span></a>
+                </li>
+
+                <li class="item dropend">
+                    <a class="link dropdown-toggle" role="button" id="dropdownMenuLink4" data-bs-toggle="dropdown"
+                        aria-expanded="false"><i class="fa-solid fa-stamp"></i><span
+                            class="tooltiptext tooltip-right">資料審核</span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink4">
+                        <li><a class="dropdown-item" href="./coopManufApp.html">廠商審核&emsp;&ensp;<i
+                                    class="fa-solid fa-user-tie"></i></a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">車位審核&emsp;&ensp;<i
+                                    class="fa-solid fa-square-parking"></i></a></li>
+                        <li><a class="dropdown-item" href="#">空間審核&emsp;&ensp;<i class="fa-solid fa-building"></i></a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">續約審核&emsp;&ensp;<i
+                                    class="fa-solid fa-file-signature"></i></a></li>
+                        <li><a class="dropdown-item" href="#">識別證審核&ensp;<i class="fa-regular fa-address-card"></i></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="item dropend">
+                    <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink5"
+                        data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-briefcase"></i><span
+                            class="tooltiptext tooltip-right">資料管理</span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink5">
+                        <li><a class="dropdown-item" href="./cultivationRoom.html">培育室管理&emsp;&ensp;<i
+                                    class="fa-solid fa-tree-city"></i></a></li>
+                        <li><a class="dropdown-item" href="#">停車位管理&emsp;&ensp;<i
+                                    class="fa-brands fa-product-hunt"></i></a></li>
+                        <li><a class="dropdown-item" href="./nav-memo2-roles.html">用戶權限設定&ensp;<i
+                                    class="fa-solid fa-people-robbery"></i></a></li>
+                        <li><a class="dropdown-item" href="#">用戶資料修改&ensp;<i class="fa-solid fa-address-book"></i></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="item">
+                    <a class="link" href="#"><i class="fa-solid fa-file-shield"></i><span
+                            class="tooltiptext tooltip-right">LOG紀錄</span></a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#"><i class="fa-regular fa-paper-plane"></i><span
+                            class="tooltiptext tooltip-right">意見反應</span></a>
+                </li>
+                <li class="item">
+                    <a class="link" href="stylePage.html"><i class="fa-solid fa-paint-roller"></i><span
+                            class="tooltiptext tooltip-right">樣式設計</span></a>
+                </li>
+
+                <li class="item">
+                    <a class="link" href="underConstruction.html"><i class="fa-solid fa-person-digging"></i><span
+                            class="tooltiptext tooltip-right">施工頁</span></a>
+                </li>
+                </ul>
+            </div>
+            <!-- 側邊攔下方 -->
+            <div class="bottom">
+                <ul class="navigation">
+                    <!-- 已登入 -->
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink9"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i
+                                class="fa-regular fa-circle-user"></i></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink9">
+                            <li><a class="dropdown-item" href="#">設定&ensp;<i class="fa-solid fa-gear"></i></a></li>
+                            <li><a class="dropdown-item" href="#">登出&ensp;<i class="fa-solid fa-door-open"></i></a></li>
+                        </ul>
+                    </li>
+                    <!-- 未登入 -->
+                    <!-- <li class="item">
+                        <a class="link" href="./nav-memo2-login.html"><i class="fa-regular fa-circle-user"></i><span
+                                class="tooltiptext tooltip-right">登入&ensp;/&ensp;申請</span></a>
+                    </li> -->
+                </ul>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="container">
+                <!-- 麵包屑 -->
+                <div class="breadcrumb-box section-padding section-border-radius my-2r no_print">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><i class="fa-solid fa-briefcase"></i>&ensp;資料管理</li>
+                        <li class="breadcrumb-item active"><i class="fa-solid fa-tree-city"></i>&ensp;培育室管理</li>
+                    </ol>
+                </div>
+                <div>
+                    <!-- 培育室啟用列表 -->
+                    <div class="tabs-box my-2r no_print">
+                        <div class="row mb-4 px-3">
+                            <h3 class="section-header col-auto mb-0 lh-base"><i
+                                    class="fa-solid fa-quote-left"></i>啟用中列表<i class="fa-solid fa-quote-right"></i></h3>
+                            <a class="btn btn-outline-info col-auto goto_somewhere ms-5 py-2" role="button" href="#"><i
+                                    class="fa-solid fa-plus"></i><i class="fa-solid fa-arrow-right mx-1"></i><i
+                                    class="fa-solid fa-tree-city"></i><span
+                                    class="tooltiptext tooltip-right">新增培育室</span></a>
+                        </div>
+                        <div class="tabs section-border-radius section-padding">
+                            <table id="cultivationRoom_OpenList"
+                                class="table table-hover table-bordered responsive align-middle" style="width:100%">
+                                <!-- <thead>
+                                    <tr>
+                                        <th class="text-nowrap text-center">培育區域</th>
+                                        <th class="text-nowrap text-center">培育室</th>
+                                        <th class="text-nowrap text-center">培育企業</th>
+                                        <th class="text-nowrap text-center">服務費&ensp;/&ensp;月</th>
+                                        <th class="text-nowrap text-center">當前狀態</th>
+                                        <th class="text-nowrap text-center">詳情</th>
+                                        <th class="text-nowrap text-center">修改</th>
+                                    </tr>
+                                </thead> -->
+                                <!-- <tbody>
+                                    <tr>
+                                        <td class="text-center">青創基地</td>
+                                        <td class="text-center">101</td>
+                                        <td class="">馳晶科技股份有限公司</td>
+                                        <td class="text-end text-nowrap">80,000</td>
+                                        <td class="text-center">已培育</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#openRoom_Details">
+                                                <i class="fa-solid fa-info px-1"></i></button></td>
+                                        <td class="text-center"><a
+                                                class="btn btn-outline-primary rounded-circle btn-sm oneWord"
+                                                href="#"><i class="fa-solid fa-wrench"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">綜合工廠培育區</td>
+                                        <td class="text-center">A4-102</td>
+                                        <td class="">羿安整合行銷股份有限公司</td>
+                                        <td class="text-end text-nowrap">12,000</td>
+                                        <td class="text-center">已培育</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#openRoom_Details">
+                                                <i class="fa-solid fa-info px-1"></i></button></td>
+                                        <td class="text-center"><a
+                                                class="btn btn-outline-primary rounded-circle btn-sm oneWord"
+                                                href="#"><i class="fa-solid fa-wrench"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">挺生大樓培育區</td>
+                                        <td class="text-center">714</td>
+                                        <td class="">博濟施生技股份有限公司</td>
+                                        <td class="text-end text-nowrap">6,000</td>
+                                        <td class="text-center">已培育</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#openRoom_Details">
+                                                <i class="fa-solid fa-info px-1"></i></button></td>
+                                        <td class="text-center"><a
+                                                class="btn btn-outline-primary rounded-circle btn-sm oneWord"
+                                                href="#"><i class="fa-solid fa-wrench"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">產學實驗培育區</td>
+                                        <td class="text-center">101</td>
+                                        <td class="">品庠醫藥生技股份有限公司</td>
+                                        <td class="text-end text-nowrap">30,000</td>
+                                        <td class="text-center">已培育</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#openRoom_Details">
+                                                <i class="fa-solid fa-info px-1"></i></button></td>
+                                        <td class="text-center"><a
+                                                class="btn btn-outline-primary rounded-circle btn-sm oneWord"
+                                                href="#"><i class="fa-solid fa-wrench"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">實驗大樓培育區</td>
+                                        <td class="text-center">301</td>
+                                        <td class="">恆橋產業股份有限公司</td>
+                                        <td class="text-end text-nowrap">6,000</td>
+                                        <td class="text-center">已培育</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#openRoom_Details">
+                                                <i class="fa-solid fa-info px-1"></i></button></td>
+                                        <td class="text-center"><a
+                                                class="btn btn-outline-primary rounded-circle btn-sm oneWord"
+                                                href="#"><i class="fa-solid fa-wrench"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">北設工培育區</td>
+                                        <td class="text-center">713</td>
+                                        <td class="">台華旅行社有限公司台北分公司</td>
+                                        <td class="text-end text-nowrap">15,000</td>
+                                        <td class="text-center">已培育</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#openRoom_Details">
+                                                <i class="fa-solid fa-info px-1"></i></button></td>
+                                        <td class="text-center"><a
+                                                class="btn btn-outline-primary rounded-circle btn-sm oneWord"
+                                                href="#"><i class="fa-solid fa-wrench"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">尚志大樓培育區</td>
+                                        <td class="text-center">999</td>
+                                        <td class="">無</td>
+                                        <td class="text-end text-nowrap">20,000</td>
+                                        <td class="text-center">尚未培育</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#openRoom_Details">
+                                                <i class="fa-solid fa-info px-1"></i></button></td>
+                                        <td class="text-center"><a
+                                                class="btn btn-outline-primary rounded-circle btn-sm oneWord"
+                                                href="#"><i class="fa-solid fa-wrench"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">青創基地</td>
+                                        <td class="text-center">104</td>
+                                        <td class="">馳晶科技股份有限公司</td>
+                                        <td class="text-end text-nowrap">80,000</td>
+                                        <td class="text-center">洽談中</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#openRoom_Details">
+                                                <i class="fa-solid fa-info px-1"></i></button></td>
+                                        <td class="text-center"><a
+                                                class="btn btn-outline-primary rounded-circle btn-sm oneWord"
+                                                href="#"><i class="fa-solid fa-wrench"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">綜合工廠培育區</td>
+                                        <td class="text-center">A4-103</td>
+                                        <td class="">白晶設計事業有限公司</td>
+                                        <td class="text-end text-nowrap">10,000</td>
+                                        <td class="text-center">尚未培育</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#openRoom_Details">
+                                                <i class="fa-solid fa-info px-1"></i></button></td>
+                                        <td class="text-center"><a
+                                                class="btn btn-outline-primary rounded-circle btn-sm oneWord"
+                                                href="#"><i class="fa-solid fa-wrench"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">挺生大樓培育區</td>
+                                        <td class="text-center">809</td>
+                                        <td class="">磁電國際股份有限公司</td>
+                                        <td class="text-end text-nowrap">20,000</td>
+                                        <td class="text-center">已培育</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#openRoom_Details">
+                                                <i class="fa-solid fa-info px-1"></i></button></td>
+                                        <td class="text-center"><a
+                                                class="btn btn-outline-primary rounded-circle btn-sm oneWord"
+                                                href="#"><i class="fa-solid fa-wrench"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">產學實驗培育區</td>
+                                        <td class="text-center">101</td>
+                                        <td class="">品庠醫藥生技股份有限公司</td>
+                                        <td class="text-end text-nowrap">30,000</td>
+                                        <td class="text-center">已培育</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#openRoom_Details">
+                                                <i class="fa-solid fa-info px-1"></i></button></td>
+                                        <td class="text-center"><a
+                                                class="btn btn-outline-primary rounded-circle btn-sm oneWord"
+                                                href="#"><i class="fa-solid fa-wrench"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">實驗大樓培育區</td>
+                                        <td class="text-center">302</td>
+                                        <td class="">無</td>
+                                        <td class="text-end text-nowrap">6,000</td>
+                                        <td class="text-center">尚未培育</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#openRoom_Details">
+                                                <i class="fa-solid fa-info px-1"></i></button></td>
+                                        <td class="text-center"><a
+                                                class="btn btn-outline-primary rounded-circle btn-sm oneWord"
+                                                href="#"><i class="fa-solid fa-wrench"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">北設工培育區</td>
+                                        <td class="text-center">102</td>
+                                        <td class="">201</td>
+                                        <td class="text-end text-nowrap">30,000</td>
+                                        <td class="text-center">已培育</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#openRoom_Details">
+                                                <i class="fa-solid fa-info px-1"></i></button></td>
+                                        <td class="text-center"><a
+                                                class="btn btn-outline-primary rounded-circle btn-sm oneWord"
+                                                href="#"><i class="fa-solid fa-wrench"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">尚志大樓培育區</td>
+                                        <td class="text-center">998</td>
+                                        <td class="">無</td>
+                                        <td class="text-end text-nowrap">180,000</td>
+                                        <td class="text-center">尚未培育</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#openRoom_Details">
+                                                <i class="fa-solid fa-info px-1"></i></button></td>
+                                        <td class="text-center"><a
+                                                class="btn btn-outline-primary rounded-circle btn-sm oneWord"
+                                                href="#"><i class="fa-solid fa-wrench"></i></a></td>
+                                    </tr>
+                                </tbody> -->
+                                <!-- <tfoot>
+                                    <tr>
+                                        <th class="text-nowrap text-center">培育區域</th>
+                                        <th class="text-nowrap text-center">培育室</th>
+                                        <th class="text-nowrap text-center">培育企業</th>
+                                        <th class="text-nowrap text-center">服務費&ensp;/&ensp;月</th>
+                                        <th class="text-nowrap text-center">當前狀態</th>
+                                        <th class="text-nowrap text-center">詳情</th>
+                                        <th class="text-nowrap text-center">修改</th>
+                                    </tr>
+                                </tfoot> -->
+
+                            </table>
+                        </div>
+                    </div>
+                    <hr class="my-5">
+                    <!-- 培育室停用列表 -->
+                    <div class="tabs-box my-2r no_print">
+                        <h3 class="section-header"><i class="fa-solid fa-quote-left"></i>停用中列表<i
+                                class="fa-solid fa-quote-right"></i></h3>
+                        <div class="tabs section-border-radius section-padding">
+                            <table id="cultivationRoom_CloseList"
+                                class="table table-hover table-bordered responsive align-middle" style="width:100%">
+
+                                <thead>
+                                    <tr>
+                                        <th class="text-nowrap text-center">建立日期</th>
+                                        <th class="text-nowrap text-center">培育區域</th>
+                                        <th class="text-nowrap text-center">培育室</th>
+                                        <th class="text-nowrap text-center">可用坪數</th>
+                                        <th class="text-nowrap text-center">服務費&ensp;/&ensp;月</th>
+                                        <th class="text-nowrap text-center">最後停用日期</th>
+                                        <th class="text-nowrap text-center">歷史紀錄</th>
+                                        <th class="text-nowrap text-center">再次上架</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">2019-01-01</td>
+                                        <td class="text-center">青創基地</td>
+                                        <td class="text-center">101</td>
+                                        <td class="text-end">10.0</td>
+                                        <td class="text-end text-nowrap">80,000</td>
+                                        <td class="text-center">2021-01-01</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#closeRoom_Details">
+                                                <i class="fa-solid fa-clock-rotate-left"></i></button></td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm">
+                                                <i class="fa-solid fa-arrow-rotate-left"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2020-05-01</td>
+                                        <td class="text-center">綜合工廠培育區</td>
+                                        <td class="text-center">A4-102</td>
+                                        <td class="text-end">9.0</td>
+                                        <td class="text-end text-nowrap">12,000</td>
+                                        <td class="text-center">2021-05-01</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#closeRoom_Details">
+                                                <i class="fa-solid fa-clock-rotate-left"></i></button></td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm">
+                                                <i class="fa-solid fa-arrow-rotate-left"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2020-03-04</td>
+                                        <td class="text-center">挺生大樓培育區</td>
+                                        <td class="text-center">714</td>
+                                        <td class="text-end">8.0</td>
+                                        <td class="text-end text-nowrap">6,000</td>
+                                        <td class="text-center">2021-03-04</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#closeRoom_Details">
+                                                <i class="fa-solid fa-clock-rotate-left"></i></button></td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm">
+                                                <i class="fa-solid fa-arrow-rotate-left"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2019-03-04</td>
+                                        <td class="text-center">產學實驗培育區</td>
+                                        <td class="text-center">101</td>
+                                        <td class="text-end">7.0</td>
+                                        <td class="text-end text-nowrap">30,000</td>
+                                        <td class="text-center">2021-03-04</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#closeRoom_Details">
+                                                <i class="fa-solid fa-clock-rotate-left"></i></button></td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm">
+                                                <i class="fa-solid fa-arrow-rotate-left"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2019-03-04</td>
+                                        <td class="text-center">實驗大樓培育區</td>
+                                        <td class="text-center">301</td>
+                                        <td class="text-end">6.0</td>
+                                        <td class="text-end text-nowrap">6,000</td>
+                                        <td class="text-center">2021-03-04</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#closeRoom_Details">
+                                                <i class="fa-solid fa-clock-rotate-left"></i></button></td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm">
+                                                <i class="fa-solid fa-arrow-rotate-left"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2019-03-04</td>
+                                        <td class="text-center">北設工培育區</td>
+                                        <td class="text-center">713</td>
+                                        <td class="text-end">5.0</td>
+                                        <td class="text-end text-nowrap">15,000</td>
+                                        <td class="text-center">2021-04-11</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#closeRoom_Details">
+                                                <i class="fa-solid fa-clock-rotate-left"></i></button></td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm">
+                                                <i class="fa-solid fa-arrow-rotate-left"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2019-03-04</td>
+                                        <td class="text-center">尚志大樓培育區</td>
+                                        <td class="text-center">999</td>
+                                        <td class="text-end">4.0</td>
+                                        <td class="text-end text-nowrap">20,000</td>
+                                        <td class="text-center">2021-04-11</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#closeRoom_Details">
+                                                <i class="fa-solid fa-clock-rotate-left"></i></button></td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm">
+                                                <i class="fa-solid fa-arrow-rotate-left"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2019-03-04</td>
+                                        <td class="text-center">青創基地</td>
+                                        <td class="text-center">104</td>
+                                        <td class="text-end">3.0</td>
+                                        <td class="text-end text-nowrap">80,000</td>
+                                        <td class="text-center">2021-04-11</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#closeRoom_Details">
+                                                <i class="fa-solid fa-clock-rotate-left"></i></button></td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm">
+                                                <i class="fa-solid fa-arrow-rotate-left"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2019-03-04</td>
+                                        <td class="text-center">綜合工廠培育區</td>
+                                        <td class="text-center">A4-103</td>
+                                        <td class="text-end">2.0</td>
+                                        <td class="text-end text-nowrap">10,000</td>
+                                        <td class="text-center">2022-01-01</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#closeRoom_Details">
+                                                <i class="fa-solid fa-clock-rotate-left"></i></button></td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm">
+                                                <i class="fa-solid fa-arrow-rotate-left"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2019-03-04</td>
+                                        <td class="text-center">挺生大樓培育區</td>
+                                        <td class="text-center">809</td>
+                                        <td class="text-end">1.0</td>
+                                        <td class="text-end text-nowrap">20,000</td>
+                                        <td class="text-center">2021-06-07</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#closeRoom_Details">
+                                                <i class="fa-solid fa-clock-rotate-left"></i></button></td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm">
+                                                <i class="fa-solid fa-arrow-rotate-left"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2019-03-04</td>
+                                        <td class="text-center">產學實驗培育區</td>
+                                        <td class="text-center">101</td>
+                                        <td class="text-end">0.0</td>
+                                        <td class="text-end text-nowrap">30,000</td>
+                                        <td class="text-center">2021-06-07</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#closeRoom_Details">
+                                                <i class="fa-solid fa-clock-rotate-left"></i></button></td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm">
+                                                <i class="fa-solid fa-arrow-rotate-left"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2019-03-04</td>
+                                        <td class="text-center">實驗大樓培育區</td>
+                                        <td class="text-center">302</td>
+                                        <td class="text-end">10.5</td>
+                                        <td class="text-end">6,000</td>
+                                        <td class="text-center">2022-01-01</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#closeRoom_Details">
+                                                <i class="fa-solid fa-clock-rotate-left"></i></button></td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm">
+                                                <i class="fa-solid fa-arrow-rotate-left"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2019-03-04</td>
+                                        <td class="text-center">北設工培育區</td>
+                                        <td class="text-center">102</td>
+                                        <td class="text-end">102.0</td>
+                                        <td class="text-end text-nowrap">30,000</td>
+                                        <td class="text-center">2024-04-07</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#closeRoom_Details">
+                                                <i class="fa-solid fa-clock-rotate-left"></i></button></td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm">
+                                                <i class="fa-solid fa-arrow-rotate-left"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2019-03-04</td>
+                                        <td class="text-center">尚志大樓培育區</td>
+                                        <td class="text-center">998</td>
+                                        <td class="text-end">8.5</td>
+                                        <td class="text-end text-nowrap">180,000</td>
+                                        <td class="text-center">2021-02-17</td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#closeRoom_Details">
+                                                <i class="fa-solid fa-clock-rotate-left"></i></button></td>
+                                        <td class="text-center"><button type="button"
+                                                class="btn btn-outline-primary rounded-circle btn-sm">
+                                                <i class="fa-solid fa-arrow-rotate-left"></i></button></td>
+                                    </tr>
+                                </tbody>
+
+                                <tfoot>
+                                    <tr>
+                                        <th class="text-nowrap text-center">建立日期</th>
+                                        <th class="text-nowrap text-center">培育區域</th>
+                                        <th class="text-nowrap text-center">培育室</th>
+                                        <th class="text-nowrap text-center">可用坪數</th>
+                                        <th class="text-nowrap text-center">服務費&ensp;/&ensp;月</th>
+                                        <th class="text-nowrap text-center">最後停用日期</th>
+                                        <th class="text-nowrap text-center">歷史紀錄</th>
+                                        <th class="text-nowrap text-center">再次上架</th>
+                                    </tr>
+                                </tfoot>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal 1 -->
+                <div class="modal fade" id="openRoom_Details" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="openRoom_DetailsLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="openRoom_DetailsLabel">培育室詳情</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <!-- 培育室基本資料 -->
+                                    <div class="row mb-1">
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                            所在區域
+                                        </div>
+                                        <div class="col lightBoxItems p-3" id="companyName">
+                                            青創基地
+                                        </div>
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                            室
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            101
+                                        </div>
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                            坪數
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            15.28
+                                        </div>
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                            服務費用/月
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            80,000
+                                        </div>
+
+                                    </div>
+                                    <!-- 培育企業相關 -->
+                                    <div class="row mb-1">
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                            培育企業
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            馳晶科技股份有限公司
+                                        </div>
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                            培育代表
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            康弘昇
+                                        </div>
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                            培育期間
+                                        </div>
+                                        <div class="col-auto lightBoxItems p-3">
+                                            起：<span class="me-2">2021-01-01</span><br
+                                                class="d-none d-lg-block d-xxl-none">
+                                            訖：<span>2021-12-31</span>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- 備註 -->
+                                    <div class="row mb-1">
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                            備註事項
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            R101、R104、R105 三間培育室每月輔導服務費合算80,000元
+                                        </div>
+                                    </div>
+
+                                    <!-- 工作地點和截止日期 -->
+                                    <div class="row mb-1 multiple">
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                            登記人員
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            王小明
+                                        </div>
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                            紀錄日期
+                                        </div>
+                                        <div class="col-12 col-lg-auto lightBoxItems p-3">
+                                            2011-06-30
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid mt-4 border p-3 rounded">
+                                    <h5 class="fw-bold"><i class="fa-solid fa-clock-rotate-left me-2"></i>歷程記錄</h5>
+                                    <table id="roomHistoryList"
+                                        class="table table-hover table-bordered responsive align-middle"
+                                        style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center text-nowrap">紀錄日期</th>
+                                                <th class="text-center text-nowrap">坪數</th>
+                                                <th class="text-center text-nowrap">服務費</th>
+                                                <th class="text-center text-nowrap">培育開始</th>
+                                                <th class="text-center text-nowrap">培育結束</th>
+                                                <th class="text-center text-nowrap">培育企業</th>
+                                                <th class="text-center text-nowrap">企業代表</th>
+                                                <th class="text-center text-nowrap">備註</th>
+                                                <th class="text-center text-nowrap">操作者</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-nowrap text-center">2019-01-19</td>
+                                                <td>56.40</td>
+                                                <td class="text-nowrap">30,000</td>
+                                                <td class="text-nowrap text-center">-</td>
+                                                <td class="text-nowrap text-center">-</td>
+                                                <td>-</td>
+                                                <td class="text-center">-</td>
+                                                <td>啟用</td>
+                                                <td class="text-center"><small>王大明</small></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-nowrap text-center">2020-01-20</td>
+                                                <td>56.40</td>
+                                                <td class="text-nowrap">30,000</td>
+                                                <td class="text-nowrap text-center">2020-03-01</td>
+                                                <td class="text-nowrap text-center">2020-09-30</td>
+                                                <td>冠陞企業管理顧問股份有限公司</td>
+                                                <td class="text-center">陳智揚</td>
+                                                <td></td>
+                                                <td class="text-center"><small>王大明</small></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-nowrap text-center">2020-05-18</td>
+                                                <td>15.28</td>
+                                                <td class="text-nowrap">30,000</td>
+                                                <td class="text-nowrap text-center">2019-10-01</td>
+                                                <td class="text-nowrap text-center">2020-09-30</td>
+                                                <td>冠陞企業管理顧問股份有限公司</td>
+                                                <td class="text-center">陳智揚</td>
+                                                <td></td>
+                                                <td class="text-center"><small>王大明</small></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-nowrap text-center">2021-01-18</td>
+                                                <td>15.28</td>
+                                                <td class="text-nowrap">80,000</td>
+                                                <td class="text-nowrap text-center">2021-01-01</td>
+                                                <td class="text-nowrap text-center">2021-12-31</td>
+                                                <td>馳晶科技股份有限公司</td>
+                                                <td class="text-center">康弘昇</td>
+                                                <td>R101、R104、R105 三間培育室每月輔導服務費合算80,000元</td>
+                                                <td class="text-center"><small>王大明</small></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-nowrap text-center">2021-01-18</td>
+                                                <td>15.28</td>
+                                                <td class="text-nowrap">80,000</td>
+                                                <td class="text-nowrap text-center">2021-01-01</td>
+                                                <td class="text-nowrap text-center">2021-12-31</td>
+                                                <td>馳晶科技股份有限公司</td>
+                                                <td class="text-center">康弘昇</td>
+                                                <td>R101、R104、R105 三間培育室每月輔導服務費合算80,000元</td>
+                                                <td class="text-center"><small>王大明</small></td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th class="text-center text-nowrap">紀錄日期</th>
+                                                <th class="text-center text-nowrap">坪數</th>
+                                                <th class="text-center text-nowrap">服務費</th>
+                                                <th class="text-center text-nowrap">培育開始</th>
+                                                <th class="text-center text-nowrap">培育結束</th>
+                                                <th class="text-center text-nowrap">培育企業</th>
+                                                <th class="text-center text-nowrap">企業代表</th>
+                                                <th class="text-center text-nowrap">備註</th>
+                                                <th class="text-center text-nowrap">操作者</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary"
+                                    data-bs-dismiss="modal">關閉視窗</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 2 -->
+                <div class="modal fade" id="closeRoom_Details" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="closeRoom_DetailsLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="closeRoom_DetailsLabel">培育室紀錄</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <!-- 培育室基本資料 -->
+                                    <div class="row mb-1">
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                            所在區域
+                                        </div>
+                                        <div class="col lightBoxItems p-3" id="companyName">
+                                            青創基地
+                                        </div>
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                            室
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            101
+                                        </div>
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                            坪數
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            15.28
+                                        </div>
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                            服務費用/月
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            80,000
+                                        </div>
+
+                                    </div>
+                                    <!-- 備註 -->
+                                    <div class="row mb-1">
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                            備註事項
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            R101、R104、R105 三間培育室每月輔導服務費合算80,000元
+                                        </div>
+                                    </div>
+
+                                    <!-- 建立與關閉 -->
+                                    <div class="row mb-1 multiple">
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3">
+                                            創建人員
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            王小明
+                                        </div>
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                            最先啟用日
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            2011-06-30
+                                        </div>
+                                        <div class="col-12 col-lg-auto text-nowrap lightBoxLabel p-3 inlineLabel">
+                                            最後停用日
+                                        </div>
+                                        <div class="col lightBoxItems p-3">
+                                            2011-06-30
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid mt-4 border p-3 rounded">
+                                    <h5 class="fw-bold"><i class="fa-solid fa-clock-rotate-left me-2"></i>歷程記錄</h5>
+                                    <table id="roomHistoryList2"
+                                        class="table table-hover table-bordered responsive align-middle"
+                                        style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center text-nowrap">紀錄日期</th>
+                                                <th class="text-center text-nowrap">坪數</th>
+                                                <th class="text-center text-nowrap">服務費</th>
+                                                <th class="text-center text-nowrap">培育開始</th>
+                                                <th class="text-center text-nowrap">培育結束</th>
+                                                <th class="text-center text-nowrap">培育企業</th>
+                                                <th class="text-center text-nowrap">企業代表</th>
+                                                <th class="text-center text-nowrap">備註</th>
+                                                <th class="text-center text-nowrap">操作者</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-nowrap text-center">2019-01-19</td>
+                                                <td>56.40</td>
+                                                <td class="text-nowrap">30,000</td>
+                                                <td class="text-nowrap text-center">-</td>
+                                                <td class="text-nowrap text-center">-</td>
+                                                <td>-</td>
+                                                <td class="text-center">-</td>
+                                                <td>啟用</td>
+                                                <td class="text-center"><small>王大明</small></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-nowrap text-center">2020-01-20</td>
+                                                <td>56.40</td>
+                                                <td class="text-nowrap">30,000</td>
+                                                <td class="text-nowrap text-center">2020-03-01</td>
+                                                <td class="text-nowrap text-center">2020-09-30</td>
+                                                <td>冠陞企業管理顧問股份有限公司</td>
+                                                <td class="text-center">陳智揚</td>
+                                                <td></td>
+                                                <td class="text-center"><small>王大明</small></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-nowrap text-center">2020-05-18</td>
+                                                <td>15.28</td>
+                                                <td class="text-nowrap">30,000</td>
+                                                <td class="text-nowrap text-center">2019-10-01</td>
+                                                <td class="text-nowrap text-center">2020-09-30</td>
+                                                <td>冠陞企業管理顧問股份有限公司</td>
+                                                <td class="text-center">陳智揚</td>
+                                                <td></td>
+                                                <td class="text-center"><small>王大明</small></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-nowrap text-center">2021-01-18</td>
+                                                <td>15.28</td>
+                                                <td class="text-nowrap">80,000</td>
+                                                <td class="text-nowrap text-center">2021-01-01</td>
+                                                <td class="text-nowrap text-center">2021-12-31</td>
+                                                <td>馳晶科技股份有限公司</td>
+                                                <td class="text-center">康弘昇</td>
+                                                <td>R101、R104、R105 三間培育室每月輔導服務費合算80,000元</td>
+                                                <td class="text-center"><small>王大明</small></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-nowrap text-center">2021-01-18</td>
+                                                <td>15.28</td>
+                                                <td class="text-nowrap">80,000</td>
+                                                <td class="text-nowrap text-center">2021-01-01</td>
+                                                <td class="text-nowrap text-center">2021-12-31</td>
+                                                <td>馳晶科技股份有限公司</td>
+                                                <td class="text-center">康弘昇</td>
+                                                <td>R101、R104、R105 三間培育室每月輔導服務費合算80,000元</td>
+                                                <td class="text-center"><small>王大明</small></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-nowrap text-center">2024-01-19</td>
+                                                <td>56.40</td>
+                                                <td class="text-nowrap">30,000</td>
+                                                <td class="text-nowrap text-center">-</td>
+                                                <td class="text-nowrap text-center">-</td>
+                                                <td>-</td>
+                                                <td class="text-center">-</td>
+                                                <td>停用</td>
+                                                <td class="text-center"><small>王大明</small></td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th class="text-center text-nowrap">紀錄日期</th>
+                                                <th class="text-center text-nowrap">坪數</th>
+                                                <th class="text-center text-nowrap">服務費</th>
+                                                <th class="text-center text-nowrap">培育開始</th>
+                                                <th class="text-center text-nowrap">培育結束</th>
+                                                <th class="text-center text-nowrap">培育企業</th>
+                                                <th class="text-center text-nowrap">企業代表</th>
+                                                <th class="text-center text-nowrap">備註</th>
+                                                <th class="text-center text-nowrap">操作者</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary"
+                                    data-bs-dismiss="modal">關閉視窗</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- TOP -->
+                <div class="top_button">
+                    <a id="btn_up"><img src="./img/TOP_LOGO_3.png" alt=""></a>
+                </div>
+                <!-- 頁尾 -->
+                <div class="footer section-padding section-border-radius my-2r no_print">
+                    <ul class="links">
+                        <li><a href="#">大同大學</a></li>
+                        <li><a href="./nav-memo2-joblist.html">育成媒合</a></li>
+                        <li><a href="./nav-memo2.html">帳戶總攬</a></li>
+                    </ul>
+                    <p class="copyright">
+                        大同大學 版權所有&copy;2022 All Rights Reserved.<br>建議使用：IE9.0以上版本或Google
+                        Chrome瀏覽器<span>(最佳螢幕解析1280*1024)</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="print_template"></section>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.1/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.1/js/responsive.bootstrap5.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

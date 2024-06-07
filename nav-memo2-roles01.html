@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大同大學-校內育成媒合平台</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./css/nav-memo2-joblist.css"> -->
+    <link rel="stylesheet" href="./css/nav-memo2-main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.1/css/responsive.bootstrap5.min.css">
+</head>
+
+<body>
+    <main class="main">
+        <!-- 側邊攔 -->
+        <nav class="nav-box no_print">
+            <!-- RWD-MENU標籤 -->
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- 側邊攔上方 -->
+            <div class="top">
+                <a href="#" class="navbar-logo">
+                    <img src="./img/ttoLogo_2.png" class="navbar-brand">
+                </a>
+                <ul class="navigation navbar-top">
+                    <li class="item">
+                        <a class="link active" href="./nav-memo2.html"><i class="fas fa-home"></i><span
+                                class="tooltiptext tooltip-right">儀錶板</span></a>
+                    </li>
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink1"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-users"></i><span
+                                class="tooltiptext tooltip-right">職缺媒合</span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                            <li><a class="dropdown-item" href="./nav-memo2-joblist.html">職缺總攬&ensp;<i
+                                        class="fa-solid fa-users-line"></i></a>
+                            </li>
+                            <li><a class="dropdown-item" href="./nav-memo2-myjob.html">刊登中&emsp;&ensp;<i
+                                        class="fa-solid fa-users-viewfinder"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink3"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i
+                                class="fa-solid fa-file-contract"></i><span
+                                class="tooltiptext tooltip-right">申請與查閱</span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink3">
+                            <li><a class="dropdown-item" href="./idcard_inventory.html">識別證管理&ensp;<i
+                                        class="fa-regular fa-address-card"></i></a>
+                            </li>
+                            <li><a class="dropdown-item" href="./parkingspace_inventory.html">停車位管理&ensp;<i
+                                        class="fa-solid fa-square-parking"></i></a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">續約申請&emsp;&ensp;<i
+                                        class="fa-solid fa-file-signature"></i></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="item">
+                        <a class="link" href="#"><i class="fa-solid fa-spinner"></i><span
+                                class="tooltiptext tooltip-right">進度查詢</span></a>
+                    </li>
+
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" role="button" id="dropdownMenuLink4" data-bs-toggle="dropdown"
+                            aria-expanded="false"><i class="fa-solid fa-stamp"></i><span
+                                class="tooltiptext tooltip-right">資料審核</span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink4">
+                            <li><a class="dropdown-item" href="./coopManufApp.html">廠商審核&emsp;&ensp;<i
+                                        class="fa-solid fa-user-tie"></i></a>
+                            </li>
+                            <li><a class="dropdown-item" href="./parkingSpaceApp.html.html">車位審核&emsp;&ensp;<i
+                                        class="fa-solid fa-square-parking"></i></a></li>
+                            <li><a class="dropdown-item" href="#">空間審核&emsp;&ensp;<i
+                                        class="fa-solid fa-building"></i></a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">續約審核&emsp;&ensp;<i
+                                        class="fa-solid fa-file-signature"></i></a></li>
+                            <li><a class="dropdown-item" href="#">識別證審核&ensp;<i
+                                        class="fa-regular fa-address-card"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink5"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-briefcase"></i><span
+                                class="tooltiptext tooltip-right">資料管理</span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink5">
+                            <li><a class="dropdown-item" href="./cultivationRoom.html">培育室管理&emsp;&ensp;<i
+                                        class="fa-solid fa-tree-city"></i></a></li>
+                            <li><a class="dropdown-item" href="#">停車位管理&emsp;&ensp;<i
+                                        class="fa-brands fa-product-hunt"></i></a></li>
+                            <li><a class="dropdown-item" href="./nav-memo2-roles.html">用戶權限設定&ensp;<i
+                                        class="fa-solid fa-people-robbery"></i></a></li>
+                            <li><a class="dropdown-item" href="#">用戶資料修改&ensp;<i
+                                        class="fa-solid fa-address-book"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="item">
+                        <a class="link" href="#"><i class="fa-solid fa-file-shield"></i><span
+                                class="tooltiptext tooltip-right">LOG紀錄</span></a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#"><i class="fa-regular fa-paper-plane"></i><span
+                                class="tooltiptext tooltip-right">意見反應</span></a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="stylePage.html"><i class="fa-solid fa-paint-roller"></i><span
+                                class="tooltiptext tooltip-right">樣式設計</span></a>
+                    </li>
+
+                    <li class="item">
+                        <a class="link" href="underConstruction.html"><i class="fa-solid fa-person-digging"></i><span
+                                class="tooltiptext tooltip-right">施工頁</span></a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- 側邊攔下方 -->
+            <div class="bottom">
+                <ul class="navigation">
+                    <!-- 已登入 -->
+                    <li class="item dropend">
+                        <a class="link dropdown-toggle" href="#" role="button" id="dropdownMenuLink9"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i
+                                class="fa-regular fa-circle-user"></i></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink9">
+                            <li><a class="dropdown-item" href="#">設定&ensp;<i class="fa-solid fa-gear"></i></a></li>
+                            <li><a class="dropdown-item" href="#">登出&ensp;<i class="fa-solid fa-door-open"></i></a></li>
+                        </ul>
+                    </li>
+                    <!-- 未登入 -->
+                    <!-- <li class="item">
+                        <a class="link" href="./nav-memo2-login.html"><i class="fa-regular fa-circle-user"></i><span
+                                class="tooltiptext tooltip-right">登入&ensp;/&ensp;申請</span></a>
+                    </li> -->
+                </ul>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="container">
+                <!-- 麵包屑 -->
+                <div class="breadcrumb-box section-padding section-border-radius my-2r">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active"><i class="fa-solid fa-people-robbery"></i>&ensp;權限設定</li>
+                    </ol>
+                </div>
+
+                <!-- 職缺列表 -->
+                <div class="tabs-box my-2r">
+                    <h3 class="section-header">使用者列表</h3>
+                    <div class="tabs section-border-radius section-padding">
+                        <table id="rolesList" class="table table-hover table-bordered responsive align-middle"
+                            style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th class="text-nowrap text-center">建立日期</th>
+                                    <th class="text-nowrap text-center">公司名稱</th>
+                                    <th class="text-nowrap text-center">使用者代號</th>
+                                    <th class="text-nowrap text-center">E-mail</th>
+                                    <th class="text-nowrap text-center">當前角色</th>
+                                    <th class="text-nowrap text-center">調整角色</th>
+                                    <th class="text-nowrap text-center">啟用</th>
+                                    <th class="text-nowrap text-center">儲存</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">2011-04-25</td>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckDefault">
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-06-30</td>
+                                    <td>Garrett Winters</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-01-12</td>
+                                    <td>Ashton Cox</td>
+                                    <td>Junior Technical Author</td>
+                                    <td>San Francisco</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckDefault">
+
+                                        </div>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2012-03-29</td>
+                                    <td>Cedric Kelly</td>
+                                    <td>Senior Javascript Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckDefault">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2008-11-28</td>
+                                    <td>Airi Satou</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2012-12-02</td>
+                                    <td>Brielle Williamson</td>
+                                    <td>Integration Specialist</td>
+                                    <td>New York</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked>
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2012-08-06</td>
+                                    <td>Herrod Chandler</td>
+                                    <td>Sales Assistant</td>
+                                    <td>San Francisco</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-10-14</td>
+                                    <td>Rhona Davidson</td>
+                                    <td>Integration Specialist</td>
+                                    <td>Tokyo</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckDefault">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-09-15</td>
+                                    <td>Colleen Hurst</td>
+                                    <td>Javascript Developer</td>
+                                    <td>San Francisco</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2008-12-13</td>
+                                    <td>Sonya Frost</td>
+                                    <td>Software Engineer</td>
+                                    <td>Edinburgh</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2008-12-19</td>
+                                    <td>Jena Gaines</td>
+                                    <td>Office Manager</td>
+                                    <td>London</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2013-03-03</td>
+                                    <td>Quinn Flynn</td>
+                                    <td>Support Lead</td>
+                                    <td>Edinburgh</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2008-10-16</td>
+                                    <td>Charde Marshall</td>
+                                    <td>Regional Director</td>
+                                    <td>San Francisco</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2012-12-18</td>
+                                    <td>Haley Kennedy</td>
+                                    <td>Senior Marketing Designer</td>
+                                    <td>London</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-03-17</td>
+                                    <td>Tatyana Fitzpatrick</td>
+                                    <td>Regional Director</td>
+                                    <td>London</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2012-11-27</td>
+                                    <td>Michael Silva</td>
+                                    <td>Marketing Designer</td>
+                                    <td>London</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-06-09</td>
+                                    <td>Paul Byrd</td>
+                                    <td>Chief Financial Officer (CFO)</td>
+                                    <td>New York</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2018-06-09</td>
+                                    <td>Gloria Little</td>
+                                    <td>Systems 系統管理員istrator</td>
+                                    <td>New York</td>
+                                    <td class="text-center nowLevel">系統開發員</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2012-10-13</td>
+                                    <td>Bradley Greer</td>
+                                    <td>Software Engineer</td>
+                                    <td>London</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2012-09-26</td>
+                                    <td>Dai Rios</td>
+                                    <td>Personnel Lead</td>
+                                    <td>Edinburgh</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-09-03</td>
+                                    <td>Jenette Caldwell</td>
+                                    <td>Development Lead</td>
+                                    <td>New York</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-06-25</td>
+                                    <td>Yuri Berry</td>
+                                    <td>Chief Marketing Officer (CMO)</td>
+                                    <td>New York</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-12-12</td>
+                                    <td>Caesar Vance</td>
+                                    <td>Pre-Sales Support</td>
+                                    <td>New York</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-09-20</td>
+                                    <td>Doris Wilder</td>
+                                    <td>Sales Assistant</td>
+                                    <td>Sydney</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-10-09</td>
+                                    <td>Angelica Ramos</td>
+                                    <td>Chief Executive Officer (CEO)</td>
+                                    <td>London</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-12-22</td>
+                                    <td>Gavin Joyce</td>
+                                    <td>Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-11-14</td>
+                                    <td>Jennifer Chang</td>
+                                    <td>Regional Director</td>
+                                    <td>Singapore</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-06-07</td>
+                                    <td>Brenden Wagner</td>
+                                    <td>Software Engineer</td>
+                                    <td>San Francisco</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-03-11</td>
+                                    <td>Fiona Green</td>
+                                    <td>Chief Operating Officer (COO)</td>
+                                    <td>San Francisco</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-08-14</td>
+                                    <td>Shou Itou</td>
+                                    <td>Regional Marketing</td>
+                                    <td>Tokyo</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-06-02</td>
+                                    <td>Michelle House</td>
+                                    <td>Integration Specialist</td>
+                                    <td>Sydney</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-10-22</td>
+                                    <td>Suki Burks</td>
+                                    <td>Developer</td>
+                                    <td>London</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-05-07</td>
+                                    <td>Prescott Bartlett</td>
+                                    <td>Technical Author</td>
+                                    <td>London</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2008-10-26</td>
+                                    <td>Gavin Cortez</td>
+                                    <td>Team Leader</td>
+                                    <td>San Francisco</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-03-09</td>
+                                    <td>Martena Mccray</td>
+                                    <td>Post-Sales support</td>
+                                    <td>Edinburgh</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-12-09</td>
+                                    <td>Unity Butler</td>
+                                    <td>Marketing Designer</td>
+                                    <td>San Francisco</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2008-12-16</td>
+                                    <td>Howard Hatfield</td>
+                                    <td>Office Manager</td>
+                                    <td>San Francisco</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-02-12</td>
+                                    <td>Hope Fuentes</td>
+                                    <td>Secretary</td>
+                                    <td>San Francisco</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-02-14</td>
+                                    <td>Vivian Harrell</td>
+                                    <td>Financial Controller</td>
+                                    <td>San Francisco</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2008-12-11</td>
+                                    <td>Timothy Mooney</td>
+                                    <td>Office Manager</td>
+                                    <td>London</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2008-09-26</td>
+                                    <td>Jackson Bradshaw</td>
+                                    <td>Director</td>
+                                    <td>New York</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-02-03</td>
+                                    <td>Olivia Liang</td>
+                                    <td>Support Engineer</td>
+                                    <td>Singapore</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-05-03</td>
+                                    <td>Bruno Nash</td>
+                                    <td>Software Engineer</td>
+                                    <td>London</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-08-19</td>
+                                    <td>Sakura Yamamoto</td>
+                                    <td>Support Engineer</td>
+                                    <td>Tokyo</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2013-08-11</td>
+                                    <td>Thor Walton</td>
+                                    <td>Developer</td>
+                                    <td>New York</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-07-07</td>
+                                    <td>Finn Camacho</td>
+                                    <td>Support Engineer</td>
+                                    <td>San Francisco</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2012-04-09</td>
+                                    <td>Serge Baldwin</td>
+                                    <td>Data Coordinator</td>
+                                    <td>Singapore</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-01-04</td>
+                                    <td>Zenaida Frank</td>
+                                    <td>Software Engineer</td>
+                                    <td>New York</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2012-06-01</td>
+                                    <td>Zorita Serrano</td>
+                                    <td>Software Engineer</td>
+                                    <td>San Francisco</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2013-02-01</td>
+                                    <td>Jennifer Acosta</td>
+                                    <td>Junior Javascript Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-12-06</td>
+                                    <td>Cara Stevens</td>
+                                    <td>Sales Assistant</td>
+                                    <td>New York</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-03-21</td>
+                                    <td>Hermione Butler</td>
+                                    <td>Regional Director</td>
+                                    <td>London</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2009-02-27</td>
+                                    <td>Lael Greer</td>
+                                    <td>Systems 系統管理員istrator</td>
+                                    <td>London</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2010-07-14</td>
+                                    <td>Jonas Alexander</td>
+                                    <td>Developer</td>
+                                    <td>San Francisco</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2008-11-13</td>
+                                    <td>Shad Decker</td>
+                                    <td>Regional Director</td>
+                                    <td>Edinburgh</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-06-27</td>
+                                    <td>Michael Bruce</td>
+                                    <td>Javascript Developer</td>
+                                    <td>Singapore</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2011-01-25</td>
+                                    <td>Donna Snider</td>
+                                    <td>Customer Support</td>
+                                    <td>New York</td>
+                                    <td class="text-center nowLevel">廠商商號</td>
+                                    <td class="text-center">
+                                        <select class="form-select">
+                                            <option value="">系統管理員</option>
+                                            <option value="">系統專員</option>
+                                            <option value="">廠商商號</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch px-2">
+                                            <input class="form-check-input mx-auto newStatus" type="checkbox"
+                                                id="flexSwitchCheckChecked" checked="">
+
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-outline-primary rounded-circle btn-sm">
+                                            <i class="fa-solid fa-floppy-disk"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th class="text-nowrap text-center">建立日期</th>
+                                    <th class="text-nowrap text-center">公司名稱</th>
+                                    <th class="text-nowrap text-center">使用者代號</th>
+                                    <th class="text-nowrap text-center">E-mail</th>
+                                    <th class="text-nowrap text-center">當前角色</th>
+                                    <th class="text-nowrap text-center">調整角色</th>
+                                    <th class="text-nowrap text-center">啟用</th>
+                                    <th class="text-nowrap text-center">儲存</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                    </div>
+                </div>
+
+                <!-- TOP -->
+                <div class="top_button">
+                    <a id="btn_up"><img src="./img/TOP_LOGO_3.png" alt=""></a>
+                </div>
+                <!-- 頁尾 -->
+                <div class="footer section-padding section-border-radius my-2r">
+                    <ul class="links">
+                        <li><a href="#">大同大學</a></li>
+                        <li><a href="./nav-memo2-joblist.html">育成媒合</a></li>
+                        <li><a href="./nav-memo2.html">帳戶總攬</a></li>
+                    </ul>
+                    <p class="copyright">
+                        大同大學 版權所有&copy;2022 All Rights Reserved.<br>建議使用：IE9.0以上版本或Google
+                        Chrome瀏覽器<span>(最佳螢幕解析1280*1024)</span>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.1/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.1/js/responsive.bootstrap5.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
